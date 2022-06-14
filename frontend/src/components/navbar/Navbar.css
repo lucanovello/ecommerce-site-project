@@ -1,0 +1,188 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+/* font-family: 'Abril Fatface', cursive; */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.Navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.Navbar-top {
+  height: var(--navbar-top-height);
+  padding: 1vh calc(5px + 10%);
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: white;
+  color: var(--main-color);
+}
+.Navbar-logo {
+  height: 100%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.Navbar-logo h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  font-weight: 200;
+}
+
+.Navbar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  grid-template-rows: repeat(3, 1fr);
+  font-size: 12px;
+  letter-spacing: calc(0.03 * 1vmax);
+  white-space: nowrap;
+}
+
+.Navbar-info-line {
+  margin: auto 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: center;
+  font-weight: 300;
+  gap: calc(10px + 1%);
+}
+
+.search-box-container-link {
+  font-weight: 400;
+  transition: 0.2s ease, color 0.1s ease;
+  display: inline-block;
+}
+
+.search-box-container-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  display: block;
+  position: relative;
+  bottom: 0;
+  background: var(--main-color);
+  transition: 0.2s ease-in-out;
+}
+.search-box-container-link:hover::after {
+  background: var(--main-color);
+  width: 100%;
+}
+
+.Navbar-info-top {
+}
+.Navbar-info-middle {
+  padding: calc(5px + 1vh) 0;
+  font-weight: 600;
+}
+.Navbar-info-bottom {
+}
+
+.search-box-container {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1;
+}
+
+.search-box-container a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: 0.2 ease;
+}
+
+.search-box {
+  width: 200px;
+  margin-left: 2%;
+  padding: 1.2vh 1%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--main-color);
+  background-color: rgb(245, 245, 245);
+}
+.search-box:focus {
+  outline: none;
+}
+.search-button {
+  width: 20px;
+  height: 100%;
+  padding: 1.2vh 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+.search-button-icon {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--highlight-color);
+  transform: rotate(-45deg);
+  transition: 0.1s ease;
+}
+.search-button-icon:hover {
+  color: var(--main-color);
+}
+
+.Navbar-main-menu {
+  height: calc(var(--navbar-height) - var(--navbar-top-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  border-bottom: var(--dashed-border);
+  box-sizing: content-box;
+  z-index: 999;
+}
+
+.Navbar-menu-options {
+  width: 100%;
+  height: 100%;
+  padding: 0 calc(5px + 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: calc(1px / var(--g-ratio));
+  color: white;
+  /* gap: calc(5px + 5%); */
+}
+
+.Navbar-menu-options li {
+  width: 80%;
+  height: 100%;
+  padding: 1vh;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+.Navbar-menu-options li:hover {
+  background: #525252;
+}
