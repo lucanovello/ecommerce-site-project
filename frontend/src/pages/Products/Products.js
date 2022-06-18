@@ -1,5 +1,3 @@
-import { Route } from "react-router-dom";
-
 function Products() {
   return <h1>Products PAGE</h1>;
 }

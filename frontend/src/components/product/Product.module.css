@@ -1,0 +1,71 @@
+.featuredItem {
+  max-width: 15%;
+  min-width: 240px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.featuredItemImg {
+  width: 100%;
+  transition: 0.1s ease-out;
+}
+
+.featuredItem:hover .featuredItemImg {
+  transform: scale(1.03);
+}
+
+.featuredItemText {
+  width: 100%;
+  padding: 0 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.featuredItemTitle {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: calc(11px + 15%);
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1.1;
+}
+
+.featuredItemArtist {
+  margin-bottom: 0.5vh;
+  font-size: calc(9px + 15%);
+  font-weight: 300;
+  text-transform: capitalize;
+  color: rgb(145, 145, 145);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.featuredItemRating {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.2s ease;
+}
+.featuredItemRating:hover {
+  border-bottom: 1px solid #ffc000;
+}
+
+.featuredItemPrice {
+  width: 100%;
+  font-size: calc(14px + 15%);
+  font-weight: 700;
+}

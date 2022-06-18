@@ -1,7 +1,7 @@
 /* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* font-family: 'Poppins', sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 /* font-family: 'Abril Fatface', cursive; */
 
 a {
@@ -17,43 +17,45 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-.Navbar-top {
+.NavbarTop {
   height: var(--navbar-top-height);
-  padding: 1vh calc(5px + 10%);
+  padding: 1vh calc(7%);
   display: flex;
   justify-content: space-between;
   align-content: center;
   background: white;
   color: var(--main-color);
+  gap: 50px;
 }
-.Navbar-logo {
+.NavbarLogo {
   height: 100%;
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.Navbar-logo h1 {
-  font-family: "Abril Fatface", cursive;
+.NavbarLogo h1 {
+  font-family: 'Abril Fatface', cursive;
   font-size: 48px;
   font-weight: 200;
 }
 
-.Navbar-info {
+.NavbarInfo {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  justify-self: flex-end;
   grid-template-rows: repeat(3, 1fr);
   font-size: 12px;
   letter-spacing: calc(0.03 * 1vmax);
   white-space: nowrap;
 }
 
-.Navbar-info-line {
+.NavbarInfoLine {
   margin: auto 0;
   display: flex;
   justify-content: flex-end;
@@ -63,14 +65,14 @@ a {
   gap: calc(10px + 1%);
 }
 
-.search-box-container-link {
-  font-weight: 400;
+.searchBoxContainerLink {
+  font-weight: 600;
   transition: 0.2s ease, color 0.1s ease;
   display: inline-block;
 }
 
-.search-box-container-link::after {
-  content: "";
+.searchBoxContainerLink::after {
+  content: '';
   width: 0;
   height: 1px;
   display: block;
@@ -79,21 +81,19 @@ a {
   background: var(--main-color);
   transition: 0.2s ease-in-out;
 }
-.search-box-container-link:hover::after {
+.searchBoxContainerLink:hover::after {
   background: var(--main-color);
   width: 100%;
 }
 
-.Navbar-info-top {
-}
-.Navbar-info-middle {
+.NavbarInfoMiddle {
   padding: calc(5px + 1vh) 0;
   font-weight: 600;
 }
-.Navbar-info-bottom {
+.NavbarInfoBottom {
 }
 
-.search-box-container {
+.searchBoxContainer {
   height: 30px;
   display: flex;
   justify-content: flex-start;
@@ -101,30 +101,30 @@ a {
   line-height: 1;
 }
 
-.search-box-container a {
+.searchBoxContainer a {
   margin-left: 10px;
   text-decoration: none;
   color: var(--main-color);
   transition: 0.2 ease;
 }
 
-.search-box {
+.searchBox {
   width: 200px;
   margin-left: 2%;
   padding: 1.2vh 1%;
   height: 100%;
   border: none;
   border-bottom: 1px solid rgb(220, 220, 220);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: var(--main-color);
   background-color: rgb(245, 245, 245);
 }
-.search-box:focus {
+.searchBox:focus {
   outline: none;
 }
-.search-button {
+.searchButton {
   width: 20px;
   height: 100%;
   padding: 1.2vh 1%;
@@ -137,18 +137,18 @@ a {
   background-color: rgb(245, 245, 245);
   cursor: pointer;
 }
-.search-button-icon {
+.searchButtonIcon {
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--highlight-color);
   transform: rotate(-45deg);
   transition: 0.1s ease;
 }
-.search-button-icon:hover {
+.searchButtonIcon:hover {
   color: var(--main-color);
 }
 
-.Navbar-main-menu {
+.NavbarMainMenu {
   height: calc(var(--navbar-height) - var(--navbar-top-height));
   display: flex;
   justify-content: center;
@@ -159,7 +159,7 @@ a {
   z-index: 999;
 }
 
-.Navbar-menu-options {
+.NavbarMenuOptions {
   width: 100%;
   height: 100%;
   padding: 0 calc(5px + 15%);
@@ -168,21 +168,31 @@ a {
   align-items: center;
   list-style: none;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: calc(1px / var(--g-ratio));
   color: white;
-  /* gap: calc(5px + 5%); */
 }
 
-.Navbar-menu-options li {
+.NavbarMenuOptions li {
   width: 80%;
   height: 100%;
-  padding: 1vh;
+  padding: 1vh 10px;
   cursor: pointer;
-  transition: 0.5s ease-out;
+  white-space: nowrap;
 }
-.Navbar-menu-options li:hover {
-  background: #525252;
+.NavbarMenuOptions li:hover {
+  animation: pulse 0.6s ease infinite alternate;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+@keyframes pulse {
+  0% {
+    background: var(--main-color);
+  }
+  100% {
+    background: #757575;
+  }
 }

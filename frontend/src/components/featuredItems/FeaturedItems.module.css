@@ -1,0 +1,24 @@
+.featuredItemsContainer {
+  width: 100%;
+  padding: 5vh calc(20px + 2%);
+}
+
+.featuredItemsMainTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.featuredItemsImgContainer {
+  font-size: 1.5rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: calc(5px + 0.5vw);
+}

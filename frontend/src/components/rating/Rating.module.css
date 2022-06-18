@@ -1,0 +1,12 @@
+.featuredItemStars {
+  font-size: calc(8px + 15%);
+  color: #ffc000;
+  transition: 0.2s ease;
+}
+
+.featuredItemNumReviews {
+  font-size: calc(8px + 15%);
+  font-weight: 300;
+  color: rgb(145, 145, 145);
+  transition: 0.2s ease;
+}

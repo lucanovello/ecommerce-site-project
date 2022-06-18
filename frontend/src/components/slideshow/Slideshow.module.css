@@ -1,30 +1,34 @@
-.slideshow-container {
+.slideshowContainer {
   width: 100%;
   min-width: 800px;
   height: calc(100vh - var(--navbar-height));
   padding: 10vh calc(20px + 2vmax);
   color: var(--main-color);
   border-bottom: 1px dashed white;
+  background: url('../../../public/images/fashion-2.jpg');
+  background-position: 30% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.slideshow-text {
+.slideshowText {
   width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-.slideshow-text h1 {
+.slideshowText h1 {
   font-size: calc(2.5rem + 2vmax);
   font-weight: 700;
   text-align: center;
   line-height: 1;
 }
 
-.slideshow-text span {
+.slideshowText span {
   margin: 5vh 0;
   width: 40%;
   height: 3px;
@@ -36,19 +40,19 @@
   );
 }
 
-.slideshow-text p {
+.slideshowText p {
   font-size: calc(1rem + 0.5vmax);
   font-weight: 400;
   text-align: center;
 }
 
-.slideshow-btn {
+.slideshowBtn {
   margin-top: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2vh calc(20px + 1vmax);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -59,7 +63,7 @@
   white-space: nowrap;
   transition: 0.1s ease-out;
 }
-.slideshow-btn:hover {
+.slideshowBtn:hover {
   background: white;
   color: var(--main-color);
   border: 1px dashed var(--main-color);

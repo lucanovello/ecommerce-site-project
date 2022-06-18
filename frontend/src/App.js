@@ -1,21 +1,18 @@
-import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
-import Slideshow from './components/slideshow/Slideshow';
-import FeaturedItems from './components/featuredItems/FeaturedItems';
-import Home from './pages/Home.js';
-import Products from './pages/Products.js';
-import Product from './pages/Product.js';
-import './App.css';
+import Home from './pages/Home/Home.js';
+import Products from './pages/Products/Products.js';
+import ProductScreen from './pages/ProductScreen/ProductScreen.js';
+import app from './App.module.css';
 
 function App() {
   return (
-    <main className="App">
+    <main className={app.App}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} exact />
-        <Route path="/products" element={<Products />} exact />
-        <Route path="/products/:productId" element={<Product />} exact />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<ProductScreen />} />
       </Routes>
     </main>
   );
