@@ -12,6 +12,7 @@ a {
 
 .Navbar {
   width: 100%;
+  min-width: 700px;
   height: var(--navbar-height);
   display: flex;
   flex-direction: column;

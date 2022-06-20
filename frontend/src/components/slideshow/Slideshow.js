@@ -4,10 +4,9 @@ function Slideshow(props) {
   return (
     <div
       className={slideshowStyles.slideshowContainer}
-      // style={{
-      //   backgroundImage:
-      //     "url('https://github.com/lunovello/ecommerce-site-project/blob/master/frontend/public/images/fashion-2.jpg')",
-      // }}
+      style={{
+        backgroundImage: `url(${props.data.image})`,
+      }}
     >
       <div className={slideshowStyles.slideshowText}>
         <h1>Brand Name</h1>

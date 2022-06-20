@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import productScreenStyle from './ProductScreen.module.css';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
-import Rating from '../../components/rating/Rating';
+import Rating from '../../components/Rating/Rating';
+import LoadingBox from '../../components/LoadingBox/LoadingBox';
+import ErrorBox from '../../components/ErrorBox/ErrorBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -28,7 +30,6 @@ function ProductScreen(props) {
   const { productId } = params;
 
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
-    devices: [],
     product: [],
     loading: true,
     error: '',
@@ -38,20 +39,20 @@ function ProductScreen(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/products/${productId}`);
+        const result = await axios.get(`/api/data/products/${productId}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
-        console.log('fail');
+        console.log('FETCH_FAIL');
       }
     };
     fetchData();
   }, [productId]);
 
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <ErrorBox error={error} />
   ) : (
     <div className={productScreenStyle.productScreenContainer}>
       <div className={productScreenStyle.productContainer}>

@@ -1,8 +1,8 @@
 import productStyle from './Product.module.css';
 import { Link } from 'react-router-dom';
-import Rating from '../rating/Rating';
+import Rating from '../Rating/Rating';
 
-const Product = (props) => {
+function Product(props) {
   return (
     <div className={productStyle.featuredItem}>
       <Link to={`/products/${props.product.id}`}>
@@ -30,6 +30,6 @@ const Product = (props) => {
       </Link>
     </div>
   );
-};
+}
 
 export default Product;

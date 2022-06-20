@@ -63,6 +63,10 @@ const data = {
       numReviews: 3,
     },
   ],
+  slideshow: {
+    image: '/images/fashion-2.jpg',
+    alt: 'Fashion 2',
+  },
 };
 
 export default data;

@@ -1,7 +1,9 @@
 import featuredItems from './FeaturedItems.module.css';
+import Product from '../Product/Product';
+import LoadingBox from '../LoadingBox/LoadingBox';
+import ErrorBox from '../ErrorBox/ErrorBox';
+import { useEffect, useReducer } from 'react';
 import axios from 'axios';
-import { useEffect, useReducer, useState } from 'react';
-import Product from '../product/Product';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -27,16 +29,22 @@ function FeaturedItems(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/products');
-        dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
+        const result = await axios.get('/api/data');
+        dispatch({ type: 'FETCH_SUCCESS', payload: result.data.products });
+        console.log(result.data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        console.log('FETCH_FAIL');
       }
     };
     fetchData();
   }, []);
 
-  return (
+  return loading ? (
+    <LoadingBox />
+  ) : error ? (
+    <ErrorBox error={error} />
+  ) : (
     <section className={featuredItems.featuredItemsContainer}>
       <h2 className={featuredItems.featuredItemsMainTitle}>
         {props.mainTitle}

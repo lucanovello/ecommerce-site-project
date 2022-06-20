@@ -1,12 +1,22 @@
-import Slideshow from '../../components/slideshow/Slideshow';
+import Slideshow from '../../components/Slideshow/Slideshow';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
-import data from '../../data';
+import LoadingBox from '../../components/LoadingBox/LoadingBox';
+import ErrorBox from '../../components/ErrorBox/ErrorBox';
 
-function Home() {
-  return (
+function Home(props) {
+  return props.loading ? (
+    <LoadingBox />
+  ) : props.error ? (
+    <ErrorBox error={props.error} />
+  ) : (
     <div>
-      <Slideshow SlideshowImageStyle={data.slideshow} />
-      <FeaturedItems mainTitle="Featured Items" />
+      <Slideshow data={props.data.slideshow} />
+      <FeaturedItems
+        mainTitle="Featured Items"
+        products={props.data.products}
+        loading={props.loading}
+        error={props.error}
+      />
     </div>
   );
 }
