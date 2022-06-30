@@ -3,17 +3,31 @@ import data from './data.js';
 
 const app = express();
 
-app.get('/api/data', (req, res) => {
+app.get('/api', (req, res) => {
   res.send(data);
 });
-app.get(`/api/data/products/:productId`, (req, res) => {
-  const product = data.products.find((x) => x.id === req.params.productId);
+app.get(`/api/products/:slug`, (req, res) => {
+  const product = data.products.find((x) => x.slug === req.params.slug);
   if (product) {
-    res.send(product);
+    res.send({
+      product,
+      devices: data.devices,
+    });
   } else {
     res.status(404).send({ message: 'Product Not Found' });
   }
 });
+// app.get(`/api/products/:id`, (req, res) => {
+//   const product = data.products.find((x) => x._id === req.params.slug);
+//   if (product) {
+//     res.send({
+//       product,
+//       devices: data.devices,
+//     });
+//   } else {
+//     res.status(404).send({ message: 'Product Not Found' });
+//   }
+// });
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

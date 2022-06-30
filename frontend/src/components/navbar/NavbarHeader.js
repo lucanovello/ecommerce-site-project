@@ -1,7 +1,13 @@
 import navbarStyle from './Navbar.module.css';
 import { Link } from 'react-router-dom';
+import { MdOutlineShoppingBag, MdShoppingBag } from 'react-icons/md';
+import { RiHeartAddLine, RiPhoneFill } from 'react-icons/ri';
+import { useContext } from 'react';
+import { Store } from '../../Store';
 
 function NavbarMenu() {
+  const { state } = useContext(Store);
+  const { cart } = state;
   return (
     <div className={navbarStyle.NavbarTop}>
       <div className={navbarStyle.NavbarLogo}>
@@ -19,7 +25,8 @@ function NavbarMenu() {
             className={navbarStyle.searchBoxContainerLink}
           >
             <span>
-              <i className="fa-solid fa-phone"></i> 1.800.123.4567
+              <RiPhoneFill className={navbarStyle.searchBoxIcons} />{' '}
+              1.800.123.4567
             </span>
           </Link>{' '}
           |
@@ -33,23 +40,34 @@ function NavbarMenu() {
             </Link>
           </p>
         </div>
-        <div
-          className={`${navbarStyle.NavbarInfoLine} ${navbarStyle.NavbarInfoMiddle}`}
-        >
-          FREE SHIPPING ON ALL ORDERS. NO MINIMUM PURCHASE
-        </div>
-        <div
-          className={`${navbarStyle.NavbarInfoLine} ${navbarStyle.NavbarInfoBottom}`}
-        >
-          <Link to="/" className={navbarStyle.searchBoxContainerLink}>
+
+        <div className={`${navbarStyle.NavbarInfoLine}`}>
+          <Link to="/cart" className={navbarStyle.searchBoxContainerLink}>
             <span>
-              <i className="fa-solid fa-bag-shopping"></i> Shopping Cart
+              {cart.cartItems.length > 0 ? (
+                <div>
+                  <MdShoppingBag className={navbarStyle.searchBoxIcons} />
+                  <div className={navbarStyle.shoppingCartQuantityWrapper}>
+                    <div className={navbarStyle.shoppingCartQuantity}>
+                      {cart.cartItems.length}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <MdOutlineShoppingBag
+                    className={navbarStyle.searchBoxIcons}
+                  />
+                </div>
+              )}
+              Shopping Cart
             </span>
           </Link>{' '}
           |
           <Link to="/" className={navbarStyle.searchBoxContainerLink}>
             <span>
-              <i className="fa-solid fa-clipboard-check"></i> Wish Lists
+              <RiHeartAddLine className={navbarStyle.searchBoxIcons} /> Wish
+              Lists
             </span>
           </Link>{' '}
           |

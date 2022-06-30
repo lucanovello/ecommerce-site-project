@@ -1,12 +1,16 @@
 /* VARIABLES */
 :root {
   --g-ratio: 1.618;
-  --navbar-height: calc(100px + 5vh);
-  --navbar-top-height: calc(var(--navbar-height) * 0.75);
+  --navbar-header-height: calc(25px + 1vh);
+  --navbar-height: calc((70px + 5vh));
+  --navbar-top-height: calc(var(--navbar-height) * 0.7);
   --body_bg: #ffffff;
   --main-color: #242424;
-  --highlight-color: #525252;
+  --highlight-color: #80a3bb;
+  --button-color: hsl(210, 100%, 15%);
+  --button-hover-color: hsl(200, 70%, 45%);
   --dashed-border: 1px dashed white;
+  --cart-border-color: #d1d1d1;
 }
 
 .App {

@@ -1,0 +1,70 @@
+.quantityBoxInputContainer {
+  height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.quantityBoxInput {
+  width: 25px;
+  height: 100%;
+  border: 1px solid var(--button-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  text-align: center;
+}
+
+.quantityBoxInputButton {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background: var(--button-color);
+  cursor: pointer;
+  transition: 0.05s ease-out;
+}
+
+.quantityBoxInputButtonHover {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background: var(--button-color);
+  cursor: pointer;
+  transition: 0.05s ease-out;
+}
+.quantityBoxInputButtonHover:hover {
+  background: var(--button-hover-color);
+}
+
+.quantityBoxInputButtonMinus {
+  border-radius: 5px 0 0 5px;
+}
+.quantityBoxInputButtonPlus {
+  border-radius: 0 5px 5px 0;
+}
+
+.removeArrows::-webkit-inner-spin-button {
+  appearance: none;
+}
+.removeArrows::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.removeArrows {
+  appearance: textfield;
+}

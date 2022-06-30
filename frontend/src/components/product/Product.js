@@ -5,7 +5,7 @@ import Rating from '../Rating/Rating';
 function Product(props) {
   return (
     <div className={productStyle.featuredItem}>
-      <Link to={`/products/${props.product.id}`}>
+      <Link to={`/products/${props.product.slug}`}>
         <img
           src={props.product.image}
           alt={props.product.name}

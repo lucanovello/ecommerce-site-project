@@ -1,7 +1,8 @@
 import Slideshow from '../../components/Slideshow/Slideshow';
-import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import ErrorBox from '../../components/ErrorBox/ErrorBox';
+import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
+import { Fragment } from 'react';
 
 function Home(props) {
   return props.loading ? (
@@ -9,15 +10,10 @@ function Home(props) {
   ) : props.error ? (
     <ErrorBox error={props.error} />
   ) : (
-    <div>
+    <Fragment>
       <Slideshow data={props.data.slideshow} />
-      <FeaturedItems
-        mainTitle="Featured Items"
-        products={props.data.products}
-        loading={props.loading}
-        error={props.error}
-      />
-    </div>
+      <FeaturedItems mainTitle="Related Items" />
+    </Fragment>
   );
 }
 

@@ -6,6 +6,7 @@ import ProductScreen from './pages/ProductScreen/ProductScreen.js';
 import app from './App.module.css';
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
+import CartScreen from './pages/CartScreen/CartScreen';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -31,12 +32,10 @@ function App() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/data');
+        const result = await axios.get('/api');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
-        console.log(result.data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
-        console.log('FETCH_FAIL');
       }
     };
     fetchData();
@@ -48,17 +47,48 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home data={data} loading={loading} error={error} />}
+          element={
+            <Home
+              data={data}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+            />
+          }
+          exact
+        />
+        <Route
+          path="/cart"
+          element={
+            <CartScreen
+              data={data}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+            />
+          }
           exact
         />
         <Route
           path="/products"
-          element={<Products data={data} loading={loading} error={error} />}
+          element={
+            <Products
+              data={data}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+            />
+          }
         />
         <Route
-          path="/products/:productId"
+          path="/products/:slug"
           element={
-            <ProductScreen data={data} loading={loading} error={error} />
+            <ProductScreen
+              data={data}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+            />
           }
         />
       </Routes>

@@ -1,5 +1,8 @@
 .featuredItemStars {
-  font-size: calc(8px + 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(11px + 15%);
   color: #ffc000;
   transition: 0.2s ease;
 }

@@ -5,7 +5,8 @@
   padding: 10vh calc(20px + 2vmax);
   color: var(--main-color);
   border-bottom: 1px dashed white;
-  /* background: url('../../../public/images/fashion-2.jpg'); */
+  position: relative;
+  top: 0;
   background-position: 20% 0%;
   background-size: cover;
   background-repeat: no-repeat;

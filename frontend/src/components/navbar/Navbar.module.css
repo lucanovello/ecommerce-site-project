@@ -13,7 +13,6 @@ a {
 .Navbar {
   width: 100%;
   min-width: 700px;
-  height: var(--navbar-height);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,8 +21,7 @@ a {
 }
 
 .NavbarTop {
-  height: var(--navbar-top-height);
-  padding: 1vh calc(7%);
+  padding: 1vh calc(10px + 5%);
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -31,33 +29,41 @@ a {
   color: var(--main-color);
   gap: 50px;
 }
+
+.NavbarTopHeaderOpen {
+  height: var(--navbar-top-height);
+}
+.NavbarTopHeaderClosed {
+  height: var(--navbar-top-height);
+}
+
 .NavbarLogo {
-  height: 100%;
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
 }
 .NavbarLogo h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 48px;
   font-weight: 200;
+  line-height: 1;
 }
 
 .NavbarInfo {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-end;
   justify-self: flex-end;
   grid-template-rows: repeat(3, 1fr);
   font-size: 12px;
   letter-spacing: calc(0.03 * 1vmax);
   white-space: nowrap;
+  gap: 10px;
 }
 
 .NavbarInfoLine {
-  margin: auto 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -77,7 +83,6 @@ a {
   width: 0;
   height: 1px;
   display: block;
-  position: relative;
   bottom: 0;
   background: var(--main-color);
   transition: 0.2s ease-in-out;
@@ -87,11 +92,44 @@ a {
   width: 100%;
 }
 
+.searchBoxContainerLink span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.searchBoxIcons {
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.shoppingCartQuantityWrapper {
+  position: absolute;
+}
+
+.shoppingCartQuantity {
+  box-sizing: content-box;
+  width: 1rem;
+  aspect-ratio: 1;
+  padding: 0.02rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
+  font-weight: 400;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  background: var(--highlight-color);
+  z-index: 999;
+}
+
 .NavbarInfoMiddle {
   padding: calc(5px + 1vh) 0;
   font-weight: 600;
-}
-.NavbarInfoBottom {
 }
 
 .searchBoxContainer {
@@ -150,11 +188,11 @@ a {
 }
 
 .NavbarMainMenu {
-  height: calc(var(--navbar-height) - var(--navbar-top-height));
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--main-color);
+  border-top: var(--dashed-border);
   border-bottom: var(--dashed-border);
   box-sizing: content-box;
   z-index: 999;

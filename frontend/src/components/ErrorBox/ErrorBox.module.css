@@ -1,0 +1,12 @@
+.errorBoxContainer {
+  width: 100%;
+  padding: 20vh 0 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #242424;
+  gap: 20px;
+}

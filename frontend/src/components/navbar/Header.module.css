@@ -1,0 +1,48 @@
+.HeaderContainer {
+  width: 100%;
+  height: calc(25px + 1vh);
+  padding: 1vh 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(211, 32%, 86%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  color: 242424;
+}
+
+.collapse {
+  height: 0;
+  padding: 0;
+  font-size: 0rem;
+  opacity: 0;
+  transition: 0.5s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.HeaderCloseContainer {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(0.5px + 0.5vh);
+  right: calc(10px + 5vw);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #242424;
+  transition: 0.2 s ease;
+}
+.HeaderCloseContainer:hover {
+  background: #242424;
+  color: #ffffff;
+}

@@ -29,12 +29,10 @@ function FeaturedItems(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/data');
+        const result = await axios.get('/api');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data.products });
-        console.log(result.data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
-        console.log('FETCH_FAIL');
       }
     };
     fetchData();
@@ -43,15 +41,20 @@ function FeaturedItems(props) {
   return loading ? (
     <LoadingBox />
   ) : error ? (
-    <ErrorBox error={error} />
+    <div>
+      <ErrorBox error={error} />
+    </div>
   ) : (
     <section className={featuredItems.featuredItemsContainer}>
-      <h2 className={featuredItems.featuredItemsMainTitle}>
-        {props.mainTitle}
-      </h2>
+      {props.mainTitle && (
+        <h2 className={featuredItems.featuredItemsMainTitle}>
+          {props.mainTitle}
+        </h2>
+      )}
+
       <div className={featuredItems.featuredItemsImgContainer}>
         {products.map((product) => (
-          <Product product={product} key={product.id}></Product>
+          <Product product={product} key={product.slug}></Product>
         ))}
       </div>
     </section>

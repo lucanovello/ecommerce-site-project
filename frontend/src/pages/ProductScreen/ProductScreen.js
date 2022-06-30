@@ -1,11 +1,14 @@
-import { useReducer, useEffect } from 'react';
+import { useReducer, useEffect, useContext, Fragment, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import productScreenStyle from './ProductScreen.module.css';
-import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import Rating from '../../components/Rating/Rating';
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import ErrorBox from '../../components/ErrorBox/ErrorBox';
+import Devices from './Devices';
+import { Store } from '../../Store';
+import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
+import QuantityBox from '../../components/QuantityBox/QuantityBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -14,9 +17,10 @@ const reducer = (state, action) => {
     case 'FETCH_SUCCESS':
       return {
         ...state,
-        product: action.payload,
-        devices: action.payload,
+        product: action.payload.product,
+        devices: action.payload.devices,
         loading: false,
+        error: false,
       };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
@@ -26,33 +30,53 @@ const reducer = (state, action) => {
 };
 
 function ProductScreen(props) {
+  const [productQty, setProductQty] = useState(1);
   const params = useParams();
-  const { productId } = params;
-
-  const [{ loading, error, product }, dispatch] = useReducer(reducer, {
+  const { slug } = params;
+  const [{ loading, error, product, devices }, dispatch] = useReducer(reducer, {
     product: [],
+    devices: [],
     loading: true,
     error: '',
   });
-
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/data/products/${productId}`);
+        const result = await axios.get(`/api/products/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
-        console.log('FETCH_FAIL');
       }
     };
     fetchData();
-  }, [productId]);
+    setProductQty(1);
+  }, [slug]);
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart } = state;
+  const addToCartHandler = async () => {
+    const itemExists = cart.cartItems.find((x) => x._id === product._id);
+    const quantity = itemExists ? itemExists.quantity + productQty : productQty;
+    const { data } = await axios.get(`/api/products/${slug}`);
+    if (data.quantityInStock < quantity) {
+      window.alert('Sorry, Product is out of stock');
+      return;
+    }
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product, quantity: quantity },
+    });
+  };
 
   return loading ? (
     <LoadingBox />
   ) : error ? (
-    <ErrorBox error={error} />
+    <Fragment>
+      <ErrorBox error={error} />
+
+      <FeaturedItems mainTitle="Related Items" />
+    </Fragment>
   ) : (
     <div className={productScreenStyle.productScreenContainer}>
       <div className={productScreenStyle.productContainer}>
@@ -73,179 +97,29 @@ function ProductScreen(props) {
             numReviews={product.numReviews}
           />
           <div className={productScreenStyle.productOptionsContainer}>
-            <div className={productScreenStyle.productQuantityContainer}>
-              <label
-                htmlFor="quantity"
-                className={productScreenStyle.productQuantityLabel}
-              >
-                Qty:
-              </label>
-              <input
-                type="number"
-                id="quantity"
-                placeholder="1"
-                min={1}
-                className={productScreenStyle.productQuantity}
-              />
-            </div>
-            <div className={productScreenStyle.productDeviceContainer}>
-              <label
-                htmlFor="device"
-                className={productScreenStyle.productDeviceLabel}
-              >
-                Device:<span>*</span>
-              </label>
-              <select
-                name="device"
-                id="device"
-                className={productScreenStyle.productDevice}
-                required
-                defaultValue={'------ Please choose an option ------'}
-              >
-                <option
-                  value="------ Please choose an option ------"
-                  className={productScreenStyle.productDeviceMainTitle}
-                  disabled
-                  hidden
-                >
-                  ------ Please choose an option ------
-                </option>
-
-                <optgroup
-                  label="------ Apple ------"
-                  className={productScreenStyle.productDeviceTitle}
-                />
-                <option
-                  value="iPhone 13 Pro Max"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 13 Pro Max
-                </option>
-                <option
-                  value="iPhone 13 Pro"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 13 Pro
-                </option>
-                <option
-                  value="iPhone 13"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 13
-                </option>
-                <option
-                  value="iPhone 13 Mini"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 13 Mini
-                </option>
-                <option
-                  value="iPhone SE"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone SE
-                </option>
-                <option
-                  value="iPhone 12 Pro Max"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 12 Pro Max
-                </option>
-                <option
-                  value="iPhone 12 Pro"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 12 Pro
-                </option>
-                <option
-                  value="iPhone 12"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 12
-                </option>
-                <option
-                  value="iPhone 12 Mini"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  iPhone 12 Mini
-                </option>
-
-                <optgroup
-                  label="------ Samsung ------"
-                  className={productScreenStyle.productDeviceTitle}
-                />
-                <option
-                  value="Samsung Galaxy S22 Ultra"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Samsung Galaxy S22 Ultra
-                </option>
-                <option
-                  value="Samsung Galaxy S22+"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Samsung Galaxy S22+
-                </option>
-                <option
-                  value="Samsung Galaxy S22"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Samsung Galaxy S22
-                </option>
-                <option
-                  value="Samsung Galaxy S21 FE 5G"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Samsung Galaxy S21 FE 5G
-                </option>
-                <option
-                  value="Samsung Galaxy S21 Ultra 5G"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Samsung Galaxy S21 Ultra 5G
-                </option>
-                <option
-                  value="Samsung Galaxy S21 5G"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Samsung Galaxy S21 5G
-                </option>
-
-                <optgroup
-                  label="------ Google ------"
-                  className={productScreenStyle.productDeviceTitle}
-                />
-                <option
-                  value="Google Pixel 6 Pro"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Google Pixel 6 Pro
-                </option>
-                <option
-                  value="Google Pixel 6"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Google Pixel 6
-                </option>
-                <option
-                  value="Google Pixel 5 Pro"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Google Pixel 5 Pro
-                </option>
-                <option
-                  value="Google Pixel 5"
-                  className={productScreenStyle.productDeviceOption}
-                >
-                  Google Pixel 5
-                </option>
-              </select>
-            </div>
+            <QuantityBox
+              value={productQty}
+              setQty={setProductQty}
+              quantityBoxContainerStyle={
+                productScreenStyle.productQuantityContainer
+              }
+              quantityBoxLabelStyle={productScreenStyle.productQuantityLabel}
+              quantityBoxInputStyle={productScreenStyle.productQuantity}
+            />
+            <Devices
+              devices={devices}
+              className={productScreenStyle.productDeviceContainer}
+            />
+            <h5 className={productScreenStyle.productPrice}>
+              ${product.price}
+            </h5>
+            <button
+              className={productScreenStyle.productButton}
+              onClick={addToCartHandler}
+            >
+              Add To Cart
+            </button>
           </div>
-          <h5 className={productScreenStyle.productPrice}>${product.price}</h5>
-          <button className={productScreenStyle.productButton}>
-            Add To Cart
-          </button>
         </div>
       </div>
       <FeaturedItems mainTitle="Related Items" />
