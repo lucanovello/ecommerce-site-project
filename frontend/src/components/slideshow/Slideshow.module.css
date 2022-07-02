@@ -1,6 +1,6 @@
 .slideshowContainer {
   width: 100%;
-  min-width: 800px;
+  /* min-width: 800px; */
   height: calc(100vh - var(--navbar-height));
   padding: 10vh calc(20px + 2vmax);
   color: var(--main-color);

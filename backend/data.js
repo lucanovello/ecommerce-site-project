@@ -1,21 +1,21 @@
 const data = {
   products: [
     {
-      slug: 'The-Great-Wave-Off-Kanagawa',
-      _id: '1',
+      slug: 'the-great-wave-off-kanagawa',
+      _id: 'the-great-wave-off-kanagawa',
       name: 'The Great Wave Off Kanagawa',
       artist: 'Katsushika Hokusai',
       description: `The Great Wave off Kanagawa (1820-1831) is a woodblock print by the Japanese ukiyo-e artist Hokusai probably made in late 1831 during the Edo period of Japanese history. The print depicts three boats moving through a storm-tossed sea, with a large wave forming a spiral in the centre and Mount Fuji visible in the background.`,
       price: 19.99,
-      quantityInStock: 8,
+      quantityInStock: 0,
       image:
         '/images/products/Katsushika_Hokusai-The_Great_Wave_Off_Kanagawa.jpg',
       rating: 5,
       numReviews: 14,
     },
     {
-      slug: 'Girl-With-A-Pearl-Earring',
-      _id: '2',
+      slug: 'girl-with-a-pearl-earring',
+      _id: 'girl-with-a-pearl-earring',
       name: 'Girl With A Pearl Earring',
       artist: 'Jan Vermeer',
       description: `Girl with a Pearl Earring (1665) is an oil painting by Dutch Golden Age painter Johannes Vermeer, dated c. 1665. Going by various names over the centuries, it became known by its present title towards the end of the 20th century after the earring worn by the girl portrayed there.`,
@@ -26,8 +26,8 @@ const data = {
       numReviews: 8,
     },
     {
-      slug: 'The-Kiss',
-      _id: '3',
+      slug: 'the-kiss',
+      _id: 'the-kiss',
       name: 'The Kiss',
       artist: 'Gustav Klimt',
       description: `The Kiss (circa 1907-1908) is an oil-on-canvas painting with added gold leaf, silver and platinum by the Austrian Symbolist painter Gustav Klimt. It depicts a couple embracing each other, their bodies entwined in elaborate beautiful robes decorated in a style influenced by the contemporary Art Nouveau style and the organic forms of the earlier Arts and Crafts movement.`,
@@ -39,7 +39,7 @@ const data = {
     },
     {
       slug: 'mona-lisa',
-      _id: '4',
+      _id: 'mona-lisa',
       name: 'Mona Lisa',
       artist: 'Leonardo Da Vinci',
       description: `The Mona Lisa (1503) is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as "the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world".`,
@@ -50,8 +50,8 @@ const data = {
       numReviews: 13,
     },
     {
-      slug: 'Jeanne-Hebuterne-With-Hat-And-Necklace',
-      _id: '5',
+      slug: 'jeanne-hebuterne-with-hat-and-necklace',
+      _id: 'jeanne-hebuterne-with-hat-and-necklace',
       name: 'Jeanne Hebuterne With Hat And Necklace',
       artist: 'Amedeo Modigliani',
       description: `Jeanne Hébuterne with Hat and Necklace (1917) is an oil on canvas painting by Italian painter Amedeo Modigliani. The painting shows a modern woman with her hair tucked under a stylish hat. A special attention is given to her eyes painted in a light shade of blue which comes forward on a darker background.`,
@@ -63,8 +63,8 @@ const data = {
       numReviews: 6,
     },
     {
-      slug: 'The-Desperate-Man',
-      _id: '6',
+      slug: 'the-desperate-man',
+      _id: 'the-desperate-man',
       name: 'The Desperate Man',
       artist: 'Gustave Courbet',
       description: `The Desperate Man or Desperation (1843-1845) is an oil on canvas self-portrait by Gustave Courbet, produced early during his stay in Paris. It is now in the private collection of the Conseil Investissement Art BNP Paribas but was displayed in the Musée d'Orsay's 2007 Courbet exhibition.`,

@@ -1,4 +1,11 @@
-import { useReducer, useEffect, useContext, Fragment, useState } from 'react';
+import {
+  useReducer,
+  useEffect,
+  useContext,
+  Fragment,
+  useState,
+  useRef,
+} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import productScreenStyle from './ProductScreen.module.css';
@@ -31,6 +38,9 @@ const reducer = (state, action) => {
 
 function ProductScreen(props) {
   const [productQty, setProductQty] = useState(1);
+  const [isDeviceValid, setIsDeviceValid] = useState(false);
+  const [isSubmitValid, setIsSubmitValid] = useState(false);
+  const device = useRef(null);
   const params = useParams();
   const { slug } = params;
   const [{ loading, error, product, devices }, dispatch] = useReducer(reducer, {
@@ -51,21 +61,44 @@ function ProductScreen(props) {
     };
     fetchData();
     setProductQty(1);
+    setIsDeviceValid(false);
+    setIsSubmitValid(false);
   }, [slug]);
+
+  useEffect(() => {
+    if (product.quantityInStock > 0 && isDeviceValid) {
+      setIsSubmitValid(true);
+      return;
+    }
+    setIsSubmitValid(false);
+  }, [product.quantityInStock, isDeviceValid, slug]);
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
+
   const addToCartHandler = async () => {
     const itemExists = cart.cartItems.find((x) => x._id === product._id);
     const quantity = itemExists ? itemExists.quantity + productQty : productQty;
     const { data } = await axios.get(`/api/products/${slug}`);
     if (data.quantityInStock < quantity) {
-      window.alert('Sorry, Product is out of stock');
+      window.alert('Sorry, product is out of stock');
       return;
     }
+    if (!isDeviceValid) {
+      window.alert('Please select a device');
+      return;
+    }
+
     ctxDispatch({
       type: 'CART_ADD_ITEM',
-      payload: { ...product, quantity: quantity },
+      payload: {
+        ...product,
+        _id: `${product.slug}_${device.current.value
+          .replace(/\s+/g, '-')
+          .toLowerCase()}`,
+        quantity: quantity,
+        device: device.current.value,
+      },
     });
   };
 
@@ -96,28 +129,45 @@ function ProductScreen(props) {
             rating={product.rating}
             numReviews={product.numReviews}
           />
+
           <div className={productScreenStyle.productOptionsContainer}>
-            <QuantityBox
-              value={productQty}
-              setQty={setProductQty}
-              quantityBoxContainerStyle={
-                productScreenStyle.productQuantityContainer
-              }
-              quantityBoxLabelStyle={productScreenStyle.productQuantityLabel}
-              quantityBoxInputStyle={productScreenStyle.productQuantity}
-            />
+            <div className={productScreenStyle.productQuantityBoxContainer}>
+              <QuantityBox
+                value={productQty}
+                setQty={setProductQty}
+                item={product}
+                ctxDispatch={false}
+                quantityBoxContainerStyle={
+                  productScreenStyle.productQuantityContainer
+                }
+                quantityBoxLabelStyle={productScreenStyle.productQuantityLabel}
+                quantityBoxInputStyle={productScreenStyle.productQuantity}
+              />
+              <p className={productScreenStyle.productScreenStyleQtyInStock}>
+                {product.quantityInStock} in stock
+              </p>
+            </div>
             <Devices
               devices={devices}
               className={productScreenStyle.productDeviceContainer}
+              refValue={device}
+              setIsDeviceValid={setIsDeviceValid}
             />
             <h5 className={productScreenStyle.productPrice}>
               ${product.price}
             </h5>
             <button
-              className={productScreenStyle.productButton}
-              onClick={addToCartHandler}
+              type="button"
+              className={`${productScreenStyle.productButton}
+              ${
+                isSubmitValid
+                  ? productScreenStyle.productButtonActive
+                  : productScreenStyle.productButtonDisabled
+              }`}
+              onClick={() => isSubmitValid && addToCartHandler()}
+              disabled={!isSubmitValid}
             >
-              Add To Cart
+              {product.quantityInStock < 1 ? 'Out of Stock' : 'Add To Cart'}
             </button>
           </div>
         </div>

@@ -8,14 +8,16 @@
   --main-color: #242424;
   --highlight-color: #80a3bb;
   --button-color: hsl(210, 100%, 15%);
-  --button-hover-color: hsl(200, 70%, 45%);
+  --button-click-color: hsl(210, 90%, 25%);
+  --button-hover-color: hsl(210, 0%, 85%);
+  --button-highlight-color: hsla(211, 40%, 75%, 0.6);
   --dashed-border: 1px dashed white;
   --cart-border-color: #d1d1d1;
 }
 
 .App {
   width: 100%;
-  min-width: 420px;
+  min-width: 700px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

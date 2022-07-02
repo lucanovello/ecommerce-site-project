@@ -10,10 +10,12 @@
 .quantityBoxInput {
   width: 25px;
   height: 100%;
-  border: 1px solid var(--button-color);
+  border: none;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   text-align: center;
+  background: hsl(0, 0%, 95%);
+  box-shadow: inset 0px 0px 2px #838383;
 }
 
 .quantityBoxInputButton {
@@ -21,34 +23,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
+  /* outline: 1px solid var(--button-color); */
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
-  color: white;
-  background: var(--button-color);
   cursor: pointer;
-  transition: 0.05s ease-out;
 }
 
-.quantityBoxInputButtonHover {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  color: white;
+.quantityBoxInputButtonActive {
+  border: 1px solid var(--button-color);
   background: var(--button-color);
-  cursor: pointer;
-  transition: 0.05s ease-out;
+  color: white;
+  box-shadow: inset 1px 1px 2px var(--button-highlight-color);
 }
-.quantityBoxInputButtonHover:hover {
+.quantityBoxInputButtonActive:active {
+  background: var(--button-click-color);
+  box-shadow: inset 1px 1px 1px #1e2225;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.quantityBoxInputButtonDisabled {
+  border: 1px solid var(--button-hover-color);
   background: var(--button-hover-color);
+  color: var(--button-color);
+  box-shadow: inset 1px 1px 1px #acacac;
+  cursor: default;
 }
 
 .quantityBoxInputButtonMinus {

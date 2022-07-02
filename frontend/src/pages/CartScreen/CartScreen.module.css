@@ -89,13 +89,19 @@
 .cartScreenItemDetailsName {
   font-size: 1rem;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
 }
 .cartScreenItemDetailsArtist {
   cursor: pointer;
+}
+
+.cartScreenItemDetailsDevice {
+  font-size: 0.7rem;
+  font-weight: 500;
   margin-bottom: 5px;
 }
+
 .cartScreenItemDetailsQtyInStock {
   font-size: 0.75rem;
   font-weight: 400;
@@ -160,10 +166,14 @@
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
   color: white;
-  background: var(--highlight-color);
-  cursor: pointer;
-  transition: 0.1s ease-out;
-}
-.cartScreenCheckoutBtn:hover {
+  box-shadow: inset 1px 2px 3px var(--button-highlight-color);
   background: var(--button-color);
+  cursor: pointer;
+}
+.cartScreenCheckoutBtn:active {
+  background: var(--button-click-color);
+  box-shadow: inset 2px 3px 3px #15181d;
+  text-shadow: 2px 2px 1px #15181d;
+  cursor: pointer;
+  transition: 0.1s ease;
 }

@@ -45,14 +45,14 @@ function FeaturedItems(props) {
       <ErrorBox error={error} />
     </div>
   ) : (
-    <section className={featuredItems.featuredItemsContainer}>
+    <section className={featuredItems.featuredItemsOuterContainer}>
       {props.mainTitle && (
         <h2 className={featuredItems.featuredItemsMainTitle}>
           {props.mainTitle}
         </h2>
       )}
 
-      <div className={featuredItems.featuredItemsImgContainer}>
+      <div className={featuredItems.featuredItemsInnerContainer}>
         {products.map((product) => (
           <Product product={product} key={product.slug}></Product>
         ))}

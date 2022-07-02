@@ -1,12 +1,18 @@
 import { Fragment, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import { Store } from '../../Store';
 import CartItem from './CartItem';
 import cartScreenStyle from './CartScreen.module.css';
 
 const CartScreen = () => {
+  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
+
+  const checkoutHandler = () => {
+    navigate('signin?redirect=/shipping');
+  };
 
   return (
     <Fragment>
@@ -15,12 +21,8 @@ const CartScreen = () => {
         <div className={cartScreenStyle.cartScreenItemsContainer}>
           <ul className={cartScreenStyle.cartScreenItems}>
             {cart.cartItems.length > 0 ? (
-              cart.cartItems.map((item) => (
-                <CartItem
-                  item={item}
-                  key={item._id}
-                  ctxDispatch={ctxDispatch}
-                />
+              cart.cartItems.map((item, index) => (
+                <CartItem item={item} key={index} ctxDispatch={ctxDispatch} />
               ))
             ) : (
               <li className={cartScreenStyle.cartScreenItemNone}>
@@ -30,13 +32,22 @@ const CartScreen = () => {
           </ul>
           <div className={cartScreenStyle.cartScreenTotal}>
             <h2>
-              Total: ({cart.cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
+              Total: (
+              {cart.cartItems
+                ? cart.cartItems.reduce((a, c) => a + c.quantity, 0)
+                : 0}{' '}
               items) : $
               {cart.cartItems
-                .reduce((a, c) => a + c.price * c.quantity, 0)
-                .toFixed(2)}
+                ? cart.cartItems
+                    .reduce((a, c) => a + c.price * c.quantity, 0)
+                    .toFixed(2)
+                : (0).toFixed(2)}
             </h2>
-            <button className={cartScreenStyle.cartScreenCheckoutBtn}>
+            <button
+              type="button"
+              className={cartScreenStyle.cartScreenCheckoutBtn}
+              onClick={checkoutHandler}
+            >
               Proceed to Checkout
             </button>
           </div>

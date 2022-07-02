@@ -1,15 +1,27 @@
-import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import CartQuantityBox from '../../components/QuantityBox/CartQuantityBox';
+import QuantityBox from '../../components/QuantityBox/QuantityBox';
 import cartScreenStyle from './CartScreen.module.css';
 
 const CartItem = (props) => {
   const [cartQty, setCartQty] = useState(props.item.quantity);
-  const [subTotal, setSubTotal] = useState(0);
 
-  useEffect(() => {
-    setSubTotal(cartQty * props.item.price);
-  }, [cartQty, props.item.price]);
+  const updateCartHandler = async (item, quantity) => {
+    const { data } = await axios.get(`/api/products/${props.item.slug}`);
+    if (data.quantityInStock < quantity) {
+      window.alert('Sorry, Product is out of stock');
+      return;
+    }
+    props.ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...props.item, quantity },
+    });
+  };
+
+  const removeItemHandler = (item) => {
+    props.ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: item });
+  };
 
   return (
     <li className={cartScreenStyle.cartScreenItem} key={props.item._id}>
@@ -28,13 +40,17 @@ const CartItem = (props) => {
           <p className={cartScreenStyle.cartScreenItemDetailsArtist}>
             {props.item.artist}
           </p>
-          <CartQuantityBox
+          <p className={cartScreenStyle.cartScreenItemDetailsDevice}>
+            {props.item.device} phone case
+          </p>
+          <QuantityBox
             value={cartQty}
             setQty={setCartQty}
             item={props.item}
             max={props.item.quantityInStock}
             key={props.item._id}
             ctxDispatch={props.ctxDispatch}
+            updateCartHandler={updateCartHandler}
             quantityBoxContainerStyle={
               cartScreenStyle.cartScreenItemDetailsQtyContainer
             }
@@ -43,17 +59,20 @@ const CartItem = (props) => {
               cartScreenStyle.cartScreenItemDetailsQtyInput
             }
           >
-            <button className={cartScreenStyle.cartScreenItemDelete}>
+            <button
+              className={cartScreenStyle.cartScreenItemDelete}
+              onClick={() => removeItemHandler(props.item)}
+            >
               {'  Delete'}
             </button>
-          </CartQuantityBox>
+          </QuantityBox>
         </div>
         <div className={cartScreenStyle.cartScreenItemDetail}>
           <p className={cartScreenStyle.cartScreenItemDetailsPrice}>
-            ${subTotal.toFixed(2)}
+            ${props.item.price.toFixed(2)}
           </p>
           <p className={cartScreenStyle.cartScreenItemDetailsQtyInStock}>
-            {props.item.quantityInStock - cartQty} Left in stock
+            {props.item.quantityInStock} in stock
           </p>
         </div>
       </div>
