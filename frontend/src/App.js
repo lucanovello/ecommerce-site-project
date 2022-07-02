@@ -7,6 +7,7 @@ import app from './App.module.css';
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import CartScreen from './pages/CartScreen/CartScreen';
+import Footer from './components/Footer/Footer';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -92,6 +93,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </main>
   );
 }

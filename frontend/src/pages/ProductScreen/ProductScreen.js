@@ -100,6 +100,7 @@ function ProductScreen(props) {
         device: device.current.value,
       },
     });
+    setProductQty(1);
   };
 
   return loading ? (

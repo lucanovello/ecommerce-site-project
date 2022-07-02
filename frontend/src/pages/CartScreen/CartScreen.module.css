@@ -88,18 +88,19 @@
 
 .cartScreenItemDetailsName {
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1;
   font-weight: 700;
   cursor: pointer;
 }
 .cartScreenItemDetailsArtist {
   cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .cartScreenItemDetailsDevice {
   font-size: 0.7rem;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .cartScreenItemDetailsQtyInStock {
