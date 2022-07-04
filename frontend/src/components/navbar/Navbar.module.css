@@ -85,7 +85,7 @@ a {
 }
 .searchBoxContainerLink:hover::after {
   background: var(--main-color);
-  width: 100%;
+  width: 90%;
 }
 
 .searchBoxContainerLink span {
