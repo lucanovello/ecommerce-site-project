@@ -8,6 +8,7 @@ import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import CartScreen from './pages/CartScreen/CartScreen';
 import Footer from './components/Footer/Footer';
+import SignInScreen from './pages/SignInScreen/SignInScreen';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -54,6 +55,7 @@ function App() {
               loading={loading}
               error={error}
               className={app.contentMargin}
+              headerTitle={`Luca Novello | This is a homepage ;D`}
             />
           }
           exact
@@ -63,6 +65,18 @@ function App() {
           element={
             <CartScreen
               data={data}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+              headerTitle={`Luca Novello | This is a cart page ;D`}
+            />
+          }
+          exact
+        />
+        <Route
+          path="/signin"
+          element={
+            <SignInScreen
               loading={loading}
               error={error}
               className={app.contentMargin}
@@ -78,6 +92,7 @@ function App() {
               loading={loading}
               error={error}
               className={app.contentMargin}
+              headerTitle={`Luca Novello | This is a products page ;D`}
             />
           }
         />

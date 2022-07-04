@@ -71,7 +71,7 @@
 
 .productQuantityBoxContainer {
   width: 100%;
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,14 +99,11 @@
 }
 
 .productDeviceContainer {
-  margin-bottom: 1vh;
+  width: 100%;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr 7fr;
   align-items: center;
-}
-
-.productDeviceContainer {
-  width: 100%;
 }
 
 .productDeviceLabel {
@@ -117,58 +114,74 @@
 }
 
 .productDevice {
-  max-width: 100%;
-  min-width: 220px;
-  height: 30px;
+  width: 100%;
+  height: 35px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
   text-align: center;
+  background: hsl(0, 0%, 95%);
+  box-shadow: inset 0px 0px 2px #838383;
+  cursor: pointer;
 }
 .productDeviceMainTitle {
-  font-family: 'Poppins';
-  text-align: center;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
 }
 .productDeviceTitle {
-  padding: 5px 0;
-  font-family: 'Poppins';
-  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
   text-transform: uppercase;
-  text-align: center;
-  color: rgb(77, 77, 77);
+  letter-spacing: 5px;
+  color: hsl(200, 10%, 60%);
 }
 
 .productDeviceOption {
+  font-family: 'Open Sans', 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
   text-align: left;
+  text-transform: capitalize;
+  color: black;
 }
 
 .productPrice {
-  margin-bottom: 1vh;
+  width: 100%;
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
+  text-align: right;
 }
 
 .productButton {
+  width: 100%;
   padding: 15px 25px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
+  font-family: 'Open Sans', 'Poppins', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  color: rgb(230, 230, 230);
+  border: var(--dashed-border);
+  border-radius: 10px;
   user-select: none;
-}
-.productButtonActive {
-  background: var(--button-color);
-  color: white;
-  box-shadow: inset 2px 2px 3px var(--button-highlight-color);
-  cursor: pointer;
-}
-.productButtonActive:active {
-  background: var(--button-click-color);
-  box-shadow: inset 2px 3px 3px #15181d;
-  text-shadow: 2px 2px 1px #15181d;
-  cursor: pointer;
   transition: 0.1s ease;
 }
+
+.productButtonActive {
+  background: linear-gradient(var(--button-click-color), var(--button-color));
+  cursor: pointer;
+}
+.productButtonActive:hover {
+  filter: brightness(1.3);
+}
+.productButtonActive:hover:active {
+  box-shadow: 0px 0px 5px var(--button-color);
+}
 .productButtonDisabled {
-  background: var(--button-hover-color);
+  background: var(--button-disabled-color);
+  box-shadow: inset 0px 0px 2px rgb(230, 230, 230);
+  color: white;
+  border: none;
   cursor: default;
 }

@@ -1,8 +1,12 @@
+import { Helmet } from 'react-helmet-async';
 import loadingBoxStyles from './LoadingBox.module.css';
 
 function LoadingBox() {
   return (
     <div className={loadingBoxStyles.LoadingBoxContainer}>
+      <Helmet>
+        <title>{'Loading...'}</title>
+      </Helmet>
       <div
         className={`${loadingBoxStyles.LoadingBox} ${loadingBoxStyles.LoadingBox1}`}
       ></div>

@@ -32,7 +32,7 @@ function Devices(props) {
             return (
               <optgroup
                 key={index}
-                label={`------- ${device.brand} -------`}
+                label={device.brand}
                 className={productScreenStyle.productDeviceTitle}
               >
                 {device.models.map((model, index) => {

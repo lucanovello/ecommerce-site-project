@@ -1,3 +1,28 @@
+/* VARIABLES */
+:root {
+  --g-ratio: 1.618;
+  --navbar-header-height: calc(25px + 1vh);
+  --navbar-height: calc((70px + 5vh));
+  --navbar-top-height: calc(var(--navbar-height) * 0.7);
+  --body_bg: #ffffff;
+  --main-color: #242424;
+  --highlight-color: #80a3bb;
+  --button-color: hsl(210, 100%, 15%);
+  --button-click-color: hsl(210, 90%, 25%);
+  --button-disabled-color: hsl(210, 0%, 90%);
+  --button-highlight-color: hsla(210, 40%, 75%, 0.6);
+  --dashed-border: 1px dashed white;
+  --cart-border-color: #d1d1d1;
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Abril Fatface', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
 *,
 *::before,
 *::after {
@@ -13,9 +38,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

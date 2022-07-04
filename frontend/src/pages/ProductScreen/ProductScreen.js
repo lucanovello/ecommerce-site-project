@@ -16,6 +16,7 @@ import Devices from './Devices';
 import { Store } from '../../Store';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import QuantityBox from '../../components/QuantityBox/QuantityBox';
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -108,11 +109,13 @@ function ProductScreen(props) {
   ) : error ? (
     <Fragment>
       <ErrorBox error={error} />
-
       <FeaturedItems mainTitle="Related Items" />
     </Fragment>
   ) : (
     <div className={productScreenStyle.productScreenContainer}>
+      <Helmet>
+        <title>{`${product.name} Phone Case`}</title>
+      </Helmet>
       <div className={productScreenStyle.productContainer}>
         <img
           className={productScreenStyle.productImage}
@@ -168,7 +171,11 @@ function ProductScreen(props) {
               onClick={() => isSubmitValid && addToCartHandler()}
               disabled={!isSubmitValid}
             >
-              {product.quantityInStock < 1 ? 'Out of Stock' : 'Add To Cart'}
+              {product.quantityInStock < 1
+                ? 'Out of Stock'
+                : !isSubmitValid
+                ? 'Please select a device'
+                : 'Add To Cart'}
             </button>
           </div>
         </div>

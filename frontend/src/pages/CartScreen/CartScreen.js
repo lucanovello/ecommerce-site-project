@@ -1,11 +1,12 @@
 import { Fragment, useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import { Store } from '../../Store';
 import CartItem from './CartItem';
 import cartScreenStyle from './CartScreen.module.css';
 
-const CartScreen = () => {
+const CartScreen = (props) => {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
@@ -16,6 +17,13 @@ const CartScreen = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>
+          {props.headerTitle
+            ? props.headerTitle
+            : 'Luca Novello | Ecommerce Website'}
+        </title>
+      </Helmet>
       <div className={cartScreenStyle.cartScreenContainer}>
         <h2 className={cartScreenStyle.cartScreenTitle}>Shopping Cart</h2>
         <div className={cartScreenStyle.cartScreenItemsContainer}>

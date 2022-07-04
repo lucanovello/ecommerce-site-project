@@ -24,7 +24,7 @@
 }
 
 .HeaderCloseContainer {
-  width: 1.5rem;
+  width: 1.2rem;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@
   cursor: pointer;
   font-family: sans-serif;
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   text-align: center;
   color: #242424;
   transition: 0.2 s ease;

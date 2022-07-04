@@ -4,6 +4,7 @@ import { MdOutlineShoppingBag, MdShoppingBag } from 'react-icons/md';
 import { RiHeartAddLine, RiPhoneFill } from 'react-icons/ri';
 import { useContext } from 'react';
 import { Store } from '../../Store';
+import { FaSearch } from 'react-icons/fa';
 
 function NavbarMenu() {
   const { state } = useContext(Store);
@@ -31,7 +32,7 @@ function NavbarMenu() {
           </Link>{' '}
           |
           <p>
-            <Link to="/" className={navbarStyle.searchBoxContainerLink}>
+            <Link to="/signin" className={navbarStyle.searchBoxContainerLink}>
               <span>Sign In</span>
             </Link>
             {' or '}
@@ -73,12 +74,12 @@ function NavbarMenu() {
           |
           <form className={navbarStyle.searchBoxContainer}>
             <input
-              type="text"
+              type="search"
               className={navbarStyle.searchBox}
-              placeholder="Search"
+              placeholder="Search..."
             ></input>
             <button className={navbarStyle.searchButton}>
-              <span className={navbarStyle.searchButtonIcon}>&#9906;</span>
+              <FaSearch className={navbarStyle.searchButtonIcon} />
             </button>
           </form>
         </div>

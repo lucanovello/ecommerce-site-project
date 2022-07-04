@@ -1,9 +1,3 @@
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* font-family: 'Poppins', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-/* font-family: 'Abril Fatface', cursive; */
-
 a {
   text-decoration: none;
   color: inherit;
@@ -12,12 +6,14 @@ a {
 
 .Navbar {
   width: 100%;
-  /* min-width: 700px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
+  position: sticky;
+  top: 0;
   font-family: 'Poppins', sans-serif;
+  z-index: 99;
 }
 
 .NavbarTop {
@@ -150,7 +146,7 @@ a {
 .searchBox {
   width: 200px;
   margin-left: 2%;
-  padding: 1.2vh 1%;
+  padding: 1.2vh 5%;
   height: 100%;
   border: none;
   border-bottom: 1px solid rgb(220, 220, 220);
@@ -164,9 +160,9 @@ a {
   outline: none;
 }
 .searchButton {
-  width: 20px;
+  width: 25px;
   height: 100%;
-  padding: 1.2vh 1%;
+  padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,14 +172,15 @@ a {
   background-color: rgb(245, 245, 245);
   cursor: pointer;
 }
+
 .searchButtonIcon {
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--highlight-color);
-  transform: rotate(-45deg);
-  transition: 0.1s ease;
+  color: var(--button-highlight-color);
+  transform: rotate(0deg);
+  transition: 0.2s ease;
 }
-.searchButtonIcon:hover {
+.searchButton:hover .searchButtonIcon {
   color: var(--main-color);
 }
 
@@ -212,6 +209,7 @@ a {
   text-align: center;
   letter-spacing: calc(1px / var(--g-ratio));
   color: white;
+  text-shadow: 1px 2px 4px black;
 }
 
 .NavbarMenuOptions li {

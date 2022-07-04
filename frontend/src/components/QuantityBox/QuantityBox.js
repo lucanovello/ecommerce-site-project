@@ -1,4 +1,5 @@
 import quantityBoxStyle from './QuantityBox.module.css';
+import { FaMinus, FaPlus } from 'react-icons/fa';
 
 const QuantityBox = (props) => {
   return (
@@ -23,7 +24,7 @@ const QuantityBox = (props) => {
           }}
           disabled={props.value <= 1}
         >
-          -
+          <FaMinus />
         </button>
         <input
           type="number"
@@ -52,7 +53,7 @@ const QuantityBox = (props) => {
           }}
           disabled={props.value >= props.item.quantityInStock}
         >
-          +
+          <FaPlus />
         </button>
       </div>
       {props.children}

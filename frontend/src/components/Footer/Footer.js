@@ -1,44 +1,75 @@
 import footerStyle from './Footer.module.css';
-import { IconName } from 'react-icons/bs';
+import {
+  RiFacebookFill,
+  RiTwitterFill,
+  RiLinkedinFill,
+  RiInstagramLine,
+  RiGithubFill,
+  RiGithubLine,
+} from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <div className={footerStyle.footerContainer}>
       <div className={footerStyle.footerLinksContainer}>
-        <div className={footerStyle.footerLinksColumnContainer}>
-          <ul>
-            <h3 className={footerStyle.footerLinksTitle}>Featured</h3>
-            <li>Girl With A Pearl Earring</li>
-            <li>The Desperate Man</li>
-            <li>Mona Lisa</li>
-            <li>The Great Wave Off Kanagawa</li>
-            <li>The Kiss</li>
-          </ul>
+        <div className={footerStyle.footerLogo}>
+          <Link to="/">{'Logo'}</Link>
         </div>
-        <div className={footerStyle.footerLinksColumnContainer}>
-          <ul>
-            <h3 className={footerStyle.footerLinksTitle}>Best Sellers</h3>
-            <li>The Great Wave Off Kanagawa</li>
-            <li>The Desperate Man</li>
-            <li>The Kiss</li>
-            <li>Jeanne Hebuterne With Hat And Necklace</li>
-            <li>Mona Lisa</li>
-          </ul>
+        <div className={footerStyle.footerLinksTitle}>{'Links'}</div>
+        <div className={footerStyle.footerAbout}>
+          <p>
+            Sit amet mauris commodo quis imperdiet massa tincidunt nunc
+            pulvinar. Et ligula ullamcorper malesuada proin libero nunc
+            consequat interdum varius. Accumsan tortor posuere ac ut consequat
+            semper. Velit dignissim sodales ut eu sem integer vitae.
+          </p>
+          <p>
+            Odio morbi quis commodo odio aenean sed adipiscing. Tempor orci eu
+            lobortis elementum nibh. Sit amet venenatis urna cursus eget nunc
+            scelerisque viverra. Non pulvinar neque laoreet suspendisse interdum
+            consectetur libero id faucibus.
+          </p>
         </div>
-        <div className={footerStyle.footerLinksColumnContainer}>
+        <div className={footerStyle.footerLinksList}>
           <ul>
-            <h3 className={footerStyle.footerLinksTitle}>Artists</h3>
-            <li>Leonardo Da Vinci</li>
-            <li>Gustave Courbet</li>
-            <li>Jan Vermeer</li>
-            <li>Gustav Klimt</li>
-            <li>Katsushika Hokusai</li>
+            <li>Featured</li>
+            <li>Best Sellers</li>
+            <li>New Arrivals</li>
+            <li>Trending</li>
+            <li>Artists</li>
+            <li>Genres</li>
           </ul>
         </div>
       </div>
       <div className={footerStyle.footerCopyright}>
-        Copyright &copy; {new Date().getFullYear()}
-        {' | Luca Novello | All rights Reserved'}
+        <p className={footerStyle.footerCopyrightText}>
+          {' '}
+          Copyright &copy; {year}
+          {' | '}
+          <span>Luca Novello</span>
+          {' | '}All rights Reserved
+        </p>
+        <p className={footerStyle.footerCopyrightSocial}>
+          {' '}
+          <RiFacebookFill
+            className={`${footerStyle.footerCopyrightSocialLink} ${footerStyle.footerCopyrightSocialFacebook}`}
+          />
+          <RiTwitterFill
+            className={`${footerStyle.footerCopyrightSocialLink} ${footerStyle.footerCopyrightSocialTwitter}`}
+          />
+          <RiInstagramLine
+            className={`${footerStyle.footerCopyrightSocialLink} ${footerStyle.footerCopyrightSocialInstagram}`}
+          />
+          <RiLinkedinFill
+            className={`${footerStyle.footerCopyrightSocialLink} ${footerStyle.footerCopyrightSocialLinkedin}`}
+          />
+          <RiGithubFill
+            className={`${footerStyle.footerCopyrightSocialLink} ${footerStyle.footerCopyrightSocialGithub}`}
+          />
+        </p>
       </div>
     </div>
   );
