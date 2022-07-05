@@ -19,7 +19,7 @@ function Header(props) {
         className={headerStyling.HeaderCloseContainer}
         onClick={() => setIsHeaderOpen(false)}
       >
-        <RiCloseLine />
+        <RiCloseLine className={headerStyling.HeaderCloseIcon} />
       </button>
     </header>
   );

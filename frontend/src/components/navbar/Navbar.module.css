@@ -4,7 +4,7 @@ a {
   cursor: pointer;
 }
 
-.Navbar {
+.navbar {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,8 +16,8 @@ a {
   z-index: 99;
 }
 
-.NavbarTop {
-  padding: 1vh calc(10px + 5%);
+.navbarTop {
+  padding: 2vh 5%;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -26,27 +26,27 @@ a {
   gap: 50px;
 }
 
-.NavbarTopHeaderOpen {
+.navbarTopHeaderOpen {
   height: var(--navbar-top-height);
 }
-.NavbarTopHeaderClosed {
+.navbarTopHeaderClosed {
   height: var(--navbar-top-height);
 }
 
-.NavbarLogo {
+.navbarLogo {
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.NavbarLogo h1 {
+.navbarLogo h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 48px;
   font-weight: 200;
   line-height: 1;
 }
 
-.NavbarInfo {
+.navbarInfoContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,13 +59,21 @@ a {
   gap: 10px;
 }
 
-.NavbarInfoLine {
+.navbarInfoLine {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  justify-self: center;
   font-weight: 300;
-  gap: calc(10px + 1%);
+}
+.separators {
+  margin: 0 6px;
+}
+
+.customerServiceContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2px;
 }
 
 .searchBoxContainerLink {
@@ -79,13 +87,14 @@ a {
   width: 0;
   height: 1px;
   display: block;
-  bottom: 0;
+  position: relative;
+  bottom: 1px;
   background: var(--main-color);
   transition: 0.2s ease-in-out;
 }
 .searchBoxContainerLink:hover::after {
+  width: 100%;
   background: var(--main-color);
-  width: 90%;
 }
 
 .searchBoxContainerLink span {
@@ -94,20 +103,28 @@ a {
   gap: 3px;
 }
 
-.searchBoxIcons {
-  font-size: 1.1rem;
+.navbarIcons {
+  font-size: 1.5em;
+  line-height: 1.2;
+  color: var(--main-color);
+  position: relative;
+}
+.navbarIconsShopping {
+  font-size: 1.5em;
+  line-height: 1.2;
+  color: var(--main-color);
   position: relative;
 }
 
 .shoppingCartQuantityWrapper {
-  position: absolute;
+  display: flex;
+  position: relative;
 }
 
 .shoppingCartQuantity {
-  box-sizing: content-box;
-  width: 1rem;
+  width: 16px;
   aspect-ratio: 1;
-  padding: 0.02rem;
+  box-sizing: content-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,16 +133,11 @@ a {
   color: white;
   border: 1px solid white;
   border-radius: 50%;
-  position: relative;
-  right: 10px;
-  bottom: 15px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   background: var(--highlight-color);
   z-index: 999;
-}
-
-.NavbarInfoMiddle {
-  padding: calc(5px + 1vh) 0;
-  font-weight: 600;
 }
 
 .searchBoxContainer {
@@ -151,7 +163,7 @@ a {
   border: none;
   border-bottom: 1px solid rgb(220, 220, 220);
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: 400;
   color: var(--main-color);
   background-color: rgb(245, 245, 245);
@@ -174,7 +186,7 @@ a {
 }
 
 .searchButtonIcon {
-  font-size: 1.1rem;
+  font-size: 1.2em;
   font-weight: 400;
   color: var(--button-highlight-color);
   transform: rotate(0deg);
@@ -184,7 +196,7 @@ a {
   color: var(--main-color);
 }
 
-.NavbarMainMenu {
+.navbarMainMenu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,7 +207,7 @@ a {
   z-index: 999;
 }
 
-.NavbarMenuOptions {
+.navbarMenuOptions {
   width: 100%;
   height: 100%;
   padding: 0 calc(5px + 15%);
@@ -212,14 +224,14 @@ a {
   text-shadow: 1px 2px 4px black;
 }
 
-.NavbarMenuOptions li {
+.navbarMenuOptions li {
   width: 80%;
   height: 100%;
   padding: 1vh 10px;
   cursor: pointer;
   white-space: nowrap;
 }
-.NavbarMenuOptions li:hover {
+.navbarMenuOptions li:hover {
   animation: pulse 0.6s ease infinite alternate;
   animation: name duration timing-function delay iteration-count direction
     fill-mode;

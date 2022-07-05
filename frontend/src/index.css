@@ -7,6 +7,7 @@
   --body_bg: #ffffff;
   --main-color: #242424;
   --highlight-color: #80a3bb;
+  --link-color: hsl(210, 100%, 40%);
   --button-color: hsl(210, 100%, 15%);
   --button-click-color: hsl(210, 90%, 25%);
   --button-disabled-color: hsl(210, 0%, 90%);

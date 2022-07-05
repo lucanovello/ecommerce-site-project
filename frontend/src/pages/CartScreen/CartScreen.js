@@ -12,7 +12,7 @@ const CartScreen = (props) => {
   const { cart } = state;
 
   const checkoutHandler = () => {
-    navigate('signin?redirect=/shipping');
+    navigate('/signin?redirect=/shipping');
   };
 
   return (
@@ -34,29 +34,40 @@ const CartScreen = (props) => {
               ))
             ) : (
               <li className={cartScreenStyle.cartScreenItemNone}>
-                No items in cart.
+                {'Your cart is empty.'}
               </li>
             )}
           </ul>
           <div className={cartScreenStyle.cartScreenTotal}>
             <h2>
-              Total: (
-              {cart.cartItems
-                ? cart.cartItems.reduce((a, c) => a + c.quantity, 0)
-                : 0}{' '}
-              items) : $
-              {cart.cartItems
-                ? cart.cartItems
-                    .reduce((a, c) => a + c.price * c.quantity, 0)
-                    .toFixed(2)
-                : (0).toFixed(2)}
+              {'Subtotal:'}
+              <p>
+                {cart.cartItems
+                  ? `$${cart.cartItems
+                      .reduce((a, c) => a + c.price * c.quantity, 0)
+                      .toFixed(2)}`
+                  : (0).toFixed(2)}
+              </p>
             </h2>
             <button
               type="button"
-              className={cartScreenStyle.cartScreenCheckoutBtn}
+              className={`${
+                cart.cartItems.length > 0
+                  ? cartScreenStyle.cartScreenCheckoutBtnActive
+                  : cartScreenStyle.cartScreenCheckoutBtnDisabled
+              } ${cartScreenStyle.cartScreenCheckoutBtn}`}
               onClick={checkoutHandler}
+              disabled={cart.cartItems.length < 1}
             >
-              Proceed to Checkout
+              {cart.cartItems.length > 0
+                ? `Proceed to Checkout`
+                : 'Cart is Empty'}
+              <p>
+                {`(${cart.cartItems.reduce(
+                  (a, c) => a + c.quantity,
+                  0
+                )} items)`}
+              </p>
             </button>
           </div>
         </div>

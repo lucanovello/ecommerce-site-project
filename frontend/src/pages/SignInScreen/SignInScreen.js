@@ -5,7 +5,7 @@ import signInScreenStyle from './SignInScreen.module.css';
 const SignInScreen = () => {
   const { search } = useLocation();
   const redirectUrl = new URLSearchParams(search).get('redirect');
-  const redirect = redirectUrl ? redirectUrl : '/';
+  const redirect = redirectUrl ? redirectUrl : '/signin';
 
   return (
     <div className={signInScreenStyle.signInScreenContainer}>

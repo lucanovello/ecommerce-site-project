@@ -159,13 +159,13 @@
   width: 100%;
   padding: 15px 25px;
   font-family: 'Open Sans', 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: rgb(230, 230, 230);
-  border: var(--dashed-border);
+  border: none;
   border-radius: 10px;
   user-select: none;
-  transition: 0.1s ease;
+  transition: 0.2s ease-out;
 }
 
 .productButtonActive {

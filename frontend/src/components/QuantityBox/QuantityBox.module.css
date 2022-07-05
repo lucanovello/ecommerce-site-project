@@ -1,18 +1,20 @@
 .quantityBoxInputContainer {
-  height: 30px;
+  height: 27px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   user-select: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .quantityBoxInput {
-  width: 25px;
+  width: 27px;
   height: 100%;
   border: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+
   text-align: center;
   background: hsl(0, 0%, 95%);
   box-shadow: inset 0px 0px 2px #838383;
@@ -23,7 +25,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* outline: 1px solid var(--button-color); */
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   font-weight: 400;
@@ -46,7 +47,7 @@
 }
 
 .quantityBoxInputButtonDisabled {
-  border: 1px solid var(--button-disabled-color);
+  border: none;
   background: var(--button-disabled-color);
   color: white;
   box-shadow: inset 0px 0px 2px rgb(220, 220, 220);
@@ -54,10 +55,10 @@
 }
 
 .quantityBoxInputButtonMinus {
-  border-radius: 5px 0 0 5px;
+  border-radius: 2px 0 0 2px;
 }
 .quantityBoxInputButtonPlus {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 2px 2px 0;
 }
 
 .removeArrows::-webkit-inner-spin-button {

@@ -26,7 +26,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         product: action.payload.product,
-        devices: action.payload.devices,
         loading: false,
         error: false,
       };
@@ -44,9 +43,8 @@ function ProductScreen(props) {
   const device = useRef(null);
   const params = useParams();
   const { slug } = params;
-  const [{ loading, error, product, devices }, dispatch] = useReducer(reducer, {
+  const [{ loading, error, product }, dispatch] = useReducer(reducer, {
     product: [],
-    devices: [],
     loading: true,
     error: '',
   });
@@ -55,9 +53,14 @@ function ProductScreen(props) {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get(`/api/products/${slug}`);
-        dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
+
+        dispatch({
+          type: 'FETCH_SUCCESS',
+          payload: result.data,
+        });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        console.log(err);
       }
     };
     fetchData();
@@ -78,7 +81,7 @@ function ProductScreen(props) {
   const { cart } = state;
 
   const addToCartHandler = async () => {
-    const itemExists = cart.cartItems.find((x) => x._id === product._id);
+    const itemExists = cart.cartItems.find((x) => x.slug === product.slug);
     const quantity = itemExists ? itemExists.quantity + productQty : productQty;
     const { data } = await axios.get(`/api/products/${slug}`);
     if (data.quantityInStock < quantity) {
@@ -94,7 +97,7 @@ function ProductScreen(props) {
       type: 'CART_ADD_ITEM',
       payload: {
         ...product,
-        _id: `${product.slug}_${device.current.value
+        sku: `${product.slug}_${device.current.value
           .replace(/\s+/g, '-')
           .toLowerCase()}`,
         quantity: quantity,
@@ -152,7 +155,7 @@ function ProductScreen(props) {
               </p>
             </div>
             <Devices
-              devices={devices}
+              devices={props.data.devices}
               className={productScreenStyle.productDeviceContainer}
               refValue={device}
               setIsDeviceValid={setIsDeviceValid}

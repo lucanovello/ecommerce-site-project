@@ -2,8 +2,8 @@ import navbarStyle from './Navbar.module.css';
 
 function NavbarMenu() {
   return (
-    <div className={navbarStyle.NavbarMainMenu}>
-      <ul className={navbarStyle.NavbarMenuOptions}>
+    <div className={navbarStyle.navbarMainMenu}>
+      <ul className={navbarStyle.navbarMenuOptions}>
         <li>Featured</li>
         <li>Best Sellers</li>
         <li>New Arrivals</li>

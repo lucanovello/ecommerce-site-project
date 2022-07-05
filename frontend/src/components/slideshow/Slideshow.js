@@ -5,7 +5,7 @@ function Slideshow(props) {
     <div
       className={slideshowStyles.slideshowContainer}
       style={{
-        backgroundImage: `url(${props.data.image})`,
+        backgroundImage: `url(/images/fashion-2.jpg)`,
       }}
     >
       <div className={slideshowStyles.slideshowText}>

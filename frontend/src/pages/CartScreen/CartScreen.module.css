@@ -1,10 +1,10 @@
 .cartScreenContainer {
   width: 100%;
-  min-width: 900px;
-  margin-bottom: 10vh;
   padding: 5vh 5%;
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
 }
 
 .cartScreenTitle {
@@ -26,8 +26,8 @@
 }
 
 .cartScreenItems {
-  border: 1px solid #d1d1d1;
-  /* border-radius: 5px; */
+  border: 1px dashed #d4d4d4;
+  border-radius: 5px;
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -38,14 +38,11 @@
 .cartScreenItem {
   width: 100%;
   height: 100%;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  padding-left: 2%;
-  padding-right: 5%;
+  padding: 1vh 3% 1vh 2%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px dashed #dddddd;
 }
 
 .cartScreenItem:last-child {
@@ -53,11 +50,14 @@
 }
 
 .cartScreenItemNone {
-  height: 90%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #242424;
 }
 
 .cartScreenItemImage {
@@ -76,39 +76,39 @@
   display: flex;
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1em;
   font-weight: 300;
 }
 
 .cartScreenItemDetail {
   align-self: flex-start;
   text-align: right;
-  line-height: 1.25;
 }
 
 .cartScreenItemDetailsName {
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 1.3em;
   font-weight: 700;
+  align-self: flex-end;
   cursor: pointer;
 }
 .cartScreenItemDetailsArtist {
+  font-size: 1em;
+  align-self: flex-start;
   cursor: pointer;
-  margin-bottom: 3px;
 }
 
 .cartScreenItemDetailsDevice {
-  font-size: 0.7rem;
+  font-size: 1em;
   font-weight: 500;
-  margin-bottom: 3px;
 }
 
 .cartScreenItemDetailsQtyInStock {
-  font-size: 0.75rem;
+  font-size: 1em;
   font-weight: 400;
   color: green;
 }
 .cartScreenItemDetailsQtyContainer {
+  margin-top: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -116,6 +116,7 @@
 }
 .cartScreenItemDetailsQty {
   margin-right: 5px;
+  font-size: 1em;
   font-weight: 400;
   text-align: center;
 }
@@ -142,9 +143,11 @@
 }
 
 .cartScreenItemDetailsPrice {
+  margin-top: 2px;
   align-self: flex-start;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1;
+  font-weight: 400;
 }
 
 .cartScreenTotal {
@@ -155,28 +158,49 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--cart-border-color);
+  border: 1px dashed #d4d4d4;
+  border-radius: 5px;
   text-align: center;
   gap: 1vh;
+}
+
+.cartScreenTotal p {
+  font-weight: 400;
 }
 
 .cartScreenCheckoutBtn {
   width: 100%;
   padding: 15px 25px;
   font-family: 'Open Sans', 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: rgb(230, 230, 230);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   user-select: none;
-  background: linear-gradient(var(--button-click-color), var(--button-color));
-  cursor: pointer;
   transition: 0.1s ease;
 }
-.cartScreenCheckoutBtn:hover {
+
+.cartScreenCheckoutBtnActive {
+  background: linear-gradient(var(--button-click-color), var(--button-color));
+  cursor: pointer;
+}
+.cartScreenCheckoutBtnActive:hover {
   filter: brightness(1.3);
 }
-.cartScreenCheckoutBtn:hover:active {
+.cartScreenCheckoutBtnActive:hover:active {
   box-shadow: 0px 0px 5px var(--button-color);
+}
+
+.cartScreenCheckoutBtnDisabled {
+  background: var(--button-disabled-color);
+  box-shadow: inset 0px 0px 2px rgb(230, 230, 230);
+  color: white;
+  border: none;
+  cursor: default;
+}
+.cartScreenCheckoutBtn p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(207, 207, 207);
 }

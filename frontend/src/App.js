@@ -34,7 +34,7 @@ function App() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api');
+        const result = await axios.get('/api/seed');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
@@ -51,7 +51,7 @@ function App() {
           path="/"
           element={
             <Home
-              data={data}
+              data={data.createdProducts}
               loading={loading}
               error={error}
               className={app.contentMargin}
@@ -88,7 +88,7 @@ function App() {
           path="/products"
           element={
             <Products
-              data={data}
+              data={data.createdProducts}
               loading={loading}
               error={error}
               className={app.contentMargin}
