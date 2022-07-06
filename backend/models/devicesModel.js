@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
 const devicesSchema = new mongoose.Schema({
-  brand: { type: String, unique: true },
-  models: [{ type: String, unique: true }],
+  brand: { type: String },
+  models: [{ type: String }],
 });
 
 const Devices = mongoose.model('Devices', devicesSchema);

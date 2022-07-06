@@ -1,15 +1,12 @@
-import { Fragment, useContext } from 'react';
+import { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
-import { Store } from '../../Store';
 import CartItem from './CartItem';
 import cartScreenStyle from './CartScreen.module.css';
 
 const CartScreen = (props) => {
   const navigate = useNavigate();
-  const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { cart } = state;
 
   const checkoutHandler = () => {
     navigate('/signin?redirect=/shipping');
@@ -28,9 +25,13 @@ const CartScreen = (props) => {
         <h2 className={cartScreenStyle.cartScreenTitle}>Shopping Cart</h2>
         <div className={cartScreenStyle.cartScreenItemsContainer}>
           <ul className={cartScreenStyle.cartScreenItems}>
-            {cart.cartItems.length > 0 ? (
-              cart.cartItems.map((item, index) => (
-                <CartItem item={item} key={index} ctxDispatch={ctxDispatch} />
+            {props.cart.cartItems.length > 0 ? (
+              props.cart.cartItems.map((item) => (
+                <CartItem
+                  item={item}
+                  key={item.sku}
+                  ctxDispatch={props.ctxDispatch}
+                />
               ))
             ) : (
               <li className={cartScreenStyle.cartScreenItemNone}>
@@ -42,8 +43,8 @@ const CartScreen = (props) => {
             <h2>
               {'Subtotal:'}
               <p>
-                {cart.cartItems
-                  ? `$${cart.cartItems
+                {props.cart.cartItems
+                  ? `$${props.cart.cartItems
                       .reduce((a, c) => a + c.price * c.quantity, 0)
                       .toFixed(2)}`
                   : (0).toFixed(2)}
@@ -52,18 +53,18 @@ const CartScreen = (props) => {
             <button
               type="button"
               className={`${
-                cart.cartItems.length > 0
+                props.cart.cartItems.length > 0
                   ? cartScreenStyle.cartScreenCheckoutBtnActive
                   : cartScreenStyle.cartScreenCheckoutBtnDisabled
               } ${cartScreenStyle.cartScreenCheckoutBtn}`}
               onClick={checkoutHandler}
-              disabled={cart.cartItems.length < 1}
+              disabled={props.cart.cartItems.length < 1}
             >
-              {cart.cartItems.length > 0
+              {props.cart.cartItems.length > 0
                 ? `Proceed to Checkout`
                 : 'Cart is Empty'}
               <p>
-                {`(${cart.cartItems.reduce(
+                {`(${props.cart.cartItems.reduce(
                   (a, c) => a + c.quantity,
                   0
                 )} items)`}

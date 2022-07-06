@@ -1,7 +1,6 @@
 .footerContainer {
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
   width: 100%;
+  height: 100%;
   padding: 3vh 10% 2vh;
   display: flex;
   flex-direction: column;
@@ -9,6 +8,8 @@
   align-items: center;
   border-top: var(--dashed-border);
   background: var(--main-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
 }
 
 .footerLogo {
@@ -82,28 +83,110 @@
   gap: 5px;
 }
 .footerCopyrightText span {
+  color: #8a8a8a;
   cursor: pointer;
+  animation: secret 6s ease-in-out 2s infinite;
 }
 .footerCopyrightText span:hover {
-  animation: pulse 1s ease infinite, party 1s ease infinite;
+  animation: none;
 }
 
-@keyframes pulse {
+@keyframes secret {
   0% {
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
   }
-  35% {
-    color: white;
-    text-shadow: 0 0 10px white;
+  2% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
   }
-  50% {
+  5% {
     color: #8a8a8a;
-    text-shadow: 0 0 1px #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
   }
-  65% {
-    color: white;
-    text-shadow: 0 0 10px white;
+  7% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  10% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  12% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  15% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  17% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  19% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  33% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  35% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  37% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  51% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  53% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  55% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  69% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  71% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  73% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  75% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  78% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  80% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  83% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  85% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  88% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
   }
   100% {
     color: #8a8a8a;
@@ -130,7 +213,8 @@
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(51, 51, 51, 0);
-  transition: 0.1s ease, transform 0.1s ease-out, color 0.5s linear;
+  transition: 0.1s ease-out, transform 0.1s ease-out,
+    color 0.2s ease-in-out 0.05s;
 }
 .footerCopyrightSocialLink:hover {
   top: -0px;
@@ -165,6 +249,7 @@
 
 .footerCopyrightSocialGithub {
   padding: 2px;
+  color: #414141;
 }
 .footerCopyrightSocialGithub:hover {
   color: black;

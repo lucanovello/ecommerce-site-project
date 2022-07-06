@@ -17,6 +17,7 @@ import { Store } from '../../Store';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import QuantityBox from '../../components/QuantityBox/QuantityBox';
 import { Helmet } from 'react-helmet-async';
+import { getError } from '../../utils';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -48,18 +49,18 @@ function ProductScreen(props) {
     loading: true,
     error: '',
   });
+
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get(`/api/products/${slug}`);
-
         dispatch({
           type: 'FETCH_SUCCESS',
           payload: result.data,
         });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
         console.log(err);
       }
     };

@@ -1,14 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home.js';
 import Products from './pages/Products/Products.js';
 import ProductScreen from './pages/ProductScreen/ProductScreen.js';
 import app from './App.module.css';
-import { useEffect, useReducer } from 'react';
+import { useContext, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import CartScreen from './pages/CartScreen/CartScreen';
 import Footer from './components/Footer/Footer';
 import SignInScreen from './pages/SignInScreen/SignInScreen';
+import { Store } from './Store';
+import ShippingScreen from './pages/ShippingScreen/ShippingScreen';
+import SignUpScreen from './pages/SignInScreen/SignUpScreen';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -24,6 +29,8 @@ const reducer = (state, action) => {
 };
 
 function App() {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart, userInfo } = state;
   const [{ loading, error, data }, dispatch] = useReducer(reducer, {
     data: [],
     loading: true,
@@ -45,7 +52,8 @@ function App() {
 
   return (
     <main className={app.App}>
-      <Navbar />
+      <ToastContainer position="bottom-center" limit={1} />
+      <Navbar userInfo={userInfo} />
       <Routes>
         <Route
           path="/"
@@ -56,30 +64,6 @@ function App() {
               error={error}
               className={app.contentMargin}
               headerTitle={`Luca Novello | This is a homepage ;D`}
-            />
-          }
-          exact
-        />
-        <Route
-          path="/cart"
-          element={
-            <CartScreen
-              data={data}
-              loading={loading}
-              error={error}
-              className={app.contentMargin}
-              headerTitle={`Luca Novello | This is a cart page ;D`}
-            />
-          }
-          exact
-        />
-        <Route
-          path="/signin"
-          element={
-            <SignInScreen
-              loading={loading}
-              error={error}
-              className={app.contentMargin}
             />
           }
           exact
@@ -106,6 +90,58 @@ function App() {
               className={app.contentMargin}
             />
           }
+        />
+        <Route
+          path="/cart"
+          element={
+            <CartScreen
+              data={data}
+              cart={cart}
+              ctxDispatch={ctxDispatch}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+              headerTitle={`Luca Novello | This is a cart page ;D`}
+            />
+          }
+          exact
+        />
+        <Route
+          path="/signup"
+          element={
+            <SignUpScreen
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+            />
+          }
+          exact
+        />
+        <Route
+          path="/signin"
+          element={
+            <SignInScreen
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+            />
+          }
+          exact
+        />
+        <Route
+          path="/shipping"
+          element={
+            <ShippingScreen
+              data={data}
+              cart={cart}
+              ctxDispatch={ctxDispatch}
+              loading={loading}
+              error={error}
+              className={app.contentMargin}
+              headerTitle={`Luca Novello | This is a cart page ;D`}
+            />
+          }
+          exact
         />
       </Routes>
       <Footer />

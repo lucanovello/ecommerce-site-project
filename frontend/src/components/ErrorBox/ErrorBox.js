@@ -8,7 +8,7 @@ function ErrorBox(props) {
       <Helmet>
         <title>{'Top Secret Area | Authorized Personnel Only!'}</title>
       </Helmet>
-      {'Sorry, product not found  '}
+      {props.error}
       <FaRegFrownOpen />
     </div>
   );

@@ -7,22 +7,29 @@ import signInScreenStyle from './SignInScreen.module.css';
 import { Store } from '../../Store';
 import { getError } from '../../utils';
 
-const SignInScreen = () => {
+const SignUpScreen = () => {
   const navigate = useNavigate();
   const { search } = useLocation();
   const redirectUrl = new URLSearchParams(search).get('redirect');
   const redirect = redirectUrl ? redirectUrl : '/';
 
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match');
+      return;
+    }
     try {
-      const { data } = await Axios.post('/api/users/signin', {
+      const { data } = await Axios.post('/api/users/signup', {
+        name,
         email,
         password,
       });
@@ -43,14 +50,29 @@ const SignInScreen = () => {
   return (
     <div className={signInScreenStyle.signInScreenContainer}>
       <Helmet>
-        <title>Sign In</title>
+        <title>Sign Up</title>
       </Helmet>
 
       <form
         className={signInScreenStyle.signInContainer}
         onSubmit={onSubmitHandler}
       >
-        <div className={signInScreenStyle.signInTitle}>Sign In</div>
+        <div className={signInScreenStyle.signInTitle}>Sign Up</div>
+        <div className={signInScreenStyle.signInEmailContainer}>
+          <label
+            htmlFor={'name'}
+            className={signInScreenStyle.signInEmailLabel}
+          >
+            Name
+          </label>
+          <input
+            type={'text'}
+            id={'name'}
+            className={signInScreenStyle.signInEmailInput}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
         <div className={signInScreenStyle.signInEmailContainer}>
           <label
             htmlFor={'email'}
@@ -82,16 +104,32 @@ const SignInScreen = () => {
             required
           />
         </div>
+        <div className={signInScreenStyle.signInPasswordContainer}>
+          <label
+            htmlFor={'confirmPassword'}
+            className={signInScreenStyle.signInPasswordLabel}
+          >
+            Confirm Password
+          </label>
+          <input
+            type={'password'}
+            id={'confirmPassword'}
+            className={signInScreenStyle.signInPasswordInput}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            autoComplete={'off'}
+            required
+          />
+        </div>
 
         <button type="submit" className={signInScreenStyle.signInButton}>
-          Sign In
+          Create Account
         </button>
       </form>
       <div className={signInScreenStyle.signInCreateNew}>
-        {'New customer? '}
-        <Link to={`/signup?redirect=${redirect}`}>
+        {'Already have an account? '}
+        <Link to={`/signin?redirect=${redirect}`}>
           <div className={signInScreenStyle.signInCreateNewLink}>
-            {'Create an account'}
+            {'Sign In'}
           </div>
         </Link>
       </div>
@@ -99,4 +137,4 @@ const SignInScreen = () => {
   );
 };
 
-export default SignInScreen;
+export default SignUpScreen;

@@ -1,6 +1,7 @@
 .featuredItemsOuterContainer {
   width: 100%;
   padding: 5vh calc(20px + 3%);
+  background: white;
 }
 
 .featuredItemsMainTitle {
@@ -21,7 +22,7 @@
   justify-content: center;
   align-items: center;
   justify-self: center;
-  column-gap: 0.5%;
+  gap: 0.5%;
 }
 
 @media (max-width: 840px) {

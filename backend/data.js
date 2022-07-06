@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Luca',
+      email: 'admin@lucanovello.com',
+      password: bcrypt.hashSync('zP^8n*YzDdw{M=47'),
+      isAdmin: true,
+    },
+    {
+      name: 'Guest',
+      email: 'guest@gmail.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       slug: 'the-great-wave-off-kanagawa',

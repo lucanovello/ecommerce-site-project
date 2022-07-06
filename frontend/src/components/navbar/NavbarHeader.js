@@ -2,13 +2,19 @@ import navbarStyle from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { MdOutlineShoppingBag, MdShoppingBag } from 'react-icons/md';
 import { RiHeartAddLine, RiPhoneFill } from 'react-icons/ri';
-import { Fragment, useContext } from 'react';
+import { useContext } from 'react';
 import { Store } from '../../Store';
 import { FaSearch } from 'react-icons/fa';
 
-function NavbarMenu() {
-  const { state } = useContext(Store);
+function NavbarMenu(props) {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
+
+  const signoutHandler = () => {
+    ctxDispatch({ type: 'USER_SIGNOUT' });
+    localStorage.removeItem('userInfo');
+  };
+
   return (
     <div className={navbarStyle.navbarTop}>
       <div className={navbarStyle.navbarLogo}>
@@ -29,17 +35,39 @@ function NavbarMenu() {
             </Link>
             <p className={navbarStyle.separators}>{' | '}</p>
           </div>
-          <div className={navbarStyle.customerServiceContainer}>
-            <p>
+          {props.userInfo ? (
+            <div className={navbarStyle.profileLinkContainer}>
+              <p className={navbarStyle.profileLinkTitle}>
+                {' '}
+                {props.userInfo.name}
+              </p>
+              <div className={navbarStyle.profileLinkDropdownContainer}>
+                <Link to={'/profile'} className={navbarStyle.profileLink}>
+                  Profile
+                </Link>
+                <Link to={'/orderhistory'} className={navbarStyle.profileLink}>
+                  Order History
+                </Link>
+                <Link
+                  to={'#signout'}
+                  onClick={signoutHandler}
+                  className={navbarStyle.profileLink}
+                >
+                  Sign Out
+                </Link>
+              </div>
+            </div>
+          ) : (
+            <div className={navbarStyle.customerServiceContainer}>
               <Link to="/signin" className={navbarStyle.searchBoxContainerLink}>
-                {'Sign In'}
+                Sign In
               </Link>
               {' or '}
-              <Link to="/" className={navbarStyle.searchBoxContainerLink}>
+              <Link to="/signup" className={navbarStyle.searchBoxContainerLink}>
                 {'Create an account'}
               </Link>
-            </p>
-          </div>
+            </div>
+          )}
         </div>
 
         <div className={navbarStyle.navbarInfoLine}>

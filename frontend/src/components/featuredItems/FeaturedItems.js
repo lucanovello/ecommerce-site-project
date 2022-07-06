@@ -1,7 +1,6 @@
 import featuredItems from './FeaturedItems.module.css';
 import Product from '../Product/Product';
 import LoadingBox from '../LoadingBox/LoadingBox';
-import ErrorBox from '../ErrorBox/ErrorBox';
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 
@@ -19,7 +18,7 @@ const reducer = (state, action) => {
 };
 
 function FeaturedItems(props) {
-  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
+  const [{ loading, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: '',
@@ -30,6 +29,7 @@ function FeaturedItems(props) {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api');
+
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data.products });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
@@ -40,10 +40,6 @@ function FeaturedItems(props) {
 
   return loading ? (
     <LoadingBox />
-  ) : error ? (
-    <div>
-      <ErrorBox error={error} />
-    </div>
   ) : (
     <section className={featuredItems.featuredItemsOuterContainer}>
       {props.mainTitle && (
@@ -54,7 +50,7 @@ function FeaturedItems(props) {
 
       <div className={featuredItems.featuredItemsInnerContainer}>
         {products.map((product) => (
-          <Product product={product} key={product.slug}></Product>
+          <Product product={product} key={Math.random() * 10}></Product>
         ))}
       </div>
     </section>

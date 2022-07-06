@@ -3,11 +3,11 @@ import NavbarMenu from './NavbarMenu';
 import NavbarHeader from './NavbarHeader';
 import Header from './Header';
 
-function Navbar() {
+function Navbar(props) {
   return (
     <div className={navbarStyle.navbar}>
       <Header text="Free shipping on all orders. No minimum purchase" />
-      <NavbarHeader />
+      <NavbarHeader userInfo={props.userInfo} />
       <NavbarMenu />
     </div>
   );

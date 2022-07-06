@@ -17,7 +17,7 @@ a {
 }
 
 .navbarTop {
-  padding: 2vh 5%;
+  padding: 2vh 8%;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -42,8 +42,7 @@ a {
 .navbarLogo h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 48px;
-  font-weight: 200;
-  line-height: 1;
+  font-weight: 900;
 }
 
 .navbarInfoContainer {
@@ -66,7 +65,7 @@ a {
   font-weight: 300;
 }
 .separators {
-  margin: 0 6px;
+  margin: 0 10px;
 }
 
 .customerServiceContainer {
@@ -101,6 +100,65 @@ a {
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+.profileLinkContainer {
+  position: relative;
+  top: 0;
+}
+
+.profileLinkTitle {
+  min-width: 120px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 2;
+  border: 1px dashed var(--main-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.profileLinkTitle:hover,
+.profileLinkDropdownContainer:hover + .profileLinkTitle {
+  background: var(--main-color);
+  border-top: var(--dashed-border);
+  border-left: var(--dashed-border);
+  border-right: var(--dashed-border);
+  border-bottom: 1px dashed transparent;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  transition: 0.2s ease-out;
+}
+
+.profileLinkDropdownContainer {
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  border-bottom: var(--dashed-border);
+  border-left: var(--dashed-border);
+  border-right: var(--dashed-border);
+  background: var(--main-color);
+  color: white;
+  z-index: 9999;
+}
+.profileLinkTitle:hover + .profileLinkDropdownContainer,
+.profileLinkDropdownContainer:hover {
+  opacity: 1;
+}
+
+.profileLink {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileLink:hover {
+  animation: pulse 0.6s ease infinite alternate;
 }
 
 .navbarIcons {
@@ -170,6 +228,7 @@ a {
 }
 .searchBox:focus {
   outline: none;
+  border: 1px dashed currentColor;
 }
 .searchButton {
   width: 25px;
@@ -233,8 +292,6 @@ a {
 }
 .navbarMenuOptions li:hover {
   animation: pulse 0.6s ease infinite alternate;
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
 }
 
 @keyframes pulse {

@@ -41,7 +41,7 @@ const CartItem = (props) => {
             {props.item.artist}
           </p>
           <p className={cartScreenStyle.cartScreenItemDetailsDevice}>
-            {props.item.device} phone case
+            {props.item.device}
           </p>
           <QuantityBox
             value={cartQty}
