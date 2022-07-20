@@ -1,15 +1,20 @@
 import featuredItems from './FeaturedItems.module.css';
 import Product from '../Product/Product';
 import LoadingBox from '../LoadingBox/LoadingBox';
-import { useEffect, useReducer } from 'react';
+import { Fragment, useEffect, useReducer } from 'react';
 import axios from 'axios';
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
-      return { ...state, loading: true };
+      return { ...state, loading: true, error: null };
     case 'FETCH_SUCCESS':
-      return { ...state, products: action.payload, loading: false };
+      return {
+        ...state,
+        products: action.payload.createdProducts,
+        loading: false,
+        error: false,
+      };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
     default:
@@ -18,7 +23,7 @@ const reducer = (state, action) => {
 };
 
 function FeaturedItems(props) {
-  const [{ loading, products }, dispatch] = useReducer(reducer, {
+  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: '',
@@ -28,18 +33,22 @@ function FeaturedItems(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api');
-
-        dispatch({ type: 'FETCH_SUCCESS', payload: result.data.products });
+        const result = await axios.get(`/api/seed/products`);
+        dispatch({
+          type: 'FETCH_SUCCESS',
+          payload: result.data,
+        });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: err });
       }
     };
     fetchData();
-  }, []);
+  }, [props.location]);
 
   return loading ? (
     <LoadingBox />
+  ) : error ? (
+    <Fragment />
   ) : (
     <section className={featuredItems.featuredItemsOuterContainer}>
       {props.mainTitle && (
@@ -50,7 +59,7 @@ function FeaturedItems(props) {
 
       <div className={featuredItems.featuredItemsInnerContainer}>
         {products.map((product) => (
-          <Product product={product} key={Math.random() * 10}></Product>
+          <Product product={product} key={product._id}></Product>
         ))}
       </div>
     </section>

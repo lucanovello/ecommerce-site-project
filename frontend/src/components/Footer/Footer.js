@@ -18,7 +18,9 @@ const Footer = () => {
         <div className={footerStyle.footerLogo}>
           <Link to="/">{'Logo'}</Link>
         </div>
-        <div className={footerStyle.footerLinksTitle}>{'Links'}</div>
+        <Link to="/" className={footerStyle.footerLinksTitle}>
+          {'Links'}
+        </Link>
         <div className={footerStyle.footerAbout}>
           <p>
             Sit amet mauris commodo quis imperdiet massa tincidunt nunc
@@ -35,12 +37,24 @@ const Footer = () => {
         </div>
         <div className={footerStyle.footerLinksList}>
           <ul>
-            <li>Featured</li>
-            <li>Best Sellers</li>
-            <li>New Arrivals</li>
-            <li>Trending</li>
-            <li>Artists</li>
-            <li>Genres</li>
+            <li>
+              <Link to="/">Featured</Link>
+            </li>
+            <li>
+              <Link to="/">Best Sellers</Link>
+            </li>
+            <li>
+              <Link to="/">New Arrivals</Link>
+            </li>
+            <li>
+              <Link to="/">Trending</Link>
+            </li>
+            <li>
+              <Link to="/">Artists</Link>
+            </li>
+            <li>
+              <Link to="/">Genres</Link>
+            </li>
           </ul>
         </div>
       </div>

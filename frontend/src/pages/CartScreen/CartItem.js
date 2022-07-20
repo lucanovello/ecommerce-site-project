@@ -43,6 +43,7 @@ const CartItem = (props) => {
           <p className={cartScreenStyle.cartScreenItemDetailsDevice}>
             {props.item.device}
           </p>
+
           <QuantityBox
             value={cartQty}
             setQty={setCartQty}

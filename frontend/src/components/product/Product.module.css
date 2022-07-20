@@ -16,10 +16,6 @@
   transition: 0.1s ease-out;
 }
 
-.featuredItem:hover .featuredItemImg {
-  transform: scale(1.03);
-}
-
 .featuredItemText {
   width: 100%;
   padding: 0 5%;

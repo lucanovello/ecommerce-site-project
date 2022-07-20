@@ -1,11 +1,14 @@
+import LoadingBox from '../LoadingBox/LoadingBox';
 import slideshowStyles from './Slideshow.module.css';
 
 function Slideshow(props) {
-  return (
+  return props.loading ? (
+    <LoadingBox />
+  ) : (
     <div
       className={slideshowStyles.slideshowContainer}
       style={{
-        backgroundImage: `url(/images/fashion-2.jpg)`,
+        backgroundImage: `url(${props.slideshow[0].image})`,
       }}
     >
       <div className={slideshowStyles.slideshowText}>

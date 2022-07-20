@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
+import CheckoutSteps from '../../components/CheckoutSteps/CheckoutSteps';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import CartItem from './CartItem';
 import cartScreenStyle from './CartScreen.module.css';
@@ -21,8 +22,9 @@ const CartScreen = (props) => {
             : 'Luca Novello | Ecommerce Website'}
         </title>
       </Helmet>
+      <CheckoutSteps step1 />
       <div className={cartScreenStyle.cartScreenContainer}>
-        <h2 className={cartScreenStyle.cartScreenTitle}>Shopping Cart</h2>
+        <h2 className={cartScreenStyle.cartScreenTitle}>Cart</h2>
         <div className={cartScreenStyle.cartScreenItemsContainer}>
           <ul className={cartScreenStyle.cartScreenItems}>
             {props.cart.cartItems.length > 0 ? (
@@ -73,7 +75,7 @@ const CartScreen = (props) => {
           </div>
         </div>
       </div>
-      <FeaturedItems mainTitle="Related Items" />
+      <FeaturedItems mainTitle="Featured Items" />
     </Fragment>
   );
 };

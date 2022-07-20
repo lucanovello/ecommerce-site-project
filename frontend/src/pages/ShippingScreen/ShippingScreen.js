@@ -1,11 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { Fragment, useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import CheckoutSteps from '../../components/CheckoutSteps/CheckoutSteps';
 import { Store } from '../../Store';
 import shippingScreenStyle from './ShippingScreen.module.css';
 
 export default function ShippingScreen() {
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { dispatch: ctxDispatch } = useContext(Store);
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
   const [address, setAddress] = useState('');
@@ -42,142 +43,148 @@ export default function ShippingScreen() {
   };
 
   return (
-    <div className={shippingScreenStyle.shippingScreenContainer}>
+    <Fragment>
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
-      <div>
-        <form
-          className={shippingScreenStyle.shippingScreenFormContainer}
-          onSubmit={onSubmitHandler}
-        >
-          <div className={shippingScreenStyle.shippingScreenTitle}>
-            Shipping Address
-          </div>
-          <div className={shippingScreenStyle.shippingScreenFullNameContainer}>
-            <label
-              htmlFor={'fullName'}
-              className={shippingScreenStyle.shippingScreenFullNameLabel}
-            >
-              Full Name<span>*</span>
-            </label>
-            <input
-              type={'fullName'}
-              id={'fullName'}
-              className={shippingScreenStyle.shippingScreenFullNameInput}
-              onChange={(e) => setFullName(e.target.value)}
-              required
-            />
-          </div>
-          <div className={shippingScreenStyle.shippingScreenAddressContainer}>
-            <label
-              htmlFor={'address'}
-              className={shippingScreenStyle.shippingScreenAddressLabel}
-            >
-              Street Address<span>*</span>
-            </label>
-            <input
-              type={'address'}
-              id={'address'}
-              className={shippingScreenStyle.shippingScreenAddressInput}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-            />
-          </div>
-          <div className={shippingScreenStyle.shippingScreenCityFormRow}>
-            <div className={shippingScreenStyle.shippingScreenCityContainer}>
-              <label
-                htmlFor={'city'}
-                className={shippingScreenStyle.shippingScreenCityLabel}
-              >
-                City<span>*</span>
-              </label>
-              <input
-                type={'city'}
-                id={'city'}
-                className={shippingScreenStyle.shippingScreenCityInput}
-                onChange={(e) => setCity(e.target.value)}
-                required
-              />
-            </div>
+      <CheckoutSteps step1 step2 />
+      <div className={shippingScreenStyle.shippingScreenContainer}>
+        <div className={shippingScreenStyle.shippingScreenTitle}>
+          Shipping Address
+        </div>
+        <div className={shippingScreenStyle.shippingScreenFormContainer}>
+          <form onSubmit={onSubmitHandler}>
             <div
-              className={shippingScreenStyle.shippingScreenProvinceContainer}
+              className={shippingScreenStyle.shippingScreenFullNameContainer}
             >
               <label
-                htmlFor={'province'}
-                className={shippingScreenStyle.shippingScreenProvinceLabel}
+                htmlFor={'fullName'}
+                className={shippingScreenStyle.shippingScreenFullNameLabel}
               >
-                Province<span>*</span>
-              </label>
-              <select
-                id="province"
-                name="province"
-                className={shippingScreenStyle.shippingScreenProvinceInput}
-                defaultValue=""
-                onChange={(e) => setProvince(e.target.value)}
-                required
-              >
-                <option value="" hidden disabled></option>
-                <option>Alberta</option>
-                <option>British Columbia</option>
-                <option>Manitoba</option>
-                <option>New Brunswick</option>
-                <option>Newfoundland and Labrador</option>
-                <option>Northwest Territories</option>
-                <option>Nova Scotia</option>
-                <option>Nunavut</option>
-                <option>Ontario</option>
-                <option>Prince Edward Island</option>
-                <option>Quebec</option>
-                <option>Saskatchewan</option>
-                <option>Yukon</option>
-              </select>
-            </div>
-          </div>
-          <div className={shippingScreenStyle.shippingScreenCityFormRow}>
-            <div
-              className={shippingScreenStyle.shippingScreenPostalCodeContainer}
-            >
-              <label
-                htmlFor={'postalCode'}
-                className={shippingScreenStyle.shippingScreenPostalCodeLabel}
-              >
-                Postal Code<span>*</span>
+                Full Name<span>*</span>
               </label>
               <input
-                type={'postalCode'}
-                id={'postalCode'}
-                className={shippingScreenStyle.shippingScreenPostalCodeInput}
-                onChange={(e) => setPostalCode(e.target.value)}
+                type={'fullName'}
+                id={'fullName'}
+                className={shippingScreenStyle.shippingScreenFullNameInput}
+                onChange={(e) => setFullName(e.target.value)}
                 required
               />
             </div>
-            <div className={shippingScreenStyle.shippingScreenCountryContainer}>
+            <div className={shippingScreenStyle.shippingScreenAddressContainer}>
               <label
-                htmlFor={'country'}
-                className={shippingScreenStyle.shippingScreenCountryLabel}
+                htmlFor={'address'}
+                className={shippingScreenStyle.shippingScreenAddressLabel}
               >
-                Country<span>*</span>
+                Street Address<span>*</span>
               </label>
               <input
-                type={'country'}
-                id={'country'}
-                className={shippingScreenStyle.shippingScreenCountryInput}
-                onChange={(e) => setCountry(e.target.value)}
+                type={'address'}
+                id={'address'}
+                className={shippingScreenStyle.shippingScreenAddressInput}
+                onChange={(e) => setAddress(e.target.value)}
                 required
               />
             </div>
-          </div>
+            <div className={shippingScreenStyle.shippingScreenCityFormRow}>
+              <div className={shippingScreenStyle.shippingScreenCityContainer}>
+                <label
+                  htmlFor={'city'}
+                  className={shippingScreenStyle.shippingScreenCityLabel}
+                >
+                  City<span>*</span>
+                </label>
+                <input
+                  type={'city'}
+                  id={'city'}
+                  className={shippingScreenStyle.shippingScreenCityInput}
+                  onChange={(e) => setCity(e.target.value)}
+                  required
+                />
+              </div>
+              <div
+                className={shippingScreenStyle.shippingScreenProvinceContainer}
+              >
+                <label
+                  htmlFor={'province'}
+                  className={shippingScreenStyle.shippingScreenProvinceLabel}
+                >
+                  Province<span>*</span>
+                </label>
+                <select
+                  id="province"
+                  name="province"
+                  className={shippingScreenStyle.shippingScreenProvinceInput}
+                  defaultValue=""
+                  onChange={(e) => setProvince(e.target.value)}
+                  required
+                >
+                  <option value="" hidden disabled></option>
+                  <option>Alberta</option>
+                  <option>British Columbia</option>
+                  <option>Manitoba</option>
+                  <option>New Brunswick</option>
+                  <option>Newfoundland and Labrador</option>
+                  <option>Northwest Territories</option>
+                  <option>Nova Scotia</option>
+                  <option>Nunavut</option>
+                  <option>Ontario</option>
+                  <option>Prince Edward Island</option>
+                  <option>Quebec</option>
+                  <option>Saskatchewan</option>
+                  <option>Yukon</option>
+                </select>
+              </div>
+            </div>
+            <div className={shippingScreenStyle.shippingScreenCityFormRow}>
+              <div
+                className={
+                  shippingScreenStyle.shippingScreenPostalCodeContainer
+                }
+              >
+                <label
+                  htmlFor={'postalCode'}
+                  className={shippingScreenStyle.shippingScreenPostalCodeLabel}
+                >
+                  Postal Code<span>*</span>
+                </label>
+                <input
+                  type={'postalCode'}
+                  id={'postalCode'}
+                  className={shippingScreenStyle.shippingScreenPostalCodeInput}
+                  onChange={(e) => setPostalCode(e.target.value)}
+                  required
+                />
+              </div>
+              <div
+                className={shippingScreenStyle.shippingScreenCountryContainer}
+              >
+                <label
+                  htmlFor={'country'}
+                  className={shippingScreenStyle.shippingScreenCountryLabel}
+                >
+                  Country<span>*</span>
+                </label>
+                <input
+                  type={'country'}
+                  id={'country'}
+                  className={shippingScreenStyle.shippingScreenCountryInput}
+                  onChange={(e) => setCountry(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
 
-          <button
-            type="submit"
-            className={shippingScreenStyle.shippingScreenButton}
-          >
-            Continue
-          </button>
-        </form>
-        <p className={shippingScreenStyle.shippingScreenlegend}>*required</p>
+            <button
+              type="submit"
+              className={shippingScreenStyle.shippingScreenButton}
+            >
+              Continue
+            </button>
+          </form>
+          <p className={shippingScreenStyle.shippingScreenlegend}>*required</p>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 }

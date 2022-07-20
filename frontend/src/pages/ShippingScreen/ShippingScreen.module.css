@@ -1,6 +1,6 @@
 .shippingScreenContainer {
   width: 100%;
-  padding: 10vh 0;
+  padding: 5vh 15% 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,20 +12,25 @@
 }
 
 .shippingScreenFormContainer {
-  width: 500px;
+  width: 100%;
   padding: 20px 25px 30px;
+  display: flex;
+  flex-direction: column;
   border: 1px dashed rgb(211, 211, 211);
   border-radius: 4px;
   position: relative;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .shippingScreenFormContainer span {
   color: hsl(0, 90%, 40%);
 }
 .shippingScreenTitle {
-  font-size: 2.5em;
+  font-size: 2.25rem;
   font-weight: 900;
   margin-bottom: 10px;
+  text-align: center;
+  justify-self: center;
 }
 .shippingScreenFullNameContainer,
 .shippingScreenAddressContainer,
@@ -83,6 +88,7 @@
   user-select: none;
   background: linear-gradient(var(--button-click-color), var(--button-color));
   cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 .shippingScreenButton:hover {
   filter: brightness(1.3);

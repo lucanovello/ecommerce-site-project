@@ -22,11 +22,12 @@ import { getError } from '../../utils';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
-      return { ...state, loading: true };
+      return { ...state, loading: true, error: null };
     case 'FETCH_SUCCESS':
       return {
         ...state,
         product: action.payload.product,
+        devices: action.payload.devices,
         loading: false,
         error: false,
       };
@@ -44,8 +45,12 @@ function ProductScreen(props) {
   const device = useRef(null);
   const params = useParams();
   const { slug } = params;
-  const [{ loading, error, product }, dispatch] = useReducer(reducer, {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart } = state;
+
+  const [{ loading, error, product, devices }, dispatch] = useReducer(reducer, {
     product: [],
+    devices: [],
     loading: true,
     error: '',
   });
@@ -61,14 +66,13 @@ function ProductScreen(props) {
         });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
-        console.log(err);
       }
     };
     fetchData();
     setProductQty(1);
     setIsDeviceValid(false);
     setIsSubmitValid(false);
-  }, [slug]);
+  }, [slug, props.location]);
 
   useEffect(() => {
     if (product.quantityInStock > 0 && isDeviceValid) {
@@ -76,16 +80,18 @@ function ProductScreen(props) {
       return;
     }
     setIsSubmitValid(false);
-  }, [product.quantityInStock, isDeviceValid, slug]);
-
-  const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { cart } = state;
+  }, [isDeviceValid, slug, product.quantityInStock]);
 
   const addToCartHandler = async () => {
-    const itemExists = cart.cartItems.find((x) => x.slug === product.slug);
+    const itemExists = cart.cartItems.find(
+      (x) =>
+        x.sku ===
+        `${product.slug}_${device.current.value
+          .replace(/\s+/g, '-')
+          .toLowerCase()}`
+    );
     const quantity = itemExists ? itemExists.quantity + productQty : productQty;
-    const { data } = await axios.get(`/api/products/${slug}`);
-    if (data.quantityInStock < quantity) {
+    if (product.quantityInStock < quantity) {
       window.alert('Sorry, product is out of stock');
       return;
     }
@@ -93,8 +99,7 @@ function ProductScreen(props) {
       window.alert('Please select a device');
       return;
     }
-
-    ctxDispatch({
+    await ctxDispatch({
       type: 'CART_ADD_ITEM',
       payload: {
         ...product,
@@ -156,7 +161,7 @@ function ProductScreen(props) {
               </p>
             </div>
             <Devices
-              devices={props.data.devices}
+              devices={devices}
               className={productScreenStyle.productDeviceContainer}
               refValue={device}
               setIsDeviceValid={setIsDeviceValid}
@@ -184,7 +189,7 @@ function ProductScreen(props) {
           </div>
         </div>
       </div>
-      <FeaturedItems mainTitle="Related Items" />
+      <FeaturedItems mainTitle="Featured Items" location={props.location} />
     </div>
   );
 }

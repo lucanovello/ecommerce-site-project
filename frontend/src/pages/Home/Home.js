@@ -1,15 +1,49 @@
 import Slideshow from '../../components/Slideshow/Slideshow';
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import ErrorBox from '../../components/ErrorBox/ErrorBox';
-import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useReducer } from 'react';
 import { Helmet } from 'react-helmet-async';
+import axios from 'axios';
+import { getError } from '../../utils';
+import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCH_REQUEST':
+      return { ...state, loading: true, error: null };
+    case 'FETCH_SUCCESS':
+      return { ...state, data: action.payload, loading: false, error: null };
+    case 'FETCH_FAIL':
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
 function Home(props) {
-  return props.loading ? (
+  const [{ loading, error, data }, dispatch] = useReducer(reducer, {
+    data: [],
+    loading: true,
+    error: null,
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch({ type: 'FETCH_REQUEST' });
+      try {
+        const result = await axios.get('/api/seed/all');
+        dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
+      } catch (err) {
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err.message) });
+      }
+    };
+    fetchData();
+  }, [props.location]);
+
+  return loading ? (
     <LoadingBox />
-  ) : props.error ? (
-    <ErrorBox error={props.error} />
+  ) : error ? (
+    <ErrorBox error={error} />
   ) : (
     <Fragment>
       <Helmet>
@@ -19,8 +53,11 @@ function Home(props) {
             : 'Luca Novello | Ecommerce Website'}
         </title>
       </Helmet>
-      <Slideshow data={props.data.slideshow} />
-      <FeaturedItems mainTitle="Related Items" />
+      <Slideshow slideshow={data.slideshow} />
+      <FeaturedItems
+        mainTitle="Featured Items"
+        products={data.createdProducts}
+      />
     </Fragment>
   );
 }

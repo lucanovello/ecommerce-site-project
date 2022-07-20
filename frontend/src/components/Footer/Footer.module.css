@@ -60,13 +60,13 @@
   color: #737373;
   list-style: none;
 }
-.footerLinksList li {
+.footerLinksList a {
   cursor: pointer;
   font-weight: 300;
   white-space: nowrap;
   transition: 0.1s ease-out;
 }
-.footerLinksList li:hover {
+.footerLinksList a:hover {
   color: #ececec;
 }
 
@@ -84,11 +84,40 @@
 }
 .footerCopyrightText span {
   color: #8a8a8a;
-  cursor: pointer;
-  animation: secret 6s ease-in-out 2s infinite;
+  text-shadow: 0 0 1px #b8b8b8;
+  cursor: auto;
+  animation: secret 5s ease-in-out 5s infinite;
 }
 .footerCopyrightText span:hover {
-  animation: none;
+  animation: heartbeat 1s linear 1.2s infinite;
+  cursor: help;
+}
+
+@keyframes heartbeat {
+  0% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  40% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  52.5% {
+    color: #c6c6c6;
+    text-shadow: 0 0 5px #c6c6c6;
+  }
+  65% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
+  77.5% {
+    color: #c6c6c6;
+    text-shadow: 0 0 5px #c6c6c6;
+  }
+  90% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
 }
 
 @keyframes secret {
@@ -124,67 +153,67 @@
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
   }
-  19% {
+  21% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
-  33% {
+  36% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
-  35% {
+  38% {
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
   }
-  37% {
+  39% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
-  51% {
+  54% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
-  53% {
+  56% {
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
   }
-  55% {
+  57% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
-  69% {
+  72% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
-  71% {
+  74% {
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
   }
-  73% {
+  76% {
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
-  }
-  75% {
-    color: #e6e6e6;
-    text-shadow: 0 0 5px #ffffff;
   }
   78% {
-    color: #8a8a8a;
-    text-shadow: 0 0 1px #b8b8b8;
-  }
-  80% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
+  }
+  81% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
   }
   83% {
-    color: #8a8a8a;
-    text-shadow: 0 0 1px #b8b8b8;
-  }
-  85% {
     color: #e6e6e6;
     text-shadow: 0 0 5px #ffffff;
   }
+  86% {
+    color: #8a8a8a;
+    text-shadow: 0 0 1px #b8b8b8;
+  }
   88% {
+    color: #e6e6e6;
+    text-shadow: 0 0 5px #ffffff;
+  }
+  91% {
     color: #8a8a8a;
     text-shadow: 0 0 1px #b8b8b8;
   }

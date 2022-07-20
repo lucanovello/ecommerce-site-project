@@ -20,24 +20,20 @@
   animation-timing-function: linear, ease;
   animation-iteration-count: infinite, infinite;
   animation-direction: alternate, normal;
-  /* animation: colors 5s ease infinite; */
 }
 
 @keyframes loading {
   0% {
     width: 1px;
     height: 1px;
-    /* background: hsl(210, 0%, 30%); */
   }
   65% {
     width: 2px;
     height: 10px;
-    /* background: hsl(210, 0%, 30%); */
   }
   100% {
     width: 5px;
     height: 35px;
-    /* background: linear-gradient(hsl(210, 50%, 50%), hsl(210, 50%, 20%)); */
   }
 }
 @keyframes colors {

@@ -10,6 +10,9 @@ const initialState = {
     shippingAddress: localStorage.getItem('shippingAddress')
       ? JSON.parse(localStorage.getItem('shippingAddress'))
       : [],
+    paymentMethod: localStorage.getItem('paymentMethod')
+      ? localStorage.getItem('paymentMethod')
+      : [],
     cartItems: localStorage.getItem('cartItems')
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
@@ -35,15 +38,27 @@ function reducer(state, action) {
       const cartItems = state.cart.cartItems.filter(
         (item) => item.sku !== action.payload.sku
       );
-
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
       return { ...state, cart: { ...state.cart, cartItems } };
     }
+    case 'CART_CLEAR': {
+      return { ...state, cart: { ...state.cart, cartItems: [] } };
+    }
+
     case 'USER_SIGNIN': {
       return { ...state, userInfo: action.payload };
     }
+
     case 'USER_SIGNOUT': {
-      return { ...state, userInfo: null };
+      return {
+        ...state,
+        userInfo: null,
+        cart: {
+          cartItems: [],
+          shippingAddress: {},
+          paymentMethod: '',
+        },
+      };
     }
     case 'SAVE_SHIPPING_ADDRESS': {
       return {
@@ -51,6 +66,15 @@ function reducer(state, action) {
         cart: {
           ...state.cart,
           shippingAddress: action.payload,
+        },
+      };
+    }
+    case 'SAVE_PAYMENT_METHOD': {
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          paymentMethod: action.payload,
         },
       };
     }

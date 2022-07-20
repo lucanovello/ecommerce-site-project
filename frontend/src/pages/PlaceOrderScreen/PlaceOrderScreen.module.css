@@ -1,0 +1,168 @@
+.placeOrderScreenContainer {
+  width: 100%;
+  padding: 5vh 5% 5vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  background: white;
+}
+
+.placeOrderScreenTitle {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-self: center;
+}
+
+.placeOrderScreenInnerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  background: white;
+  gap: 20px;
+}
+
+.placeOrderSubTitle {
+  margin-bottom: 1vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  align-self: flex-start;
+}
+
+.placeOrderScreenInnerContainerLeft {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.placeOrderScreenItemsContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.placeOrderScreenItems {
+  width: 100%;
+  padding: 2vh 0 1vh;
+  border: 1px dashed #d4d4d4;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.placeOrderSubTitleItems {
+  padding-left: 5%;
+  padding-bottom: 0.5vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.placeOrderScreenItemNone {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #242424;
+}
+
+.placeOrderScreenAddress {
+  padding-left: 7%;
+  padding-bottom: 1.5vh;
+  align-self: flex-start;
+}
+
+.placeOrderScreenTotal {
+  width: 30%;
+  height: 100%;
+  padding: 2vh 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px dashed #d4d4d4;
+  border-radius: 5px;
+  text-align: center;
+  gap: 1vh;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.placeOrderScreenTotalWrapper {
+  width: 100%;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #dddddd;
+}
+
+.placeOrderScreenTotalWrapper p {
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(9px + 0.3vmax);
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.placeOrderScreenTotalWrapper span {
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(9px + 0.3vmax);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.placeOrderScreenCheckoutBtn {
+  width: 100%;
+  margin-top: 2vh;
+  padding: 15px 25px;
+  font-family: 'Open Sans', 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(230, 230, 230);
+  border: none;
+  border-radius: 5px;
+  user-select: none;
+  transition: 0.1s ease;
+}
+
+.placeOrderScreenCheckoutBtnActive {
+  background: linear-gradient(var(--button-click-color), var(--button-color));
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.placeOrderScreenCheckoutBtnActive:hover {
+  filter: brightness(1.3);
+}
+.placeOrderScreenCheckoutBtnActive:hover:active {
+  box-shadow: 0px 0px 5px var(--button-color);
+}
+
+.placeOrderScreenCheckoutBtnDisabled {
+  background: var(--button-disabled-color);
+  box-shadow: inset 0px 0px 2px rgb(230, 230, 230);
+  color: white;
+  border: none;
+  cursor: default;
+}
+.placeOrderScreenCheckoutBtn p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(207, 207, 207);
+}

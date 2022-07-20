@@ -16,7 +16,11 @@ function Devices(props) {
           className={productScreenStyle.productDevice}
           defaultValue={'------ Please choose an option ------'}
           onChange={() => props.setIsDeviceValid(true)}
-          ref={props.refValue}
+          ref={
+            props.refValue
+              ? props.refValue
+              : '------ Please choose an option ------'
+          }
           required
         >
           <option
