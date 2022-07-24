@@ -5,7 +5,7 @@ import CheckoutSteps from '../../components/CheckoutSteps/CheckoutSteps';
 import { Store } from '../../Store';
 import shippingScreenStyle from './ShippingScreen.module.css';
 
-export default function ShippingScreen() {
+const ShippingScreen = () => {
   const { dispatch: ctxDispatch } = useContext(Store);
   const navigate = useNavigate();
   const [fullName, setFullName] = useState('');
@@ -187,4 +187,6 @@ export default function ShippingScreen() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default ShippingScreen;

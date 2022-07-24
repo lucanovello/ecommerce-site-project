@@ -10,15 +10,14 @@ import { getError } from '../../utils';
 const SignInScreen = () => {
   const navigate = useNavigate();
   const { search } = useLocation();
-  const redirectUrl = new URLSearchParams(search).get('redirect');
-  const redirect = redirectUrl ? redirectUrl : '/';
+  const redirectInUrl = new URLSearchParams(search).get('redirect');
+  const redirect = redirectInUrl ? redirectInUrl : '/';
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
-
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {

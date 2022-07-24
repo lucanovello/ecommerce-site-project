@@ -7,15 +7,11 @@ import cartScreenStyle from './CartScreen.module.css';
 const CartItem = (props) => {
   const [cartQty, setCartQty] = useState(props.item.quantity);
 
-  const updateCartHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/products/${props.item.slug}`);
-    if (data.quantityInStock < quantity) {
-      window.alert('Sorry, Product is out of stock');
-      return;
-    }
+  const addToCartHandler = async (item, quantity) => {
+    console.log(quantity);
     props.ctxDispatch({
       type: 'CART_ADD_ITEM',
-      payload: { ...props.item, quantity },
+      payload: { ...item, quantity },
     });
   };
 
@@ -48,10 +44,9 @@ const CartItem = (props) => {
             value={cartQty}
             setQty={setCartQty}
             item={props.item}
-            max={props.item.quantityInStock}
             key={props.item._id}
             ctxDispatch={props.ctxDispatch}
-            updateCartHandler={updateCartHandler}
+            addToCartHandler={() => addToCartHandler(props.item)}
             quantityBoxContainerStyle={
               cartScreenStyle.cartScreenItemDetailsQtyContainer
             }
@@ -71,9 +66,6 @@ const CartItem = (props) => {
         <div className={cartScreenStyle.cartScreenItemDetail}>
           <p className={cartScreenStyle.cartScreenItemDetailsPrice}>
             ${props.item.price.toFixed(2)}
-          </p>
-          <p className={cartScreenStyle.cartScreenItemDetailsQtyInStock}>
-            {props.item.quantityInStock} in stock
           </p>
         </div>
       </div>

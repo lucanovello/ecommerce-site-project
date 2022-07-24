@@ -4,11 +4,9 @@ import { Fragment, useContext, useEffect, useReducer } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Store } from '../../Store';
 import { getError } from '../../utils';
-import cartScreenStyle from '../CartScreen/CartScreen.module.css';
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import ErrorBox from '../../components/ErrorBox/ErrorBox';
 import axios from 'axios';
-import { FaTimes } from 'react-icons/fa';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -108,6 +106,21 @@ const OrderHistoryScreen = () => {
                             orderHistoryScreenStyle.orderHistoryScreenSubTitle
                           }
                         >
+                          Order #
+                        </h3>
+                        <p>{order._id.replace(/\D+/g, '')}</p>
+                      </div>
+
+                      <div
+                        className={
+                          orderHistoryScreenStyle.orderSummaryInnerContainer
+                        }
+                      >
+                        <h3
+                          className={
+                            orderHistoryScreenStyle.orderHistoryScreenSubTitle
+                          }
+                        >
                           Order Placed
                         </h3>
                         <p>
@@ -132,30 +145,24 @@ const OrderHistoryScreen = () => {
                             orderHistoryScreenStyle.orderHistoryScreenSubTitle
                           }
                         >
-                          Order #
-                        </h3>
-                        <p>{order._id.replace(/\D+/g, '')}</p>
-                      </div>
-
-                      <div
-                        className={
-                          orderHistoryScreenStyle.orderSummaryInnerContainer
-                        }
-                      >
-                        <h3
-                          className={
-                            orderHistoryScreenStyle.orderHistoryScreenSubTitle
-                          }
-                        >
                           Ship To
                         </h3>
                         <p>{order.shippingAddress.fullName}</p>
                       </div>
 
+                      <div className={orderHistoryScreenStyle.orderSummaryTax}>
+                        <h3
+                          className={
+                            orderHistoryScreenStyle.orderHistoryScreenSubTitle
+                          }
+                        >
+                          Tax
+                        </h3>
+                        <p>${order.taxPrice.toFixed(2)}</p>
+                      </div>
+
                       <div
-                        className={
-                          orderHistoryScreenStyle.orderSummaryInnerContainer
-                        }
+                        className={orderHistoryScreenStyle.orderSummaryTotal}
                       >
                         <h3
                           className={
@@ -164,7 +171,7 @@ const OrderHistoryScreen = () => {
                         >
                           Total
                         </h3>
-                        <p>${order.totalPrice}</p>
+                        <p>${order.totalPrice.toFixed(2)}</p>
                       </div>
                     </Link>
 
@@ -240,7 +247,7 @@ const OrderHistoryScreen = () => {
                                     orderHistoryScreenStyle.cartScreenItemDetailsPrice
                                   }
                                 >
-                                  ${item.price.toFixed(2) * item.quantity}
+                                  ${(item.price * item.quantity).toFixed(2)}
                                 </p>
                               </div>
                             </div>

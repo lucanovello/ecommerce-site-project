@@ -10,17 +10,13 @@ const QuantityBox = (props) => {
       <div className={quantityBoxStyle.quantityBoxInputContainer}>
         <button
           type="button"
-          className={`${
-            props.value === 1
-              ? quantityBoxStyle.quantityBoxInputButtonDisabled
-              : quantityBoxStyle.quantityBoxInputButtonActive
-          } 
+          className={`${quantityBoxStyle.quantityBoxInputButtonActive} 
           ${quantityBoxStyle.quantityBoxInputButtonMinus}
            ${quantityBoxStyle.quantityBoxInputButton}`}
           onMouseDown={() => {
-            props.setQty(props.value - 1);
+            props.setQty(parseInt(props.value) - 1);
             props.ctxDispatch &&
-              props.updateCartHandler(props.item, props.value - 1);
+              props.addToCartHandler(props.item, parseInt(props.value) - 1);
           }}
           disabled={props.value <= 1}
         >
@@ -28,30 +24,31 @@ const QuantityBox = (props) => {
         </button>
         <input
           type="number"
+          className={`${quantityBoxStyle.quantityBoxInput} ${quantityBoxStyle.removeArrows}`}
           id="qty"
-          value={props.item.quantityInStock > 0 ? props.value : 0}
-          placeholder="1"
+          value={props.value}
           min={1}
           max={999}
           step={1}
-          className={`${quantityBoxStyle.quantityBoxInput} ${quantityBoxStyle.removeArrows}`}
-          disabled
+          maxLength={3}
+          onChange={(e) => {
+            parseInt(e.target.value) < 1 && (e.target.value = 1);
+            e.target.value.length < 1 && (e.target.value = 1);
+            parseInt(e.target.value) > 999 && (e.target.value = 999);
+            e.target.value.length > 3 && (e.target.value = 999);
+            props.setQty(e.target.value);
+            props.ctxDispatch &&
+              props.addToCartHandler(props.item, e.target.value);
+          }}
         />
         <button
           type="button"
-          className={`${
-            props.value >= props.item.quantityInStock
-              ? quantityBoxStyle.quantityBoxInputButtonDisabled
-              : quantityBoxStyle.quantityBoxInputButtonActive
-          } ${quantityBoxStyle.quantityBoxInputButton} ${
-            quantityBoxStyle.quantityBoxInputButtonPlus
-          }`}
+          className={`${quantityBoxStyle.quantityBoxInputButtonActive} ${quantityBoxStyle.quantityBoxInputButton} ${quantityBoxStyle.quantityBoxInputButtonPlus}`}
           onMouseDown={() => {
-            props.setQty(props.value + 1);
+            props.setQty(parseInt(props.value) + 1);
             props.ctxDispatch &&
-              props.updateCartHandler(props.item, props.value + 1);
+              props.addToCartHandler(props.item, parseInt(props.value) + 1);
           }}
-          disabled={props.value >= props.item.quantityInStock}
         >
           <FaPlus />
         </button>

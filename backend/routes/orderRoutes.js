@@ -35,8 +35,8 @@ orderRouter.get(
   isAuth,
   expressAsyncHandler(async (req, res) => {
     const orders = await Order.find({ user: req.user._id });
-    console.log('/orderhistory');
     res.send(orders);
+    console.log('/orderhistory');
   })
 );
 
@@ -46,8 +46,8 @@ orderRouter.get(
   expressAsyncHandler(async (req, res) => {
     const order = await Order.findById(req.params.id);
     if (order) {
-      console.log('/order/:id');
       res.send(order);
+      console.log('/order/:id');
     } else {
       res.status(404).send({ message: 'Order Not Found' });
     }

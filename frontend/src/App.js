@@ -1,11 +1,11 @@
-import { Route, Routes, useHistory, useLocation } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Flip, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home.js';
 import ProductScreen from './pages/ProductScreen/ProductScreen.js';
-import app from './App.module.css';
-import { useContext, useEffect, useReducer } from 'react';
+import appStyle from './App.module.css';
+import { useContext, useRef } from 'react';
 import CartScreen from './pages/CartScreen/CartScreen';
 import Footer from './components/Footer/Footer';
 import SignInScreen from './pages/SignInScreen/SignInScreen';
@@ -14,10 +14,9 @@ import ShippingScreen from './pages/ShippingScreen/ShippingScreen';
 import SignUpScreen from './pages/SignInScreen/SignUpScreen';
 import PaymentScreen from './pages/PaymentScreen/PaymentScreen';
 import PlaceOrderScreen from './pages/PlaceOrderScreen/PlaceOrderScreen';
-import { getError } from './utils';
-import axios from 'axios';
 import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen';
 import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen';
+import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -25,8 +24,17 @@ function App() {
   const location = useLocation();
 
   return (
-    <main className={app.App}>
-      <ToastContainer position="bottom-center" limit={1} />
+    <main className={appStyle.App}>
+      <ToastContainer
+        position="bottom-center"
+        transition={Flip}
+        limit={1}
+        toastClassName={appStyle.toast}
+        autoClose={1000}
+        newestOnTop={true}
+        theme={'colored'}
+        closeButton={false}
+      />
       <Navbar userInfo={userInfo} />
       <Routes>
         <Route
@@ -43,18 +51,7 @@ function App() {
             <ProductScreen ctxDispatch={ctxDispatch} location={location} />
           }
         />
-        <Route
-          path="/cart"
-          element={
-            <CartScreen
-              cart={cart}
-              ctxDispatch={ctxDispatch}
-              headerTitle={`Cart`}
-              location={location}
-            />
-          }
-          exact
-        />
+        <Route path="/cart" element={<CartScreen />} exact />
         <Route path="/signup" element={<SignUpScreen />} exact />
         <Route path="/signin" element={<SignInScreen />} exact />
         <Route
@@ -103,6 +100,13 @@ function App() {
               headerTitle={`Order History`}
               location={location}
             />
+          }
+          exact
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProfileScreen headerTitle={`Profile`} location={location} />
           }
           exact
         />

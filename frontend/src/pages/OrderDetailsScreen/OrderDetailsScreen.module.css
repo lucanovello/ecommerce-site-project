@@ -168,12 +168,6 @@
   font-weight: 500;
 }
 
-.orderDetailsScreenItemDetailsQtyInStock {
-  font-size: 1em;
-  font-weight: 400;
-  color: green;
-}
-
 .orderDetailsScreenItemDetailsPrice {
   margin-top: 2px;
   align-self: flex-start;

@@ -102,11 +102,6 @@
   font-weight: 500;
 }
 
-.cartScreenItemDetailsQtyInStock {
-  font-size: 1em;
-  font-weight: 400;
-  color: green;
-}
 .cartScreenItemDetailsQtyContainer {
   margin-top: 5px;
   display: flex;

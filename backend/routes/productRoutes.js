@@ -11,7 +11,7 @@ productRouter.get('/', async (req, res) => {
   res.send({ products });
 });
 
-productRouter.get(`/products/:slug`, async (req, res) => {
+productRouter.get(`/:slug`, async (req, res) => {
   await Devices.deleteMany({});
   const devices = await Devices.insertMany(data.devices);
   const product = await Product.findOne({ slug: req.params.slug });

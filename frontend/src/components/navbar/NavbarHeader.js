@@ -51,7 +51,7 @@ function NavbarMenu(props) {
                   Order History
                 </Link>
                 <Link
-                  to={'#signout'}
+                  to={'/'}
                   onClick={signoutHandler}
                   className={navbarStyle.profileLink}
                 >

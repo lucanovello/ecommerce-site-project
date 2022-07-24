@@ -1,4 +1,4 @@
-import {
+import React, {
   useReducer,
   useEffect,
   useContext,
@@ -18,6 +18,7 @@ import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import QuantityBox from '../../components/QuantityBox/QuantityBox';
 import { Helmet } from 'react-helmet-async';
 import { getError } from '../../utils';
+import { toast } from 'react-toastify';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -41,12 +42,17 @@ const reducer = (state, action) => {
 function ProductScreen(props) {
   const [productQty, setProductQty] = useState(1);
   const [isDeviceValid, setIsDeviceValid] = useState(false);
-  const [isSubmitValid, setIsSubmitValid] = useState(false);
   const device = useRef(null);
   const params = useParams();
   const { slug } = params;
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
+  const toastId = useRef(null);
+
+  const toastMessage = async (message) => {
+    toast.clearWaitingQueue();
+    toastId.current = message;
+  };
 
   const [{ loading, error, product, devices }, dispatch] = useReducer(reducer, {
     product: [],
@@ -71,16 +77,7 @@ function ProductScreen(props) {
     fetchData();
     setProductQty(1);
     setIsDeviceValid(false);
-    setIsSubmitValid(false);
   }, [slug, props.location]);
-
-  useEffect(() => {
-    if (product.quantityInStock > 0 && isDeviceValid) {
-      setIsSubmitValid(true);
-      return;
-    }
-    setIsSubmitValid(false);
-  }, [isDeviceValid, slug, product.quantityInStock]);
 
   const addToCartHandler = async () => {
     const itemExists = cart.cartItems.find(
@@ -90,15 +87,9 @@ function ProductScreen(props) {
           .replace(/\s+/g, '-')
           .toLowerCase()}`
     );
-    const quantity = itemExists ? itemExists.quantity + productQty : productQty;
-    if (product.quantityInStock < quantity) {
-      window.alert('Sorry, product is out of stock');
-      return;
-    }
-    if (!isDeviceValid) {
-      window.alert('Please select a device');
-      return;
-    }
+    const quantity = itemExists
+      ? parseInt(itemExists.quantity) + parseInt(productQty)
+      : parseInt(productQty);
     await ctxDispatch({
       type: 'CART_ADD_ITEM',
       payload: {
@@ -111,6 +102,12 @@ function ProductScreen(props) {
       },
     });
     setProductQty(1);
+    toastMessage(
+      toast.success('Added to Cart', {
+        toastId: 'Added_to_Cart',
+      })
+    );
+    console.log(cart);
   };
 
   return loading ? (
@@ -156,9 +153,6 @@ function ProductScreen(props) {
                 quantityBoxLabelStyle={productScreenStyle.productQuantityLabel}
                 quantityBoxInputStyle={productScreenStyle.productQuantity}
               />
-              <p className={productScreenStyle.productScreenStyleQtyInStock}>
-                {product.quantityInStock} in stock
-              </p>
             </div>
             <Devices
               devices={devices}
@@ -173,18 +167,14 @@ function ProductScreen(props) {
               type="button"
               className={`${productScreenStyle.productButton}
               ${
-                isSubmitValid
+                isDeviceValid
                   ? productScreenStyle.productButtonActive
                   : productScreenStyle.productButtonDisabled
               }`}
-              onClick={() => isSubmitValid && addToCartHandler()}
-              disabled={!isSubmitValid}
+              onClick={addToCartHandler}
+              disabled={!isDeviceValid}
             >
-              {product.quantityInStock < 1
-                ? 'Out of Stock'
-                : !isSubmitValid
-                ? 'Please select a device'
-                : 'Add To Cart'}
+              {!isDeviceValid ? 'Please select a device' : 'Add To Cart'}
             </button>
           </div>
         </div>

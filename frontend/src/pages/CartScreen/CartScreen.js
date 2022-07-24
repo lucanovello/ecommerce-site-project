@@ -1,12 +1,15 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import CheckoutSteps from '../../components/CheckoutSteps/CheckoutSteps';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
+import { Store } from '../../Store';
 import CartItem from './CartItem';
 import cartScreenStyle from './CartScreen.module.css';
 
 const CartScreen = (props) => {
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart } = state;
   const navigate = useNavigate();
 
   const checkoutHandler = () => {
@@ -16,23 +19,19 @@ const CartScreen = (props) => {
   return (
     <Fragment>
       <Helmet>
-        <title>
-          {props.headerTitle
-            ? props.headerTitle
-            : 'Luca Novello | Ecommerce Website'}
-        </title>
+        <title>{'Cart'}</title>
       </Helmet>
       <CheckoutSteps step1 />
       <div className={cartScreenStyle.cartScreenContainer}>
         <h2 className={cartScreenStyle.cartScreenTitle}>Cart</h2>
         <div className={cartScreenStyle.cartScreenItemsContainer}>
           <ul className={cartScreenStyle.cartScreenItems}>
-            {props.cart.cartItems.length > 0 ? (
-              props.cart.cartItems.map((item) => (
+            {cart.cartItems.length > 0 ? (
+              cart.cartItems.map((item) => (
                 <CartItem
                   item={item}
                   key={item.sku}
-                  ctxDispatch={props.ctxDispatch}
+                  ctxDispatch={ctxDispatch}
                 />
               ))
             ) : (
@@ -45,8 +44,8 @@ const CartScreen = (props) => {
             <h2>
               {'Subtotal:'}
               <p>
-                {props.cart.cartItems
-                  ? `$${props.cart.cartItems
+                {cart.cartItems
+                  ? `$${cart.cartItems
                       .reduce((a, c) => a + c.price * c.quantity, 0)
                       .toFixed(2)}`
                   : (0).toFixed(2)}
@@ -55,19 +54,19 @@ const CartScreen = (props) => {
             <button
               type="button"
               className={`${
-                props.cart.cartItems.length > 0
+                cart.cartItems.length > 0
                   ? cartScreenStyle.cartScreenCheckoutBtnActive
                   : cartScreenStyle.cartScreenCheckoutBtnDisabled
               } ${cartScreenStyle.cartScreenCheckoutBtn}`}
               onClick={checkoutHandler}
-              disabled={props.cart.cartItems.length < 1}
+              disabled={cart.cartItems.length < 1}
             >
-              {props.cart.cartItems.length > 0
+              {cart.cartItems.length > 0
                 ? `Proceed to Checkout`
                 : 'Cart is Empty'}
               <p>
-                {`(${props.cart.cartItems.reduce(
-                  (a, c) => a + c.quantity,
+                {`(${cart.cartItems.reduce(
+                  (a, c) => parseInt(a) + parseInt(c.quantity),
                   0
                 )} items)`}
               </p>
