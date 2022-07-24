@@ -107,7 +107,6 @@ function ProductScreen(props) {
         toastId: 'Added_to_Cart',
       })
     );
-    console.log(cart);
   };
 
   return loading ? (

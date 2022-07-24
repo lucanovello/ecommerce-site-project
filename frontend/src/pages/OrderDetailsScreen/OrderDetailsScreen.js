@@ -75,7 +75,7 @@ const OrderDetailsScreen = () => {
     e.preventDefault();
     navigate('/orderhistory');
   };
-  console.log(order);
+
   return loading ? (
     <LoadingBox />
   ) : error ? (

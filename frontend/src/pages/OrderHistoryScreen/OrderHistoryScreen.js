@@ -57,7 +57,6 @@ const OrderHistoryScreen = () => {
           type: 'FETCH_SUCCESS',
           payload: data,
         });
-        console.log(data);
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }

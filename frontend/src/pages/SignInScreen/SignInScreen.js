@@ -18,6 +18,7 @@ const SignInScreen = () => {
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
+
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {

@@ -25,6 +25,7 @@ function ProfileScreen() {
   const { userInfo } = state;
   const [name, setName] = useState(userInfo.name);
   const [email, setEmail] = useState(userInfo.email);
+  const [oldPassword, setOldPassword] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -34,6 +35,10 @@ function ProfileScreen() {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match');
+      return;
+    }
     try {
       const { data } = await axios.put(
         '/api/users/profile',
@@ -41,6 +46,7 @@ function ProfileScreen() {
           name,
           email,
           password,
+          oldPassword,
         },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
@@ -51,7 +57,7 @@ function ProfileScreen() {
       });
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
-      toast.success('User updated successfully');
+      toast.success('Profile Updated');
     } catch (err) {
       dispatch({
         type: 'FETCH_FAIL',
@@ -103,12 +109,13 @@ function ProfileScreen() {
             htmlFor={'password'}
             className={profileScreenStyle.profileLabel}
           >
-            Password
+            New Password
           </label>
           <input
             type={'password'}
             id={'password'}
             className={profileScreenStyle.profileInput}
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete={'off'}
             required
@@ -120,12 +127,13 @@ function ProfileScreen() {
             htmlFor={'confirmPassword'}
             className={profileScreenStyle.profileLabel}
           >
-            Confirm Password
+            Confirm New Password
           </label>
           <input
             type={'password'}
             id={'confirmPassword'}
             className={profileScreenStyle.profileInput}
+            value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             autoComplete={'off'}
             required

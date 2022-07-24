@@ -27,7 +27,6 @@ function NavbarMenu(props) {
       <div className={navbarStyle.navbarInfoContainer}>
         <div className={navbarStyle.navbarInfoLine}>
           <div className={navbarStyle.customerServiceContainer}>
-            <p>Customer Service</p>
             <RiPhoneFill className={navbarStyle.navbarIcons} />{' '}
             <Link
               to="tel:+18005553456"
@@ -103,17 +102,6 @@ function NavbarMenu(props) {
               )}
             </Link>
           </div>
-
-          <p className={navbarStyle.separators}>{' | '}</p>
-
-          <Link to="/">
-            <div className={navbarStyle.customerServiceContainer}>
-              <RiHeartAddLine className={navbarStyle.navbarIcons} />
-              <p className={navbarStyle.searchBoxContainerLink}>
-                {'Wish Lists'}
-              </p>
-            </div>
-          </Link>
 
           <p className={navbarStyle.separators}>{' | '}</p>
 
