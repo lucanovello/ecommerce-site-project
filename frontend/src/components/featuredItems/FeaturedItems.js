@@ -11,7 +11,7 @@ const reducer = (state, action) => {
     case 'FETCH_SUCCESS':
       return {
         ...state,
-        products: action.payload.createdProducts,
+        products: action.payload,
         loading: false,
         error: false,
       };
@@ -33,10 +33,12 @@ function FeaturedItems(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/seed/products`);
+        const result = await axios.get(`/api/featuredItems`);
+        console.log(result);
+
         dispatch({
           type: 'FETCH_SUCCESS',
-          payload: result.data,
+          payload: result.data.featuredItems,
         });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err });

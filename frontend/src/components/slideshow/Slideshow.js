@@ -1,5 +1,6 @@
 import LoadingBox from '../LoadingBox/LoadingBox';
 import slideshowStyles from './Slideshow.module.css';
+import data from '../../data';
 
 function Slideshow(props) {
   return props.loading ? (
@@ -8,7 +9,7 @@ function Slideshow(props) {
     <div
       className={slideshowStyles.slideshowContainer}
       style={{
-        backgroundImage: `url(${props.slideshow[0].image})`,
+        backgroundImage: `url(${data.slideshow[1].image})`,
       }}
     >
       <div className={slideshowStyles.slideshowText}>

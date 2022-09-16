@@ -18,10 +18,19 @@ import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen';
 import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen';
 import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
 
+function getFavicon() {
+  return document.getElementById('favicon');
+}
+
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
   const location = useLocation();
+
+  const handleFavicon = (icon) => {
+    const favicon = getFavicon();
+    favicon.href = icon;
+  };
 
   return (
     <main className={appStyle.App}>
@@ -50,6 +59,7 @@ function App() {
           element={
             <ProductScreen ctxDispatch={ctxDispatch} location={location} />
           }
+          handleFavicon={handleFavicon}
         />
         <Route path="/cart" element={<CartScreen />} exact />
         <Route path="/signup" element={<SignUpScreen />} exact />

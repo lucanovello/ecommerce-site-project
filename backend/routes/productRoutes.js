@@ -1,5 +1,4 @@
 import express from 'express';
-import data from '../data.js';
 import Devices from '../models/devicesModel.js';
 import Product from '../models/productModel.js';
 
@@ -12,8 +11,8 @@ productRouter.get('/', async (req, res) => {
 });
 
 productRouter.get(`/:slug`, async (req, res) => {
-  await Devices.deleteMany({});
-  const devices = await Devices.insertMany(data.devices);
+  // await Devices.deleteMany({});
+  const devices = await Devices.find();
   const product = await Product.findOne({ slug: req.params.slug });
   console.log('SEED_/products/:slug');
   if (product) {

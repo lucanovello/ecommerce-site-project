@@ -1,7 +1,7 @@
 import navbarStyle from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { MdOutlineShoppingBag, MdShoppingBag } from 'react-icons/md';
-import { RiHeartAddLine, RiPhoneFill } from 'react-icons/ri';
+import { RiPhoneFill } from 'react-icons/ri';
 import { useContext } from 'react';
 import { Store } from '../../Store';
 import { FaSearch } from 'react-icons/fa';

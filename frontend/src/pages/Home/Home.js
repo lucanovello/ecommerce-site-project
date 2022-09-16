@@ -31,7 +31,7 @@ function Home(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/seed/all');
+        const result = await axios.get('/api/seed/slideshow');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err.message) });
@@ -54,10 +54,7 @@ function Home(props) {
         </title>
       </Helmet>
       <Slideshow slideshow={data.slideshow} />
-      <FeaturedItems
-        mainTitle="Featured Items"
-        products={data.createdProducts}
-      />
+      <FeaturedItems mainTitle="Featured Items" />
     </Fragment>
   );
 }

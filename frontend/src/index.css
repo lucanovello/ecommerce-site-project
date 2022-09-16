@@ -6,7 +6,7 @@
   --main-color: #242424;
   --highlight-color: #bacedb;
   --link-color: hsl(210, 100%, 40%);
-  --button-color: hsl(210, 100%, 15%);
+  --button-color: #00264d;
   --button-click-color: hsl(210, 90%, 25%);
   --button-disabled-color: rgb(211, 223, 224);
   --button-highlight-color: hsla(210, 40%, 75%, 0.6);
@@ -28,7 +28,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 
 *:focus-visible {

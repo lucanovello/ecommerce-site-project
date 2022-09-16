@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import QuantityBox from '../../components/QuantityBox/QuantityBox';
@@ -8,7 +7,6 @@ const CartItem = (props) => {
   const [cartQty, setCartQty] = useState(props.item.quantity);
 
   const addToCartHandler = async (item, quantity) => {
-    console.log(quantity);
     props.ctxDispatch({
       type: 'CART_ADD_ITEM',
       payload: { ...item, quantity },
@@ -46,7 +44,7 @@ const CartItem = (props) => {
             item={props.item}
             key={props.item._id}
             ctxDispatch={props.ctxDispatch}
-            addToCartHandler={() => addToCartHandler(props.item)}
+            addToCartHandler={addToCartHandler}
             quantityBoxContainerStyle={
               cartScreenStyle.cartScreenItemDetailsQtyContainer
             }

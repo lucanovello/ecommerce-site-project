@@ -1,18 +1,17 @@
-import bcrypt from 'bcryptjs';
+// import bcrypt from 'bcryptjs';
 
 const data = {
+  business: {
+    name: 'Muse Cases',
+    phone: '1.800.123.4567',
+  },
   users: [
     {
       name: 'Luca',
       email: 'admin@lucanovello.com',
-      password: bcrypt.hashSync('zP^8n*YzDdw{M=47'),
+      // password: bcrypt.hashSync('zP^8n*YzDdw{M=47'),
+      password: 'zP^8n*YzDdw{M=47',
       isAdmin: true,
-    },
-    {
-      name: 'Guest',
-      email: 'guest@gmail.com',
-      password: bcrypt.hashSync('abc123def456'),
-      isAdmin: false,
     },
   ],
   products: [

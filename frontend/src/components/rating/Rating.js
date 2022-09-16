@@ -2,7 +2,7 @@ import ratingStyle from './Rating.module.css';
 import { RiStarFill, RiStarHalfFill, RiStarLine } from 'react-icons/ri';
 
 function Rating(props) {
-  const { rating, numReviews } = props;
+  const { rating } = props;
   return (
     <div className={props.class}>
       <div className={ratingStyle.featuredItemStars}>
@@ -42,9 +42,7 @@ function Rating(props) {
           <RiStarLine />
         )}
       </div>
-      <div className={ratingStyle.featuredItemNumReviews}>
-        {numReviews} Reviews
-      </div>
+      <div className={ratingStyle.featuredItemNumReviews}>{rating} Stars</div>
     </div>
   );
 }

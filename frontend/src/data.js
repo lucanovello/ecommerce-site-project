@@ -1,6 +1,10 @@
 // import bcrypt from 'bcryptjs';
 
 const data = {
+  business: {
+    name: 'Muse Cases',
+    phone: '1.800.123.4567',
+  },
   users: [
     {
       name: 'Luca',
@@ -98,10 +102,20 @@ const data = {
       numReviews: 7,
     },
   ],
-  slideshow: {
-    image: '/images/fashion-2.jpg',
-    alt: 'Fashion 2',
-  },
+  slideshow: [
+    {
+      image: '/images/fashion-1.jpg',
+      alt: 'Fashion 1',
+    },
+    {
+      image: '/images/fashion-2.jpg',
+      alt: 'Fashion 2',
+    },
+    {
+      image: '/images/fashion-3.jpg',
+      alt: 'Fashion 3',
+    },
+  ],
   devices: [
     {
       brand: 'Apple',

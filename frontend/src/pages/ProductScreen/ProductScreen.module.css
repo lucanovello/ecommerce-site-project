@@ -11,25 +11,136 @@
   padding: 4vh 15%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-family: 'Poppins', sans-serif;
 }
+.appear {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.disappear {
+  opacity: 0;
+  transition: 0.5s ease;
+}
 
-.productImage {
-  width: 50%;
-  min-width: 500px;
+.productImageContainer {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.productImageMainContainer {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImage,
+.productImage2,
+.productImage3 {
+  position: absolute;
+}
+
+.productImage,
+.productImage2 {
+  width: 450px;
+  height: 450px;
+}
+.productImage2 {
+  padding: 5px;
+  filter: contrast(1.1) saturate(1.2);
+}
+.productImage3 {
+  max-height: 340px;
+  border-radius: 5px;
+}
+
+.productImageAlts {
+  width: 100%;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImageAlt,
+.productImageAlt2,
+.productImageAlt3 {
+  height: 100%;
+  max-height: 100px;
+  cursor: pointer;
+  font-size: 9px;
+  filter: saturate(0.1);
+  transition: 0.2s ease-out;
+}
+.productImageAlt3 {
+  padding: 12px 32px;
+}
+
+.productImageAltWrapper::after,
+.productImageAlt2Wrapper::after,
+.productImageAlt3Wrapper::after {
+  content: ' ';
+  width: 0;
+  height: 1px;
+  margin: 0 auto;
+  display: block;
+  background: #d0d0d0;
+}
+
+.productImageAlt:hover,
+.productImageAlt2:hover,
+.productImageAlt3:hover {
+  filter: saturate(0.6);
+}
+
+.productImageAltActive {
+  transition: 0.3s ease-in-out;
+}
+.productImageAltActive img {
+  filter: saturate(1);
+}
+
+.productImageAltActive::after,
+.productImageAltActive::after {
+  content: ' ';
+  width: 60%;
+  height: 1px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  bottom: 2px;
+  background: #d0d0d0;
+  transition: 1s cubic-bezier(0.15, 0.6, 0.4, 1);
 }
 
 .productDetails {
-  width: 40%;
   min-width: 400px;
+  height: 100%;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.productInfo {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3%;
 }
 
 .productTitle {
+  margin-bottom: 0.25vh;
   font-size: 2rem;
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .productArtist {
@@ -43,7 +154,7 @@
 
 .productDescription {
   margin-bottom: 1vh;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: justify;
   line-height: 1.35;
 }
@@ -52,22 +163,25 @@
   margin-bottom: 2vh;
   display: inline-flex;
   border-bottom: 1px solid rgba(255, 217, 0, 0);
-  font-size: 2rem;
+  font-size: 1.5rem;
   gap: 6px;
-  cursor: pointer;
-  transition: 1s ease;
+  /* cursor: pointer; */
+  /* transition: 0.2s ease; */
 }
 
-.productRating:hover {
+/* .productRating:hover {
   border-bottom: 1px solid #ffc000;
-}
+} */
 
 .productOptionsContainer {
+  width: 100%;
+  min-height: 15vh;
   margin-bottom: 1vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-start;
+  gap: 5px;
 }
 
 .productQuantityBoxContainer {
@@ -146,8 +260,9 @@
 
 .productPrice {
   width: 100%;
-  font-size: 2rem;
-  font-weight: 700;
+  margin-top: 2vh;
+  font-size: 1.8rem;
+  font-weight: 500;
   text-align: right;
 }
 

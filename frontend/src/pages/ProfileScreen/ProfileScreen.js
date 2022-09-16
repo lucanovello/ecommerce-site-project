@@ -25,7 +25,6 @@ function ProfileScreen() {
   const { userInfo } = state;
   const [name, setName] = useState(userInfo.name);
   const [email, setEmail] = useState(userInfo.email);
-  const [oldPassword, setOldPassword] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -46,7 +45,6 @@ function ProfileScreen() {
           name,
           email,
           password,
-          oldPassword,
         },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
