@@ -10,6 +10,7 @@ const productSchema = new mongoose.Schema(
     year: { type: Number, required: true },
     nationality: { type: String, required: true },
     category: { type: String, required: true },
+    isfeatured: { type: Boolean, required: false },
     image: { type: String, required: true },
     image2: { type: String, required: false },
     image3: { type: String, required: false },

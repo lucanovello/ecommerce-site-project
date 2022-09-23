@@ -34,7 +34,6 @@ function FeaturedItems(props) {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get(`/api/featuredItems`);
-        console.log(result);
 
         dispatch({
           type: 'FETCH_SUCCESS',

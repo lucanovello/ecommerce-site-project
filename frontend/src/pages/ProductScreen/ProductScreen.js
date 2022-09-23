@@ -19,6 +19,7 @@ import QuantityBox from '../../components/QuantityBox/QuantityBox';
 import { Helmet } from 'react-helmet-async';
 import { getError } from '../../utils';
 import { toast } from 'react-toastify';
+import { BsFillBagCheckFill } from 'react-icons/bs';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -107,6 +108,7 @@ function ProductScreen(props) {
     toastMessage(
       toast.success('Added to Cart', {
         toastId: 'Added_to_Cart',
+        icon: <BsFillBagCheckFill />,
       })
     );
   };
@@ -130,40 +132,50 @@ function ProductScreen(props) {
       <div className={productScreenStyle.productContainer}>
         <div className={productScreenStyle.productImageContainer}>
           <div className={productScreenStyle.productImageMainContainer}>
+            {/* <img
+              className={`${
+                currentImage === product.image3
+                  ? productScreenStyle.productImage3
+                  : currentImage === product.image2
+                  ? productScreenStyle.productImage2
+                  : productScreenStyle.productImage
+              }`}
+              src={currentImage}
+              alt={product.name}
+            /> */}
+
             <img
               className={`${productScreenStyle.productImage3} ${
                 currentImage === product.image3
                   ? productScreenStyle.appear
-                  : productScreenStyle.disappear
+                  : `${productScreenStyle.disappear} ${productScreenStyle.none}`
               }`}
               src={product.image3}
               alt={product.name}
             />
-
             <img
               className={`${productScreenStyle.productImage} ${
                 productScreenStyle.productImage2
               } ${
                 currentImage === product.image2
                   ? productScreenStyle.appear
-                  : productScreenStyle.disappear
+                  : `${productScreenStyle.disappear} ${productScreenStyle.none}`
               }`}
               src={product.image2}
               alt={product.name}
             />
             <img
               className={`${productScreenStyle.productImage} ${
-                productScreenStyle.productImage1
+                productScreenStyle.productImage
               } ${
                 currentImage === product.image
                   ? productScreenStyle.appear
-                  : productScreenStyle.disappear
+                  : `${productScreenStyle.disappear} ${productScreenStyle.none}`
               }`}
               src={product.image}
               alt={product.name}
             />
           </div>
-
           <div className={productScreenStyle.productImageAlts}>
             <div
               className={`${productScreenStyle.productImageAltWrapper} ${

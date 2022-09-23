@@ -7,6 +7,7 @@ const QuantityBox = (props) => {
       <label htmlFor="qty" className={props.quantityBoxLabelStyle}>
         Qty:
       </label>
+
       <div className={quantityBoxStyle.quantityBoxInputContainer}>
         <button
           type="button"

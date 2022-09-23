@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home.js';
 import ProductScreen from './pages/ProductScreen/ProductScreen.js';
 import appStyle from './App.module.css';
-import { useContext, useRef } from 'react';
+import { useContext } from 'react';
 import CartScreen from './pages/CartScreen/CartScreen';
 import Footer from './components/Footer/Footer';
 import SignInScreen from './pages/SignInScreen/SignInScreen';
@@ -39,10 +39,14 @@ function App() {
         transition={Flip}
         limit={1}
         toastClassName={appStyle.toast}
+        bodyClassName={appStyle.toastBody}
+        progressClassName={appStyle.toastProgress}
+        pauseOnHover={false}
         autoClose={1000}
         newestOnTop={true}
-        theme={'colored'}
+        // theme={'colored'}
         closeButton={false}
+        draggable={true}
       />
       <Navbar userInfo={userInfo} />
       <Routes>
