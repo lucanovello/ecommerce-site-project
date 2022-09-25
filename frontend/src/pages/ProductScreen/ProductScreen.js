@@ -132,18 +132,6 @@ function ProductScreen(props) {
       <div className={productScreenStyle.productContainer}>
         <div className={productScreenStyle.productImageContainer}>
           <div className={productScreenStyle.productImageMainContainer}>
-            {/* <img
-              className={`${
-                currentImage === product.image3
-                  ? productScreenStyle.productImage3
-                  : currentImage === product.image2
-                  ? productScreenStyle.productImage2
-                  : productScreenStyle.productImage
-              }`}
-              src={currentImage}
-              alt={product.name}
-            /> */}
-
             <img
               className={`${productScreenStyle.productImage3} ${
                 currentImage === product.image3
@@ -225,7 +213,7 @@ function ProductScreen(props) {
           <div>
             <h4
               className={productScreenStyle.productTitle}
-            >{`${product.name} (${product.year})`}</h4>
+            >{`${product.name}, ${product.year}`}</h4>
             <h5 className={productScreenStyle.productArtist}>
               {product.artist}
             </h5>
@@ -277,7 +265,24 @@ function ProductScreen(props) {
           </div>
         </div>
       </div>
-      <FeaturedItems mainTitle="Featured Items" location={props.location} />
+      <FeaturedItems
+        mainTitle={`More from ${product.artist}`}
+        content={product.artist}
+        location={props.location}
+        route="/api/featuredItems/artist"
+      />
+      <FeaturedItems
+        mainTitle={`More from the ${product.category} Movement`}
+        content={product.category}
+        location={props.location}
+        route="/api/featuredItems/category"
+      />
+      <FeaturedItems
+        mainTitle={`More from the ${Math.floor(product.year / 100) * 100}'s`}
+        content={product.year}
+        location={props.location}
+        route="/api/featuredItems/year"
+      />
     </div>
   );
 }

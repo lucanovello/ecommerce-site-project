@@ -54,7 +54,7 @@ function Home(props) {
         </title>
       </Helmet>
       <Slideshow slideshow={data.slideshow} />
-      <FeaturedItems mainTitle="Featured Items" />
+      <FeaturedItems mainTitle="Featured Items" route="/api/featuredItems/" />
     </Fragment>
   );
 }

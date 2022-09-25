@@ -1,0 +1,79 @@
+.productsScreenOuterContainer {
+  width: 100%;
+  padding: 4vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+/* .productsScreenMainTitle {
+  padding: 4vh 15% 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #242424;
+} */
+.productsScreenInnerContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: calc(150px + 5%) auto;
+}
+
+.productsScreenInnerTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #242424;
+}
+
+.productsScreenQueryContainer {
+  padding: 2vh 12%;
+  border-right: 1px dashed #9c9c9c;
+}
+.productsScreenQueryTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #242424;
+}
+
+.productsScreenQueryListWrapper {
+  padding-left: 5%;
+  margin-bottom: 1vh;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+.navbarMenuLink {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #a0a0a0;
+  transition: 0.1s ease;
+}
+.navbarMenuLink:hover {
+  color: #000000;
+}
+.productsScreenResultsContainer {
+  padding: 2vh 2%;
+}
+.productsScreenResultsSort {
+}
+
+.productWrapper {
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+  flex-wrap: wrap;
+  column-gap: 5px;
+}

@@ -2,26 +2,32 @@
   width: 100%;
   padding: 5vh calc(20px + 3%);
   background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .featuredItemsMainTitle {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
   letter-spacing: -0.5px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 .featuredItemsInnerContainer {
+  width: 100%;
   font-size: 1.5rem;
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: flex;
   justify-content: center;
   align-items: center;
   justify-self: center;
+  flex-wrap: wrap;
   gap: 0.5%;
 }
 

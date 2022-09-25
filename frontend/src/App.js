@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home.js';
 import ProductScreen from './pages/ProductScreen/ProductScreen.js';
+import ProductsScreen from './pages/ProductsScreen/ProductsScreen.js';
 import appStyle from './App.module.css';
 import { useContext } from 'react';
 import CartScreen from './pages/CartScreen/CartScreen';
@@ -18,19 +19,10 @@ import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen';
 import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen';
 import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
 
-function getFavicon() {
-  return document.getElementById('favicon');
-}
-
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
   const location = useLocation();
-
-  const handleFavicon = (icon) => {
-    const favicon = getFavicon();
-    favicon.href = icon;
-  };
 
   return (
     <main className={appStyle.App}>
@@ -42,7 +34,7 @@ function App() {
         bodyClassName={appStyle.toastBody}
         progressClassName={appStyle.toastProgress}
         pauseOnHover={false}
-        autoClose={1000}
+        autoClose={700}
         newestOnTop={true}
         // theme={'colored'}
         closeButton={false}
@@ -59,11 +51,15 @@ function App() {
         />
 
         <Route
+          path="/products"
+          element={<ProductsScreen location={location} />}
+          exact
+        />
+        <Route
           path="/products/:slug"
           element={
             <ProductScreen ctxDispatch={ctxDispatch} location={location} />
           }
-          handleFavicon={handleFavicon}
         />
         <Route path="/cart" element={<CartScreen />} exact />
         <Route path="/signup" element={<SignUpScreen />} exact />

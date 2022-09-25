@@ -1,15 +1,28 @@
+import { Link } from 'react-router-dom';
 import navbarStyle from './Navbar.module.css';
 
 function NavbarMenu() {
   return (
     <div className={navbarStyle.navbarMainMenu}>
       <ul className={navbarStyle.navbarMenuOptions}>
-        <li>Featured</li>
-        <li>Best Sellers</li>
-        <li>New Arrivals</li>
-        <li>Trending</li>
-        <li>Artists</li>
-        <li>Genres</li>
+        <Link className={navbarStyle.navbarMenuLink} to="/products">
+          <li>Featured</li>
+        </Link>
+        <Link className={navbarStyle.navbarMenuLink} to="/products">
+          <li>Best Sellers</li>
+        </Link>
+        <Link className={navbarStyle.navbarMenuLink} to="/products">
+          <li>New Arrivals</li>
+        </Link>
+        <Link className={navbarStyle.navbarMenuLink} to="/products">
+          <li>Trending</li>
+        </Link>
+        <Link className={navbarStyle.navbarMenuLink} to="/products">
+          <li>Artists</li>
+        </Link>
+        <Link className={navbarStyle.navbarMenuLink} to="/products">
+          <li>Genres</li>
+        </Link>
       </ul>
     </div>
   );

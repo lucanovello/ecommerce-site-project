@@ -86,7 +86,7 @@
   color: #8a8a8a;
   text-shadow: 0 0 1px #b8b8b8;
   cursor: auto;
-  animation: secret 5s ease-in-out 5s infinite;
+  animation: secret 7s ease-in-out 5s infinite;
 }
 .footerCopyrightText span:hover {
   animation: heartbeat 1s linear 1.2s infinite;

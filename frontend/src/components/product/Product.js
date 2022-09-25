@@ -6,14 +6,16 @@ function Product(props) {
   return (
     <div className={productStyle.featuredItem}>
       <Link to={`/products/${props.product.slug}`}>
-        <img
-          src={props.product.image}
-          alt={props.product.name}
-          className={productStyle.featuredItemImg}
-        />
+        <div className={productStyle.featuredItemImgWrapper}>
+          <img
+            src={props.product.image}
+            alt={props.product.name}
+            className={productStyle.featuredItemImg}
+          />
+        </div>
         <div className={productStyle.featuredItemText}>
           <h4 className={productStyle.featuredItemTitle}>
-            {props.product.name}
+            {`${props.product.name}, ${props.product.year}`}
           </h4>
           <h5 className={productStyle.featuredItemArtist}>
             {props.product.artist}

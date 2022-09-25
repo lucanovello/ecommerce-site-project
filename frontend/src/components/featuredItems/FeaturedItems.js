@@ -33,7 +33,11 @@ function FeaturedItems(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/featuredItems`);
+        const result = await axios.get(props.route, {
+          params: {
+            content: props.content,
+          },
+        });
 
         dispatch({
           type: 'FETCH_SUCCESS',
@@ -44,7 +48,7 @@ function FeaturedItems(props) {
       }
     };
     fetchData();
-  }, [props.location]);
+  }, [props.location, props.content, props.route]);
 
   return loading ? (
     <LoadingBox />

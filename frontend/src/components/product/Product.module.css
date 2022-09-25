@@ -1,6 +1,6 @@
 .featuredItem {
   max-width: 15%;
-  min-width: 240px;
+  min-width: 210px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,24 @@
   margin-bottom: 1vh;
 }
 
+.featuredItemImgWrapper {
+  width: 200px;
+  overflow: hidden;
+}
+
 .featuredItemImg {
   width: 100%;
+  object-fit: cover;
   margin-bottom: 5px;
-  transition: 0.1s ease-out;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   font-weight: 300;
+
+  transition: 0.2s ease;
+}
+
+.featuredItem:hover .featuredItemImg {
+  transform: scale(1.1);
 }
 
 .featuredItemText {
@@ -28,7 +39,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 999;
 }
 
 .featuredItemTitle {
@@ -38,15 +50,17 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  font-size: calc(11px + 15%);
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(10px + 13%);
   font-weight: 600;
   text-transform: capitalize;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 .featuredItemArtist {
   margin-bottom: 0.5vh;
-  font-size: calc(9px + 15%);
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(8px + 13%);
   font-weight: 300;
   text-transform: capitalize;
   color: rgb(145, 145, 145);
@@ -57,6 +71,9 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(15px + 13%);
+  font-weight: 400;
   gap: 5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   transition: 0.2s ease;
@@ -67,6 +84,7 @@
 
 .featuredItemPrice {
   width: 100%;
-  font-size: calc(14px + 15%);
+  font-size: calc(14px + 13%);
   font-weight: 700;
+  font-family: 'Poppins', sans-serif;
 }
