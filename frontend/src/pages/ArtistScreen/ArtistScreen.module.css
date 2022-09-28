@@ -1,0 +1,51 @@
+.artistScreenResultsContainer {
+  margin: 0 auto;
+  width: 100%;
+  padding: 2vh 2%;
+}
+.artistScreenResultsInnerContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 4vh;
+}
+
+.artistScreenResultsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.artistScreenResultsTitle {
+  margin-bottom: 3vh;
+  padding: 0 3%;
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(18px + 1vmax);
+  font-weight: 900;
+  letter-spacing: -1px;
+  word-spacing: 2px;
+  color: #242424;
+}
+
+.artistScreenResultsDescription {
+  margin-bottom: 3vh;
+  padding: 0 5%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  text-align: justify;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.productWrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 10vh;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+  flex-wrap: wrap;
+}

@@ -15,9 +15,8 @@ productRouter.get('/', async (req, res) => {
 });
 
 productRouter.get(`/:slug`, async (req, res) => {
-  // await Devices.deleteMany({});
-  const devices = await Devices.find();
   const product = await Product.findOne({ slug: req.params.slug });
+  const devices = await Devices.find();
   if (product) {
     console.log(`/products/:${req.params.slug}`);
     res.send({

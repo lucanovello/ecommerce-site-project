@@ -1,14 +1,15 @@
 .productsScreenOuterContainer {
   width: 100%;
-  padding: 4vh 0;
+  padding: 2vh 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
+  color: #242424;
 }
 
-/* .productsScreenMainTitle {
-  padding: 4vh 15% 2vh;
+.productsScreenMainTitle {
+  padding: 0 15% 1vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -16,64 +17,36 @@
   font-size: 1.5rem;
   font-weight: 900;
   color: #242424;
-} */
+}
 .productsScreenInnerContainer {
   width: 100%;
-  min-height: 100vh;
   display: grid;
   grid-template-columns: calc(150px + 5%) auto;
 }
 
-.productsScreenInnerTitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #242424;
-}
-
-.productsScreenQueryContainer {
-  padding: 2vh 12%;
-  border-right: 1px dashed #9c9c9c;
-}
-.productsScreenQueryTitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #242424;
-}
-
-.productsScreenQueryListWrapper {
-  padding-left: 5%;
-  margin-bottom: 1vh;
-  line-height: 1.4;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: #a0a0a0;
-}
-.navbarMenuLink {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: #a0a0a0;
-  transition: 0.1s ease;
-}
-.navbarMenuLink:hover {
-  color: #000000;
-}
 .productsScreenResultsContainer {
-  padding: 2vh 2%;
+  padding: 4vh 2%;
 }
-.productsScreenResultsSort {
+
+.productsScreenResultsTitle {
+  width: 95%;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  word-spacing: 1px;
+  color: #242424;
 }
 
 .productWrapper {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
   flex-wrap: wrap;
-  column-gap: 5px;
 }

@@ -7,8 +7,8 @@
 
 .productContainer {
   width: 100%;
-  margin-bottom: 2vh;
-  padding: 4vh 15%;
+  margin-bottom: 10vh;
+  padding: 8vh 15%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -96,7 +96,8 @@
   height: 1px;
   margin: 0 auto;
   display: block;
-  background: #d0d0d0;
+  background: transparent;
+  border-bottom: 1px dashed transparent;
 }
 
 .productImageAlt:hover,
@@ -119,12 +120,13 @@
 .productImageAltActive::after {
   content: ' ';
   width: 60%;
-  height: 1px;
+  height: 0px;
   margin: 0 auto;
   display: block;
   position: relative;
   bottom: 2px;
-  background: #242424;
+  background: transparent;
+  border-bottom: 1px dashed #242424;
   transition: 0.7s cubic-bezier(0.15, 0.6, 0.4, 1);
 }
 
@@ -137,6 +139,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 99;
 }
 
 .productInfo {
@@ -148,8 +151,8 @@
 }
 
 .productTitle {
-  margin-bottom: 0.1vh;
-  font-size: 2rem;
+  margin-bottom: -2px;
+  font-size: 2.1rem;
   font-weight: 900;
   line-height: 1.2;
 }
@@ -159,30 +162,32 @@
   font-size: 1rem;
   font-weight: 600;
   color: hsl(210, 100%, 15%);
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: -0.4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.productArtist:hover {
+  color: hsl(210, 50%, 50%);
 }
 
 .productDescription {
   margin-bottom: 1vh;
   font-size: 0.8rem;
   text-align: justify;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .productRating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 2vh;
   display: inline-flex;
   border-bottom: 1px solid rgba(255, 217, 0, 0);
   font-size: 1.5rem;
   gap: 6px;
-  /* cursor: pointer; */
-  /* transition: 0.2s ease; */
 }
-
-/* .productRating:hover {
-  border-bottom: 1px solid #ffc000;
-} */
 
 .productOptionsContainer {
   width: 100%;

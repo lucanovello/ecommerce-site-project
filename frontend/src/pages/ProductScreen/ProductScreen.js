@@ -6,7 +6,7 @@ import React, {
   useState,
   useRef,
 } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import productScreenStyle from './ProductScreen.module.css';
 import Rating from '../../components/Rating/Rating';
@@ -214,15 +214,20 @@ function ProductScreen(props) {
             <h4
               className={productScreenStyle.productTitle}
             >{`${product.name}, ${product.year}`}</h4>
-            <h5 className={productScreenStyle.productArtist}>
-              {product.artist}
-            </h5>
+
+            <Link to={`/${product.artist.replace(' ', '_')}`}>
+              <h5 className={productScreenStyle.productArtist}>
+                {product.artist}
+              </h5>
+            </Link>
+
             <p className={productScreenStyle.productDescription}>
               {product.description}
             </p>
             <Rating
               class={productScreenStyle.productRating}
               rating={product.rating}
+              numReviews={product.numReviews}
             />
           </div>
 

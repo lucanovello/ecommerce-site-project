@@ -1,6 +1,5 @@
 import LoadingBox from '../LoadingBox/LoadingBox';
 import slideshowStyles from './Slideshow.module.css';
-import data from '../../data';
 
 function Slideshow(props) {
   return props.loading ? (
@@ -9,7 +8,9 @@ function Slideshow(props) {
     <div
       className={slideshowStyles.slideshowContainer}
       style={{
-        backgroundImage: `url(${data.slideshow[1].image})`,
+        background: `50% 0% / cover no-repeat url(${props.slide.image})`,
+        // background: `radial-gradient(rgba(0,0,0,0.1) ,rgba(0,0,0,0.8)) , 70% / cover no-repeat url(${props.slide.image})`,
+        // background: `50% 50% / cover no-repeat url('/images/wassily-kandinsky-title.jpg')`,
       }}
     >
       <div className={slideshowStyles.slideshowText}>

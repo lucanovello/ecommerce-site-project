@@ -28,6 +28,10 @@ const data = {
       image: '/images/fashion-3.jpg',
       alt: 'Fashion 3',
     },
+    {
+      image: '/images/starry-night-in-cafe.jpg',
+      alt: 'starry night in cafe',
+    },
   ],
   devices: [
     {
@@ -10564,7 +10568,7 @@ const data = {
       artist: 'Henri Matisse',
       year: 1909,
       description:
-        'Henri Emile Benoit Matisse (31 December 1869 – 3 November 1954) was a French visual artist, known for both his use of colour and his fluid and original draughtsmanship. He was a draughtsman, printmaker, and sculptor, but is known primarily as a painter. Matisse is commonly regarded, along with Pablo Picasso, as one of the artists who best helped to define the revolutionary developments in the visual arts throughout the opening decades of the twentieth century, responsible for significant developments in painting and sculpture.',
+        'Henri Emile Benoit Matisse (31 December 1869 - 3 November 1954) was a French visual artist, known for both his use of colour and his fluid and original draughtsmanship. He was a draughtsman, printmaker, and sculptor, but is known primarily as a painter. Matisse is commonly regarded, along with Pablo Picasso, as one of the artists who best helped to define the revolutionary developments in the visual arts throughout the opening decades of the twentieth century, responsible for significant developments in painting and sculpture.',
       category: 'Post-Impressionism',
       nationality: 'French',
       tags: 'Henri-Matisse',
@@ -10572,7 +10576,7 @@ const data = {
       isfeatured: true,
       image2: '/images/products/iphone-14/Henri_Matisse+Dance_I+1909.jpg',
       image:
-        '/images/products/iphone-8/Henri-Matisse+Dance_I+1909+IP6+600px.jpg',
+        '/images/products/iphone-8/Henri_Matisse+Dance_I+1909+IP6+600px.jpg',
       image3: '/images/products/paintings/Henri_Matisse+Dance_I+1909.jpg',
       rating: 5,
       numReviews: 9,
@@ -19229,7 +19233,7 @@ const data = {
       image2:
         "/images/products/iphone-14/Osman_Hamdi_Bey+Ku'ran_Tilaveti_(Reciting_The_Quran)+1910.jpg",
       image:
-        '/images/products/iphone-8/Osman_Hamdi_Bey+Kur%E2%80%99an_Tilaveti_(Reciting_The_Quran)+1910+IP6+600px.jpg',
+        "/images/products/iphone-8/Osman_Hamdi_Bey+Kur'an_Tilaveti_(Reciting_The_Quran)+1910+IP6+600px.jpg",
       image3:
         "/images/products/paintings/Osman_Hamdi_Bey+Ku'ran_Tilaveti_(Reciting_The_Quran)+1910.jpg",
       rating: 4.5,
@@ -23334,7 +23338,7 @@ const data = {
       image2:
         '/images/products/iphone-14/Raphael+The_Agony_In_The_Garden+1504_(2).jpg',
       image:
-        '/images/products/iphone-8/Raphael+The_Agony_In_The_Garden_(2)+1504+IP6+600px.jpg',
+        '/images/products/iphone-8/Raphael+The_Agony_In_The_Garden+1504_(2)+IP6+600px.jpg',
       image3:
         '/images/products/paintings/Raphael+The_Agony_In_The_Garden+1504_(2).jpg',
       rating: 5,
@@ -23899,7 +23903,7 @@ const data = {
       image2:
         '/images/products/iphone-14/Raphael+The_School_Of_Athens+1511_(3).jpg',
       image:
-        '/images/products/iphone-8/Raphael+The_School_Of_Athens+1511+IP6_(3)+600px.jpg',
+        '/images/products/iphone-8/Raphael+The_School_Of_Athens+1511_(3)+IP6+600px.jpg',
       image3:
         '/images/products/paintings/Raphael+The_School_Of_Athens+1511_(3).jpg',
       rating: 4,
@@ -24930,22 +24934,22 @@ const data = {
     {
       slug: 'Rembrandt-The-Prophetess-Anna-Rembrandts-Mother-1631',
       sku: 'Rembrandt-The-Prophetess-Anna-Rembrandts-Mother-1631_',
-      name: 'The Prophetess Anna (Rembrandt`s Mother)',
+      name: "The Prophetess Anna (Rembrandt's Mother)",
       artist: 'Rembrandt',
       year: 1631,
       description:
         "Rembrandt Harmenszoon van Rijn (July 15, 1606 - October 4, 1669) was a Dutch draughtsman, painter, and printmaker.  An innovative and prolific master in three media, he is generally considered one of the greatest visual artists in the history of art and the most important in Dutch art history.  Unlike most Dutch masters of the 17th century, Rembrandt's works depict a wide range of style and subject matter, from portraits and self-portraits to landscapes, genre scenes, allegorical and historical scenes, biblical and mythological themes as well as animal studies.  His contributions to art came in a period of great wealth and cultural achievement that historians call the Dutch Golden Age, when Dutch art (especially Dutch painting), although in many ways antithetical to the Baroque style that dominated Europe, was extremely prolific and innovative, and gave rise to important new genres.  Like many artists of the Dutch Golden Age, such as Jan Vermeer of Delft, Rembrandt was also known as an avid art collector and dealer.",
       category: 'Baroque',
       nationality: 'Dutch',
-      tags: 'Rembrandt, The Prophetess Anna (Rembrandt`s Mother)  , Dutch, Baroque, 1631, art, fine art, painting, paintings, paint, canvas',
+      tags: "Rembrandt, The Prophetess Anna (Rembrandt's Mother)  , Dutch, Baroque, 1631, art, fine art, painting, paintings, paint, canvas",
       price: 19.99,
       isfeatured: false,
       image2:
-        '/images/products/iphone-14/Rembrandt+The_Prophetess_Anna_(Rembrandt`s_Mother)+1631.jpg',
+        "/images/products/iphone-14/Rembrandt+The_Prophetess_Anna_(Rembrandt's_Mother)+1631.jpg",
       image:
-        '/images/products/iphone-8/Rembrandt+The_Prophetess_Anna_(Rembrandt`s_Mother)+1631+IP6+600px.jpg',
+        "/images/products/iphone-8/Rembrandt+The_Prophetess_Anna_(Rembrandt's_Mother)+1631+IP6+600px.jpg",
       image3:
-        '/images/products/paintings/Rembrandt+The_Prophetess_Anna_(Rembrandt`s_Mother)+1631.jpg',
+        "/images/products/paintings/Rembrandt+The_Prophetess_Anna_(Rembrandt's_Mother)+1631.jpg",
       rating: 4.5,
       numReviews: 14,
       sales: 43,

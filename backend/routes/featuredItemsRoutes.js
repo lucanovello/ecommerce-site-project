@@ -2,15 +2,16 @@ import express from 'express';
 import Product from '../models/productModel.js';
 
 const featuredItemsRouter = express.Router();
+const itemCount = 7;
 
 featuredItemsRouter.get('/', async (req, res) => {
   const products = await Product.find({ isfeatured: true });
   const featuredItems = [];
   const arr = [];
   while (
-    products.length < 6
+    products.length < itemCount
       ? featuredItems.length < products.length
-      : featuredItems.length < 6
+      : featuredItems.length < itemCount
   ) {
     let randInt = Math.floor(Math.random() * products.length);
     if (arr.indexOf(randInt) === -1) {
@@ -27,9 +28,9 @@ featuredItemsRouter.get('/artist', async (req, res) => {
   const featuredItems = [];
   const arr = [];
   while (
-    products.length < 6
+    products.length < itemCount
       ? featuredItems.length < products.length
-      : featuredItems.length < 6
+      : featuredItems.length < itemCount
   ) {
     let randInt = Math.floor(Math.random() * products.length);
     if (arr.indexOf(randInt) === -1) {
@@ -46,9 +47,9 @@ featuredItemsRouter.get('/category', async (req, res) => {
   const featuredItems = [];
   const arr = [];
   while (
-    products.length < 6
+    products.length < itemCount
       ? featuredItems.length < products.length
-      : featuredItems.length < 6
+      : featuredItems.length < itemCount
   ) {
     let randInt = Math.floor(Math.random() * products.length);
     if (arr.indexOf(randInt) === -1) {
@@ -70,9 +71,9 @@ featuredItemsRouter.get('/year', async (req, res) => {
   const featuredItems = [];
   const arr = [];
   while (
-    products.length < 6
+    products.length < itemCount
       ? featuredItems.length < products.length
-      : featuredItems.length < 6
+      : featuredItems.length < itemCount
   ) {
     let randInt = Math.floor(Math.random() * products.length);
     if (arr.indexOf(randInt) === -1) {

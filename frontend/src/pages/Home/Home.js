@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
 import { getError } from '../../utils';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
+import FeaturedCategory from '../../components/FeaturedCategory/FeaturedCategory';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -53,8 +54,11 @@ function Home(props) {
             : 'Luca Novello | Ecommerce Website'}
         </title>
       </Helmet>
-      <Slideshow slideshow={data.slideshow} />
-      <FeaturedItems mainTitle="Featured Items" route="/api/featuredItems/" />
+      <Slideshow slide={data.slideshow[1]} />
+      <FeaturedCategory title="Featured Genres" route="/api/seed/category" />
+      {/* <FeaturedItems mainTitle="Featured Items" route="/api/featuredItems/" />
+      <FeaturedItems mainTitle="Best Sellers" route="/api/featuredItems/" />
+      <FeaturedItems mainTitle="Trending" route="/api/featuredItems/" /> */}
     </Fragment>
   );
 }

@@ -13,13 +13,19 @@ function Product(props) {
             className={productStyle.featuredItemImg}
           />
         </div>
-        <div className={productStyle.featuredItemText}>
+      </Link>
+      <div className={productStyle.featuredItemText}>
+        <Link to={`/products/${props.product.slug}`}>
           <h4 className={productStyle.featuredItemTitle}>
             {`${props.product.name}, ${props.product.year}`}
           </h4>
+        </Link>
+        <Link to={`/${props.product.artist.replace(' ', '_')}`}>
           <h5 className={productStyle.featuredItemArtist}>
             {props.product.artist}
           </h5>
+        </Link>
+        <Link to={`/products/${props.product.slug}`}>
           <Rating
             class={productStyle.featuredItemRating}
             rating={props.product.rating}
@@ -28,8 +34,8 @@ function Product(props) {
           <h5 className={productStyle.featuredItemPrice}>
             ${props.product.price}
           </h5>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }

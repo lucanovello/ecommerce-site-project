@@ -9,13 +9,13 @@ const seedRouter = express.Router();
 
 seedRouter.get('/insert', async (req, res) => {
   await Product.deleteMany({});
-  // await Slideshow.deleteMany({});
-  // await Devices.deleteMany({});
+  await Slideshow.deleteMany({});
+  await Devices.deleteMany({});
 
   const products = await Product.insertMany(data.products);
-  const slideshow = await Slideshow.find();
-  const devices = await Devices.find();
-  console.log('SEED_/');
+  const slideshow = await Slideshow.insertMany(data.slideshow);
+  const devices = await Devices.insertMany(data.devices);
+  console.log('/insert');
   res.send({
     slideshow,
     products,
@@ -27,7 +27,7 @@ seedRouter.get('/all', async (req, res) => {
   const slideshow = await Slideshow.find();
   const devices = await Devices.find();
 
-  console.log('SEED_ALL');
+  console.log('/all');
   res.send({
     products,
     slideshow,
@@ -36,36 +36,41 @@ seedRouter.get('/all', async (req, res) => {
   });
 });
 seedRouter.get('/products', async (req, res) => {
-  // await Product.deleteMany({});
   const products = await Product.find();
-  console.log('SEED_PRODUCTS');
+  console.log('/products');
   res.send({
     products,
   });
 });
 seedRouter.get('/slideshow', async (req, res) => {
-  // await Slideshow.deleteMany({});
   const slideshow = await Slideshow.find();
-  console.log('SEED_SLIDESHOW');
+  console.log('/slideshow');
   res.send({
     slideshow,
   });
 });
 seedRouter.get('/devices', async (req, res) => {
-  // await Devices.deleteMany({});
   const devices = await Devices.find();
-  console.log('SEED_DEVICES');
+  console.log('/devices');
   res.send({
     devices,
   });
 });
 seedRouter.get('/createdUsers', async (req, res) => {
-  // await User.deleteMany({});
   const createdUsers = await User.find();
-  console.log('SEED_USERS');
+  console.log('/createdUsers');
   res.send({
     createdUsers,
   });
 });
-
+seedRouter.get(`/:artist`, async (req, res) => {
+  const artistLink = req.params.artist.replace('_', ' ');
+  const artist = await Product.find({ artist: artistLink });
+  console.log(req.params.artist);
+  console.log(req.params.artist.replace('_', ' '));
+  console.log('/:artist');
+  res.send({
+    artist,
+  });
+});
 export default seedRouter;

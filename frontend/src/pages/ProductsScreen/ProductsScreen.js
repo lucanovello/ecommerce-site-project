@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React, { Fragment, useEffect, useReducer } from 'react';
+import React, { Fragment, useEffect, useReducer, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import ErrorBox from '../../components/ErrorBox/ErrorBox';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import Product from '../../components/Product/Product';
+import QueryMenu from '../../components/QueryMenu/QueryMenu';
 import { getError } from '../../utils';
 import productsScreenStyle from './ProductsScreen.module.css';
 
@@ -42,12 +42,17 @@ function ProductsScreen(props) {
     loading: true,
     error: '',
   });
+
+  const [currentQuery, setCurrentQuery] = useState(products);
+  const [currentTitle, setCurrentTitle] = useState('All');
+
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get(`/api/products/`);
-        console.log(result);
+        setCurrentQuery(result.data.products);
+
         dispatch({
           type: 'FETCH_SUCCESS',
           payload: result.data,
@@ -71,74 +76,19 @@ function ProductsScreen(props) {
       <Helmet>
         <title>{props.headerTitle ? props.headerTitle : 'Products Page'}</title>
       </Helmet>
-      {/* MAIN TITLE */}
-      {/* <div className={productsScreenStyle.productsScreenMainTitle}>SEARCH</div> */}
 
-      {/* SEARCH OUTER SECTION */}
       <div className={productsScreenStyle.productsScreenInnerContainer}>
-        {/* QUERY INNER SECTION */}
-        <div className={productsScreenStyle.productsScreenQueryContainer}>
-          <h4 className={productsScreenStyle.productsScreenQueryTitle}>
-            Artists
-          </h4>
-          <ul className={productsScreenStyle.productsScreenQueryListWrapper}>
-            {artists.slice(0, 30).map((artist, index) => (
-              <li
-                className={productsScreenStyle.productsScreenQueryListItem}
-                key={index}
-              >
-                <Link
-                  className={productsScreenStyle.navbarMenuLink}
-                  to="/products"
-                >
-                  {artist}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <h4 className={productsScreenStyle.productsScreenQueryTitle}>
-            Categories
-          </h4>
-          <ul className={productsScreenStyle.productsScreenQueryListWrapper}>
-            {categories.map((category, index) => (
-              <li
-                className={productsScreenStyle.productsScreenQueryListItem}
-                key={index}
-              >
-                {' '}
-                <Link
-                  className={productsScreenStyle.navbarMenuLink}
-                  to="/products"
-                >
-                  {category}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <h4 className={productsScreenStyle.productsScreenQueryTitle}>
-            Nationality
-          </h4>
-          <ul className={productsScreenStyle.productsScreenQueryListWrapper}>
-            {nationalities.map((nationality, index) => (
-              <li
-                className={productsScreenStyle.productsScreenQueryListItem}
-                key={index}
-              >
-                <Link
-                  className={productsScreenStyle.navbarMenuLink}
-                  to="/products"
-                >
-                  {nationality}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
+        <QueryMenu
+          content={{ products, artists, categories, nationalities }}
+          states={{ setCurrentQuery, setCurrentTitle }}
+        />
         {/* RESULTS INNER SECTION */}
         <div className={productsScreenStyle.productsScreenResultsContainer}>
+          <div className={productsScreenStyle.productsScreenResultsTitle}>
+            {`${currentTitle}`}
+          </div>
           <div className={productsScreenStyle.productWrapper}>
-            {products.slice(0, 30).map((product) => (
+            {currentQuery.slice(0, 35).map((product) => (
               <Product product={product} key={product._id}></Product>
             ))}
           </div>

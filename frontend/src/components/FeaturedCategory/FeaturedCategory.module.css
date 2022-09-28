@@ -1,4 +1,4 @@
-.featuredItemsOuterContainer {
+.featuredCategoryStyleOuterContainer {
   margin: 0 auto 10vh;
   width: 90%;
   background: white;
@@ -8,7 +8,7 @@
   justify-content: flex-start;
 }
 
-.featuredItemsMainTitle {
+.featuredCategoryStyleMainTitle {
   margin-bottom: 1vh;
   padding: 0 3% 1vh;
   display: flex;
@@ -23,7 +23,7 @@
   z-index: 9;
 }
 
-.featuredItemsInnerContainer {
+.featuredCategoryStyleInnerContainer {
   width: 100%;
   padding: 1.5vh 5% 0;
   font-size: 1.5rem;

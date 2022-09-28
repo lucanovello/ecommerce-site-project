@@ -18,6 +18,7 @@ import PlaceOrderScreen from './pages/PlaceOrderScreen/PlaceOrderScreen';
 import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen';
 import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen';
 import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
+import ArtistScreen from './pages/ArtistScreen/ArtistScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -50,6 +51,11 @@ function App() {
           exact
         />
 
+        <Route
+          path="/:artist"
+          element={<ArtistScreen location={location} />}
+          exact
+        />
         <Route
           path="/products"
           element={<ProductsScreen location={location} />}
