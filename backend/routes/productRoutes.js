@@ -4,7 +4,7 @@ import Product from '../models/productModel.js';
 
 const productRouter = express.Router();
 
-productRouter.get('/', async (req, res) => {
+productRouter.get('/all', async (req, res) => {
   const products = await Product.find();
   const artist = await Product.distinct('artist');
   const category = await Product.distinct('category');
@@ -17,13 +17,13 @@ productRouter.get('/', async (req, res) => {
 productRouter.get(`/:slug`, async (req, res) => {
   const product = await Product.findOne({ slug: req.params.slug });
   const devices = await Devices.find();
-  if (product) {
-    console.log(`/products/:${req.params.slug}`);
+  try {
     res.send({
       product,
       devices,
     });
-  } else {
+    console.log(`/products/:${req.params.slug}`);
+  } catch (error) {
     res.status(404).send({ message: 'Product Not Found' });
   }
 });

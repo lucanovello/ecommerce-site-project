@@ -45,28 +45,17 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={
-            <Home headerTitle={`Luca Novello | Home`} location={location} />
-          }
+          element={<Home headerTitle={`Luca Novello | Home`} />}
           exact
         />
 
-        <Route
-          path="/:artist"
-          element={<ArtistScreen location={location} />}
-          exact
-        />
-        <Route
-          path="/products"
-          element={<ProductsScreen location={location} />}
-          exact
-        />
+        <Route path="/products" element={<ProductsScreen />} exact />
         <Route
           path="/products/:slug"
-          element={
-            <ProductScreen ctxDispatch={ctxDispatch} location={location} />
-          }
+          element={<ProductScreen ctxDispatch={ctxDispatch} />}
+          exact
         />
+        <Route path="/:artist" element={<ArtistScreen />} exact />
         <Route path="/cart" element={<CartScreen />} exact />
         <Route path="/signup" element={<SignUpScreen />} exact />
         <Route path="/signin" element={<SignInScreen />} exact />

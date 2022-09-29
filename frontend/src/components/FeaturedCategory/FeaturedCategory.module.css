@@ -1,34 +1,79 @@
-.featuredCategoryStyleOuterContainer {
-  margin: 0 auto 10vh;
-  width: 90%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.featuredCategoryStyleMainTitle {
-  margin-bottom: 1vh;
-  padding: 0 3% 1vh;
+.featuredCategoryOuterContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 7vh 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
+  background: #fff;
+}
+
+.featuredCategoryMainTitle {
+  margin-bottom: 7vh;
+  padding: 0 3% 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: capitalize;
   letter-spacing: -0.6px;
   word-spacing: 2px;
-  font-weight: 900;
-  text-transform: capitalize;
+  color: #242424;
   z-index: 9;
 }
 
-.featuredCategoryStyleInnerContainer {
-  width: 100%;
-  padding: 1.5vh 5% 0;
-  font-size: 1.5rem;
+.featuredCategoryImageOuterContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 3%;
+  row-gap: 5vh;
+}
+
+.featuredCategoryImageInnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.featuredCategoryImageTitle {
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: capitalize;
+  color: #242424;
+}
+
+.featuredCategoryImageContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  column-gap: 5px;
-  border-top: 1px dashed #242424;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  grid-template-rows: repeat(2, minmax(80px, 1fr));
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.featuredCategoryImageWrapper {
+  max-width: 80px;
+  min-width: 60px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.featuredCategoryImage {
+  width: 100%;
+  transition: 0.2s ease;
+}
+.featuredCategoryImage:hover {
+  transform: scale(1.05);
 }

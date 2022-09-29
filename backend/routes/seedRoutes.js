@@ -1,5 +1,7 @@
 import express from 'express';
 import data from '../dataAllLocal.js';
+import Artists from '../models/artistModel.js';
+import Categories from '../models/categoryModel.js';
 import Devices from '../models/devicesModel.js';
 import Product from '../models/productModel.js';
 import Slideshow from '../models/slideshowModel.js';
@@ -11,15 +13,21 @@ seedRouter.get('/insert', async (req, res) => {
   await Product.deleteMany({});
   await Slideshow.deleteMany({});
   await Devices.deleteMany({});
+  await Categories.deleteMany({});
+  await Artists.deleteMany({});
 
   const products = await Product.insertMany(data.products);
   const slideshow = await Slideshow.insertMany(data.slideshow);
   const devices = await Devices.insertMany(data.devices);
+  const categories = await Categories.insertMany(data.categories);
+  const artists = await Artists.insertMany(data.artists);
   console.log('/insert');
   res.send({
     slideshow,
     products,
     devices,
+    categories,
+    artists,
   });
 });
 seedRouter.get('/all', async (req, res) => {
@@ -63,14 +71,5 @@ seedRouter.get('/createdUsers', async (req, res) => {
     createdUsers,
   });
 });
-seedRouter.get(`/:artist`, async (req, res) => {
-  const artistLink = req.params.artist.replace('_', ' ');
-  const artist = await Product.find({ artist: artistLink });
-  console.log(req.params.artist);
-  console.log(req.params.artist.replace('_', ' '));
-  console.log('/:artist');
-  res.send({
-    artist,
-  });
-});
+
 export default seedRouter;

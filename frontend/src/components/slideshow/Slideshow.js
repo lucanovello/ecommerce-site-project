@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LoadingBox from '../LoadingBox/LoadingBox';
 import slideshowStyles from './Slideshow.module.css';
 
@@ -8,7 +9,7 @@ function Slideshow(props) {
     <div
       className={slideshowStyles.slideshowContainer}
       style={{
-        background: `50% 0% / cover no-repeat url(${props.slide.image})`,
+        background: `radial-gradient(rgba(0,0,0,0) 30%, rgba(0,0,0,0.2)), 35% 0% / cover no-repeat url(${props.slide.image})`,
         // background: `radial-gradient(rgba(0,0,0,0.1) ,rgba(0,0,0,0.8)) , 70% / cover no-repeat url(${props.slide.image})`,
         // background: `50% 50% / cover no-repeat url('/images/wassily-kandinsky-title.jpg')`,
       }}
@@ -17,7 +18,9 @@ function Slideshow(props) {
         <h1>Brand Name</h1>
         <span></span>
         <p>Call to action statement now!</p>
-        <button className={slideshowStyles.slideshowBtn}>Learn More</button>
+        <Link to="/products">
+          <button className={slideshowStyles.slideshowBtn}>Learn More</button>
+        </Link>
       </div>
     </div>
   );

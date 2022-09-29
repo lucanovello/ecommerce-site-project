@@ -1,8 +1,8 @@
 /* VARIABLES */
 :root {
-  --navbar-header-height: calc(25px + 1vh);
-  --navbar-height: calc((70px + 5vh));
-  --navbar-top-height: calc(var(--navbar-height) * 0.7);
+  --navbar-header-height: 35px;
+  --navbar-height: 80px;
+  --navbar-menu-height: 40px;
   --main-color: #242424;
   --highlight-color: #bacedb;
   --link-color: hsl(210, 100%, 40%);

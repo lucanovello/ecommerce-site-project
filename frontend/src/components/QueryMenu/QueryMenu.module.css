@@ -29,6 +29,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 900;
+  text-transform: capitalize;
   letter-spacing: -0.5px;
   color: #242424;
 }
@@ -78,6 +79,7 @@
   font-size: 0.7rem;
   font-weight: 300;
   color: #a0a0a0;
+  text-transform: capitalize;
 }
 .queryMenuQueryCheckbox {
   accent-color: var(--button-click-color);
@@ -94,6 +96,7 @@
   font-weight: 300;
   color: #a0a0a0;
   cursor: pointer;
+  text-transform: capitalize;
   transition: 0.1s ease;
 }
 .queryMenuQueryCheckboxLabel:hover {

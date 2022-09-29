@@ -1,7 +1,4 @@
 .featuredItem {
-  max-width: 200px;
-  min-width: 150px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -13,18 +10,16 @@
   border: 1px dashed transparent;
   transition: 1s ease;
 }
-.featuredItem:hover {
-  border: 1px dashed #e0e0e0;
-}
 
 .featuredItemImgWrapper {
-  width: 200px;
+  max-width: 200px;
+  min-width: 150px;
+  aspect-ratio: 1;
   overflow: hidden;
 }
 
 .featuredItemImg {
   width: 100%;
-  object-fit: cover;
   margin-bottom: 5px;
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
@@ -43,7 +38,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   z-index: 999;
@@ -55,7 +50,7 @@
   margin-bottom: 0.2vh;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: calc(10px + 13%);
   font-weight: 700;
@@ -66,20 +61,24 @@
 }
 
 .featuredItemArtist {
+  height: 2rem;
   margin-bottom: 0.2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   font-size: calc(9px + 13%);
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: -0.2px;
-  word-spacing: 1px;
+  line-height: 1.3;
+  white-space: nowrap;
   color: rgb(145, 145, 145);
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   transition: 0.2s ease;
 }
 .featuredItemArtist:hover {
   font-weight: 500;
-
   color: var(--button-color);
 }
 
@@ -90,7 +89,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: calc(15px + 13%);
   font-weight: 400;
-  gap: 5px;
+  gap: 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   transition: 0.2s ease;
 }

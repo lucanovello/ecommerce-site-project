@@ -18,27 +18,24 @@ a {
 }
 
 .navbarTop {
+  max-height: var(--navbar-top-height);
   padding: 2vh 8%;
   display: flex;
   justify-content: space-between;
   align-content: center;
   background: white;
   color: var(--main-color);
-  gap: 50px;
-}
-
-.navbarTopHeaderOpen {
-  height: var(--navbar-top-height);
-}
-.navbarTopHeaderClosed {
-  height: var(--navbar-top-height);
+  column-gap: 50px;
+  line-height: 1;
 }
 
 .navbarLogo {
   margin-right: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
+  position: relative;
+  bottom: 2px;
 }
 .navbarLogo h1 {
   font-family: 'Abril Fatface', cursive;
@@ -49,14 +46,14 @@ a {
 .navbarInfoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   justify-self: flex-end;
   grid-template-rows: repeat(3, 1fr);
   font-size: 12px;
   letter-spacing: calc(0.03 * 1vmax);
   white-space: nowrap;
-  gap: 10px;
+  gap: 3px;
 }
 
 .navbarInfoLine {
@@ -228,9 +225,9 @@ a {
 
 .searchBox {
   width: 200px;
+  height: 100%;
   margin-left: 2%;
   padding: 1.2vh 5%;
-  height: 100%;
   border: none;
   border-bottom: 1px solid rgb(220, 220, 220);
   font-family: 'Poppins', sans-serif;
@@ -251,7 +248,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+
   border: none;
   border-bottom: 1px solid rgb(220, 220, 220);
   background-color: rgb(245, 245, 245);
@@ -271,19 +268,20 @@ a {
 }
 
 .navbarMainMenu {
+  max-height: var(--navbar-menu-height);
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--main-color);
   border-top: var(--dashed-border);
   border-bottom: var(--dashed-border);
-  box-sizing: content-box;
+  overflow: hidden;
   z-index: 999;
 }
 
 .navbarMenuOptions {
   width: 100%;
-  height: 100%;
+  max-height: var(--navbar-menu-height);
   padding: 0 calc(5px + 15%);
   display: flex;
   justify-content: center;
@@ -300,12 +298,19 @@ a {
 
 .navbarMenuLink {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbarMenuOptions li {
+  max-height: var(--navbar-menu-height);
   width: 80%;
-  height: 100%;
   padding: 1vh 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   cursor: pointer;
   white-space: nowrap;
 }

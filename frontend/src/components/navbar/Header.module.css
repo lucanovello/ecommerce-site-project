@@ -1,6 +1,6 @@
 .HeaderContainer {
   width: 100%;
-  height: calc(25px + 1vh);
+  max-height: var(--navbar-header-height);
   padding: 1vh 25%;
   display: flex;
   justify-content: center;

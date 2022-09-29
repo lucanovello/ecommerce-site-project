@@ -55,10 +55,15 @@ function Home(props) {
         </title>
       </Helmet>
       <Slideshow slide={data.slideshow[1]} />
-      <FeaturedCategory title="Featured Genres" route="/api/seed/category" />
-      {/* <FeaturedItems mainTitle="Featured Items" route="/api/featuredItems/" />
+      <FeaturedCategory
+        mainTitle="Featured Genres"
+        route="/api/categories/featuredCategory"
+        content="category"
+      />
+
       <FeaturedItems mainTitle="Best Sellers" route="/api/featuredItems/" />
-      <FeaturedItems mainTitle="Trending" route="/api/featuredItems/" /> */}
+      {/* <FeaturedItems mainTitle="Trending" route="/api/featuredItems/" />  */}
+      {/* <FeaturedItems mainTitle="Featured Items" route="/api/featuredItems/" /> */}
     </Fragment>
   );
 }

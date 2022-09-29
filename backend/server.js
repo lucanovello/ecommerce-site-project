@@ -7,6 +7,8 @@ import productRouter from './routes/productRoutes.js';
 import featuredItemsRouter from './routes/featuredItemsRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
+import artistRouter from './routes/artistRoutes.js';
+import categoryRouter from './routes/categoryRoutes.js';
 
 dotenv.config();
 
@@ -26,6 +28,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
+app.use('/api/artists', artistRouter);
+app.use('/api/categories', categoryRouter);
 app.use('/api/featuredItems', featuredItemsRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);

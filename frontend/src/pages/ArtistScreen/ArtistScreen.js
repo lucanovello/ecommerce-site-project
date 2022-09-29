@@ -41,7 +41,7 @@ function ArtistScreen(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/seed/${artist}`);
+        const result = await axios.get(`/api/artists/${artist}`);
 
         dispatch({
           type: 'FETCH_SUCCESS',

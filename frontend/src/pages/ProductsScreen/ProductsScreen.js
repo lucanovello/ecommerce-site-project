@@ -50,9 +50,8 @@ function ProductsScreen(props) {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/products/`);
+        const result = await axios.get(`/api/products/all`);
         setCurrentQuery(result.data.products);
-
         dispatch({
           type: 'FETCH_SUCCESS',
           payload: result.data,
