@@ -1,5 +1,6 @@
 .queryMenuContainer {
-  padding: 4.5vh 0 2vh 13%;
+  padding-top: 4vh;
+  padding-bottom: 5vh;
   border-right: 1px dashed #dddddd;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -16,9 +17,9 @@
   border-radius: 30px 0 0 30px;
 }
 .queryMenuTitleWrapper {
-  padding-right: 10px;
-  padding-bottom: 0.5vh;
   margin-bottom: 1vh;
+  padding-left: 13%;
+  padding-right: 10px;
   border-bottom: 1px dashed #dddddd;
   display: flex;
   justify-content: space-between;
@@ -43,8 +44,9 @@
 }
 
 .queryMenuQueryItemsContainer {
+  padding: 0 10px 0 13%;
   max-height: 52vh;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
   overflow-y: auto;
   scroll-behavior: smooth;
   transition: 0.5s ease;

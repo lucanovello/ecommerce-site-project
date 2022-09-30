@@ -36,7 +36,7 @@ function FeaturedCategory(props) {
         const result = await axios.get(props.route, {
           params: {
             content: props.content,
-            size: 7,
+            size: props.size ? props.size : 7,
           },
         });
         dispatch({
@@ -48,8 +48,7 @@ function FeaturedCategory(props) {
       }
     };
     fetchData();
-  }, [props.content, props.route]);
-
+  }, [props.content, props.route, props.size]);
   return loading ? (
     <LoadingBox />
   ) : error ? (
@@ -65,12 +64,14 @@ function FeaturedCategory(props) {
         className={featuredCategoryStyle.featuredCategoryImageOuterContainer}
       >
         {results.map((item, index) => (
-          <Link to={`/products/?genre=${item[0].category}`}>
+          <Link
+            to={`/products/?${props.content}=${item[0][props.content]}`}
+            key={index}
+          >
             <div
               className={
                 featuredCategoryStyle.featuredCategoryImageInnerContainer
               }
-              key={index}
             >
               <div
                 className={featuredCategoryStyle.featuredCategoryImageContainer}
@@ -78,42 +79,50 @@ function FeaturedCategory(props) {
                 <div
                   className={featuredCategoryStyle.featuredCategoryImageWrapper}
                 >
-                  <img
-                    className={featuredCategoryStyle.featuredCategoryImage}
-                    src={item[0].image}
-                    alt={item[0].name}
-                  />
+                  {item[0].image ? (
+                    <img
+                      className={featuredCategoryStyle.featuredCategoryImage}
+                      src={item[0].image}
+                      alt={item[0].name}
+                    />
+                  ) : null}
                 </div>
                 <div
                   className={featuredCategoryStyle.featuredCategoryImageWrapper}
                 >
-                  <img
-                    className={featuredCategoryStyle.featuredCategoryImage}
-                    src={item[1].image}
-                    alt={item[1].name}
-                  />
+                  {item[1].image ? (
+                    <img
+                      className={featuredCategoryStyle.featuredCategoryImage}
+                      src={item[1].image}
+                      alt={item[1].name}
+                    />
+                  ) : null}
                 </div>
                 <div
                   className={featuredCategoryStyle.featuredCategoryImageWrapper}
                 >
-                  <img
-                    className={featuredCategoryStyle.featuredCategoryImage}
-                    src={item[2].image}
-                    alt={item[2].name}
-                  />
+                  {item[2].image ? (
+                    <img
+                      className={featuredCategoryStyle.featuredCategoryImage}
+                      src={item[2].image}
+                      alt={item[2].name}
+                    />
+                  ) : null}
                 </div>
                 <div
                   className={featuredCategoryStyle.featuredCategoryImageWrapper}
                 >
-                  <img
-                    className={featuredCategoryStyle.featuredCategoryImage}
-                    src={item[3].image}
-                    alt={item[3].name}
-                  />
+                  {item[3].image ? (
+                    <img
+                      className={featuredCategoryStyle.featuredCategoryImage}
+                      src={item[3].image}
+                      alt={item[3].name}
+                    />
+                  ) : null}
                 </div>
               </div>
               <h3 className={featuredCategoryStyle.featuredCategoryImageTitle}>
-                {item[0].category}
+                {item[0][props.content]}
               </h3>
             </div>
           </Link>

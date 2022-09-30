@@ -32,6 +32,7 @@ const reducer = (state, action) => {
 };
 
 function ProductsScreen(props) {
+  const [searchParams, setSearchParams] = useSearchParams({ sort: 'featured' });
   const [
     { loading, error, products, artists, categories, nationalities },
     dispatch,
@@ -43,10 +44,12 @@ function ProductsScreen(props) {
     loading: true,
     error: '',
   });
-  const [currentQuery, setCurrentQuery] = useState();
+  const [currentQuery, setCurrentQuery] = useState([]);
   const [currentTitle, setCurrentTitle] = useState('All');
+  const [currentSort, setCurrentSort] = useState(
+    searchParams.get('sort') ? searchParams.get('sort') : 'featured'
+  );
 
-  const [searchParams, setSearchParams] = useSearchParams();
   const queryParams = {
     artist: searchParams.get('artist')
       ? searchParams.get('artist').toLowerCase()
@@ -57,10 +60,8 @@ function ProductsScreen(props) {
     nationality: searchParams.get('nationality')
       ? searchParams.get('nationality').toLowerCase()
       : '',
-    century: searchParams.get('century')
-      ? searchParams.get('century').toLowerCase()
-      : '',
   };
+  const sortParams = searchParams.get('sort');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -80,6 +81,8 @@ function ProductsScreen(props) {
   }, []);
 
   useEffect(() => {
+    const finalQuery = {};
+
     const getResults = (key, value) => {
       const getResultsArr = [];
       for (let i = 0; i < products.length; i++) {
@@ -87,8 +90,18 @@ function ProductsScreen(props) {
         if (product[key].toLowerCase() === value.toLowerCase())
           getResultsArr.push(product);
       }
+      const sortedResults = getResultsArr.sort((a, b) => {
+        const itemA = a[currentSort];
+        const itemB = b[currentSort];
+        if (itemA < itemB) {
+          return currentSort === 'rating' ? 1 : -1;
+        } else {
+          return currentSort === 'rating' ? -1 : 1;
+        }
+      });
+
       setCurrentTitle(value.toLowerCase());
-      setCurrentQuery(getResultsArr);
+      setCurrentQuery(sortedResults);
     };
 
     queryParams.artist
@@ -97,15 +110,38 @@ function ProductsScreen(props) {
       ? getResults('category', queryParams.genre)
       : queryParams.nationality
       ? getResults('nationality', queryParams.nationality)
-      : queryParams.century
-      ? getResults('century', queryParams.century)
-      : setCurrentQuery(products.slice(0, 35));
+      : setCurrentQuery(
+          products
+            .sort((a, b) => {
+              const itemA = a[currentSort];
+              const itemB = b[currentSort];
+              if (itemA < itemB) {
+                return currentSort === 'rating' ? 1 : -1;
+              } else {
+                return currentSort === 'rating' ? -1 : 1;
+              }
+            })
+            .slice(0, 70)
+        );
+
+    queryParams.artist && (finalQuery.artist = queryParams.artist);
+    queryParams.genre && (finalQuery.genre = queryParams.genre);
+    queryParams.nationality &&
+      (finalQuery.nationality = queryParams.nationality);
+    sortParams
+      ? (finalQuery.sort = currentSort)
+      : (finalQuery.sort = 'featured');
+
+    console.log(finalQuery);
+    setSearchParams(finalQuery);
   }, [
     queryParams.artist,
     queryParams.genre,
     queryParams.nationality,
-    queryParams.century,
+    currentSort,
+    sortParams,
     products,
+    setSearchParams,
   ]);
 
   return loading ? (
@@ -130,9 +166,76 @@ function ProductsScreen(props) {
         {/* RESULTS INNER SECTION */}
         <div className={productsScreenStyle.productsScreenResultsContainer}>
           <div className={productsScreenStyle.productsScreenResultsTextWrapper}>
-            <h2
-              className={productsScreenStyle.productsScreenResultsTitle}
-            >{`${currentTitle}`}</h2>
+            <div
+              className={
+                productsScreenStyle.productsScreenResultsTextTitleSortWrapper
+              }
+            >
+              <h2
+                className={productsScreenStyle.productsScreenResultsTitle}
+              >{`${currentTitle}`}</h2>
+              <form className={productsScreenStyle.sortContainer}>
+                <select
+                  className={productsScreenStyle.sortSelect}
+                  name="sort"
+                  id="sort"
+                  onChange={(e) => setCurrentSort(e.target.value.toLowerCase())}
+                  value={sortParams ? `Sort by: ${sortParams}` : 'Sort by: '}
+                >
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value={sortParams ? `Sort by: ${sortParams}` : 'Sort by: '}
+                    selected
+                    disabled
+                    hidden
+                  >
+                    {sortParams ? `Sort by: ${sortParams}` : 'Sort by: '}
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="featured"
+                  >
+                    Featured
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="name"
+                  >
+                    Name
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="artist"
+                  >
+                    Artist
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="category"
+                  >
+                    Genre
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="year"
+                  >
+                    Year
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="rating"
+                  >
+                    Avg Rating
+                  </option>
+                  <option
+                    className={productsScreenStyle.sortOption}
+                    value="price"
+                  >
+                    Price
+                  </option>
+                </select>
+              </form>
+            </div>
             {currentTitle === queryParams.artist ? (
               <p
                 className={productsScreenStyle.productsScreenResultsDescription}
@@ -142,7 +245,7 @@ function ProductsScreen(props) {
             ) : null}
           </div>
           <div className={productsScreenStyle.productWrapper}>
-            {currentQuery.slice(0, 35).map((product) => (
+            {currentQuery.slice(0, 70).map((product) => (
               <Product product={product} key={product._id}></Product>
             ))}
           </div>

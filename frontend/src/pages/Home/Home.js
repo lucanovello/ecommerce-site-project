@@ -59,9 +59,16 @@ function Home(props) {
         mainTitle="Featured Genres"
         route="/api/categories/featuredCategory"
         content="category"
+        size={7}
+      />
+      <FeaturedCategory
+        mainTitle="Featured Artists"
+        route="/api/categories/featuredArtist"
+        content="artist"
+        size={7}
       />
 
-      <FeaturedItems mainTitle="Best Sellers" route="/api/featuredItems/" />
+      {/* <FeaturedItems mainTitle="Best Sellers" route="/api/featuredItems/" /> */}
       {/* <FeaturedItems mainTitle="Trending" route="/api/featuredItems/" />  */}
       {/* <FeaturedItems mainTitle="Featured Items" route="/api/featuredItems/" /> */}
     </Fragment>

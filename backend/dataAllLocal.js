@@ -73,157 +73,64 @@ const data = {
       ],
     },
   ],
-
   categories: [
     { name: 'Abstract' },
     { name: 'Art Nouveau' },
     { name: 'Baroque' },
-    { name: 'Early Renaissance' },
     { name: 'Edo Period' },
     { name: 'Expressionism' },
-    { name: 'High Renaissance' },
     { name: 'Impressionism' },
     { name: 'Mannerism' },
     { name: 'Neoclassicism' },
     { name: 'Neoplasticism' },
-    { name: 'Northern Renaissance' },
     { name: 'Post-Impressionism' },
     { name: 'Primitivism' },
     { name: 'Realism' },
+    { name: 'Renaissance' },
     { name: 'Rococo' },
     { name: 'Romanticism' },
     { name: 'Symbolism' },
   ],
+
   artists: [
-    { name: 'Albert Anker' },
     { name: 'Albrecht Durer' },
-    { name: 'Alexandre Jacovleff' },
-    { name: 'Alexej Von Jawlensky' },
-    { name: 'Alexey Bogolyubov' },
     { name: 'Alfred Sisley' },
     { name: 'Alphonse Mucha' },
     { name: 'Amedeo Modigliani' },
-    { name: 'Andrea Del Verrocchio' },
-    { name: 'Anthony Van Dyck' },
-    { name: 'Artemisia Gentileschi' },
-    { name: 'Arturo Souto' },
-    { name: 'Auguste Toulmouche' },
-    { name: 'Bartolome Esteban Murillo' },
-    { name: 'Bertalan Szekely' },
-    { name: 'Berthe Morisot' },
-    { name: 'Botticelli' },
-    { name: 'Briton Riviere' },
     { name: 'Camille Pissarro' },
     { name: 'Caravaggio' },
-    { name: 'Carl Larsson' },
-    { name: 'Caspar David Friedrich' },
-    { name: 'Charles Burton Barber' },
-    { name: 'Charles Demuth' },
-    { name: 'Christoffer Wilhelm Eckersberg' },
     { name: 'Claude Monet' },
-    { name: 'Correggio' },
-    { name: 'Currier And Ives' },
     { name: 'Diego Velazquez' },
-    { name: 'Dosso Dossi' },
-    { name: 'Eastman Johnson' },
     { name: 'Edgar Degas' },
     { name: 'Edouard Manet' },
     { name: 'Edvard Munch' },
-    { name: 'Egon Schiele' },
-    { name: 'El Greco' },
-    { name: 'Emily Carr' },
-    { name: 'Ernst Ludwig Kirchner' },
     { name: 'Eugene Delacroix' },
-    { name: 'Eustache Le Sueur' },
-    { name: 'Ferdinand Hodler' },
     { name: 'Francisco Goya' },
-    { name: 'Francois Boucher' },
-    { name: 'Franz Marc' },
-    { name: 'Frederic Bazille' },
-    { name: 'Frederic Edwin Church' },
-    { name: 'Gabriel Metsu' },
     { name: 'George Bellows' },
-    { name: 'Georges Lemmen' },
-    { name: 'Georges Seurat' },
-    { name: 'Giorgio Vasari' },
-    { name: 'Giorgione' },
-    { name: 'Giovanni Boldini' },
-    { name: 'Giuseppe Arcimboldo' },
-    { name: 'Grant Wood' },
-    { name: 'Guido Reni' },
     { name: 'Gustav Klimt' },
-    { name: 'Gustave Caillebotte' },
     { name: 'Gustave Courbet' },
-    { name: 'Gustave Dore' },
     { name: 'Henri De Toulouse-Lautrec' },
-    { name: 'Henri Matisse' },
-    { name: 'Henri Rousseau' },
-    { name: 'Henri-Edmond Cross' },
-    { name: 'Henry Ossawa Tanner' },
     { name: 'Hieronymus Bosch' },
-    { name: 'Ilya Repin' },
-    { name: 'Ion Theodorescu-Sion' },
-    { name: 'Isaac Levitan' },
-    { name: 'Ito Jakuchu' },
-    { name: 'Ivan Aivazovsky' },
-    { name: 'Ivan Kramskoi' },
-    { name: 'J.M.W. Turner' },
-    { name: 'Jacob Van Strij' },
     { name: 'Jacques-Louis David' },
-    { name: 'James Mcneill Whistler' },
-    { name: 'Jan Steen' },
-    { name: 'Jan Van Eyck' },
     { name: 'Jan Vermeer' },
-    { name: 'Jean Francois Millet' },
     { name: 'Jean Leon Gerome' },
-    { name: 'Jean-Baptiste Oudry' },
     { name: 'John Singer Sargent' },
-    { name: 'John William Waterhouse' },
     { name: 'Juan Gris' },
-    { name: 'Kasimir Malevich' },
     { name: 'Katsushika Hokusai' },
-    { name: 'Konstantin Flavitsky' },
-    { name: 'Lajos Tihanyi' },
-    { name: 'Leon Bakst' },
     { name: 'Leonardo Da Vinci' },
-    { name: 'Leonetto Cappiello' },
-    { name: 'Lev Lagorio' },
-    { name: 'Louis Comfort Tiffany' },
-    { name: 'Louise Elisabeth Vigee Le Brun' },
-    { name: 'Luca Giordano' },
-    { name: 'Maurice Denis' },
     { name: 'Michelangelo' },
-    { name: 'Nicholas Roerich' },
     { name: 'Nicolas Poussin' },
     { name: 'Odilon Redon' },
-    { name: 'Ogata Korin' },
-    { name: 'Osman Hamdi Bey' },
     { name: 'Paul Cezanne' },
     { name: 'Paul Gauguin' },
     { name: 'Paul Klee' },
-    { name: 'Paul Signac' },
-    { name: 'Peter Paul Rubens' },
-    { name: 'Philip De Laszlo' },
     { name: 'Pierre-Auguste Renoir' },
-    { name: 'Piet Mondrian' },
-    { name: 'Pieter Aertsen' },
-    { name: 'Pietro Longhi' },
-    { name: 'Pietro Perugino' },
     { name: 'Raphael' },
     { name: 'Rembrandt' },
-    { name: 'Renato Guttuso' },
     { name: 'Robert Delaunay' },
-    { name: 'Theo Van Doesburg' },
     { name: 'Thomas Eakins' },
-    { name: 'Titian' },
-    { name: 'Vasily Perov' },
     { name: 'Vincent Van Gogh' },
     { name: 'Wassily Kandinsky' },
-    { name: 'Willem Drost' },
-    { name: 'William Blake' },
-    { name: 'William Hamilton' },
-    { name: 'William Kilburn' },
-    { name: 'William Leighton Leitch' },
     { name: 'William-Adolphe Bouguereau' },
     { name: 'Winslow Homer' },
   ],
@@ -283,7 +190,7 @@ const data = {
       year: 1511,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Adoration Of The Trinity  , German, Northern Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -306,7 +213,7 @@ const data = {
       year: 1493,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Christ As The Man Of Sorrows  , German, Northern Renaissance, 1493, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -329,7 +236,7 @@ const data = {
       year: 1506,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Jesus Among The Doctors  , German, Northern Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -352,7 +259,7 @@ const data = {
       year: 1499,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Lot And His Daughters  , German, Northern Renaissance, 1499, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -375,7 +282,7 @@ const data = {
       year: 1499,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Madonna And Child  , German, Northern Renaissance, 1499, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -398,7 +305,7 @@ const data = {
       year: 1508,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Martyrdom Of Ten Thousand Christians  , German, Northern Renaissance, 1508, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -421,7 +328,7 @@ const data = {
       year: 1505,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, A Young Venetian Woman  , German, Northern Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -444,7 +351,7 @@ const data = {
       year: 1499,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Oswolt Krel  , German, Northern Renaissance, 1499, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -467,7 +374,7 @@ const data = {
       year: 1508,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Praying Hands  , German, Northern Renaissance, 1508, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -490,7 +397,7 @@ const data = {
       year: 1493,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Self-Portrait At The Age Of Twenty Eight  , German, Northern Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -513,7 +420,7 @@ const data = {
       year: 1498,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Self-Portrait  , German, Northern Renaissance, 1493, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -536,7 +443,7 @@ const data = {
       year: 1500,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Self-Portrait  , German, Northern Renaissance, 1498, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -559,7 +466,7 @@ const data = {
       year: 1500,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, The Lamentation Over The Dead Christ  , German, Northern Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -582,7 +489,7 @@ const data = {
       year: 1502,
       description:
         'Albrecht Durer(May 21, 1471 - April 6, 1528) was a painter, printmaker, and theorist of the German Renaissance.  Born in Nuremberg, Durer established his reputation and influence across Europe when he was still in his twenties due to his high-quality wood cut prints.  He was in communication with the major Italian artists of his time, including Raphael, Giovanni Bellini and Leonardo da Vinci, and from 1512 he was patronized by emperor Maximilian I.  Durer is commemorated by both the Lutheran and Episcopal Churches.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'German',
       tags: 'Albrecht Durer, Young Hare  , German, Northern Renaissance, 1502, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -1546,9 +1453,9 @@ const data = {
       year: 1460,
       description:
         'Andrea del Verrocchio (c.1435 - 1488), born Andrea di Michele di Francesco de\' Cioni, was an Italian painter, sculptor, and goldsmith who was a master of an important workshop in Florence.  He became known by his nickname Verrocchio, from vero occhio, which in Italian means "true eye", a tribute given to him for his artistic achievement.  Few paintings are attributed to him with certainty, but a number of important painters were trained at his workshop.  His pupils included Leonardo da Vinci, Pietro Perugino and Lorenzo di Credi.  His greatest importance was as a sculptor and his last work, the Equestrian statue of Bartolomeo Colleoni in Venice, is generally accepted as a masterpiece.',
-      category: 'Early Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
-      tags: 'Andrea Del Verrocchio, Saint Jerome  , Italian, Early Renaissance, 1465, art, fine art, painting, paintings, paint, canvas',
+      tags: 'Andrea Del Verrocchio, Saint Jerome  , Italian, Renaissance, 1465, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
       isfeatured: false,
       image2:
@@ -1956,7 +1863,7 @@ const data = {
       year: 1486,
       description:
         'Alessandro di Mariano di Vanni Filipepi, known as Sandro Botticelli (c. 1445 - May 17, 1510), was an Italian painter of the Early Renaissance.  He belonged to the Florentine School under the patronage of Lorenzo de\' Medici, a movement that Giorgio Vasari would characterize less than a hundred years later in his Vita of Botticelli as a "golden age".  Botticelli\'s posthumous reputation suffered until the late 19th century; since then, his work has been seen to represent the linear grace of Early Renaissance painting.  As well as the small number of mythological subjects which are his best known works today, he painted a wide range of religious subjects and also some portraits.',
-      category: 'Early Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Botticelli, Birth Of Venus  , Italian, Early Renaissance, 1486, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -1977,7 +1884,7 @@ const data = {
       year: 1486,
       description:
         'Alessandro di Mariano di Vanni Filipepi, known as Sandro Botticelli (c.  1445 - May 17, 1510), was an Italian painter of the Early Renaissance.  He belonged to the Florentine School under the patronage of Lorenzo de\' Medici, a movement that Giorgio Vasari would characterize less than a hundred years later in his Vita of Botticelli as a "golden age".  Botticelli\'s posthumous reputation suffered until the late 19th century; since then, his work has been seen to represent the linear grace of Early Renaissance painting.  As well as the small number of mythological subjects which are his best known works today, he painted a wide range of religious subjects and also some portraits.',
-      category: 'Early Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Botticelli, Birth Of Venus  , Italian, Early Renaissance, 1486, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -2000,7 +1907,7 @@ const data = {
       year: 1496,
       description:
         'Alessandro di Mariano di Vanni Filipepi, known as Sandro Botticelli (c.  1445 - May 17, 1510), was an Italian painter of the Early Renaissance.  He belonged to the Florentine School under the patronage of Lorenzo de\' Medici, a movement that Giorgio Vasari would characterize less than a hundred years later in his Vita of Botticelli as a "golden age".  Botticelli\'s posthumous reputation suffered until the late 19th century; since then, his work has been seen to represent the linear grace of Early Renaissance painting.  As well as the small number of mythological subjects which are his best known works today, he painted a wide range of religious subjects and also some portraits.',
-      category: 'Early Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Botticelli, Christ Crowned With Thorns  , Italian, Early Renaissance, 1496, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -2023,7 +1930,7 @@ const data = {
       year: 1482,
       description:
         'Alessandro di Mariano di Vanni Filipepi, known as Sandro Botticelli (c.  1445 - May 17, 1510), was an Italian painter of the Early Renaissance.  He belonged to the Florentine School under the patronage of Lorenzo de\' Medici, a movement that Giorgio Vasari would characterize less than a hundred years later in his Vita of Botticelli as a "golden age".  Botticelli\'s posthumous reputation suffered until the late 19th century; since then, his work has been seen to represent the linear grace of Early Renaissance painting.  As well as the small number of mythological subjects which are his best known works today, he painted a wide range of religious subjects and also some portraits.',
-      category: 'Early Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Botticelli, Primavera  , Italian, Early Renaissance, 1482, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -2044,7 +1951,7 @@ const data = {
       year: 1504,
       description:
         'Alessandro di Mariano di Vanni Filipepi, known as Sandro Botticelli (c.  1445 - May 17, 1510), was an Italian painter of the Early Renaissance.  He belonged to the Florentine School under the patronage of Lorenzo de\' Medici, a movement that Giorgio Vasari would characterize less than a hundred years later in his Vita of Botticelli as a "golden age".  Botticelli\'s posthumous reputation suffered until the late 19th century; since then, his work has been seen to represent the linear grace of Early Renaissance painting.  As well as the small number of mythological subjects which are his best known works today, he painted a wide range of religious subjects and also some portraits.',
-      category: 'Early Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Botticelli, The Story Of Lucretia  , Italian, Early Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -3426,7 +3333,7 @@ const data = {
       year: 1522,
       description:
         'Antonio Allegri da Correggio (August 1489 - March 5, 1534), usually known as Correggio, was the foremost painter of the Parma school of the Italian Renaissance, who was responsible for some of the most vigorous and sensuous works of the 16th century.  In his use of dynamic composition, illusionistic perspective and dramatic foreshortening, Correggio prefigured the Rococo art of the 18th century.  He is considered a master of chiaroscuro.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Correggio, Adoration Of The Shepherds The Holy Night  , Italian, High Renaissance, 1522, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -3449,7 +3356,7 @@ const data = {
       year: 1530,
       description:
         'Antonio Allegri da Correggio (August 1489 - March 5, 1534), usually known as Correggio, was the foremost painter of the Parma school of the Italian Renaissance, who was responsible for some of the most vigorous and sensuous works of the 16th century.  In his use of dynamic composition, illusionistic perspective and dramatic foreshortening, Correggio prefigured the Rococo art of the 18th century.  He is considered a master of chiaroscuro.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Correggio, Allegory Of The Vices  , Italian, High Renaissance, 1530, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4089,7 +3996,7 @@ const data = {
       year: 1520,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Aeneas And Achates On The Libyan Coast  , Italian, High Renaissance, 1520, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4112,7 +4019,7 @@ const data = {
       year: 1524,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Bacchus  , Italian, High Renaissance, 1524, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4132,7 +4039,7 @@ const data = {
       year: 1516,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Circe And Her Lovers In A Landscape  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4155,7 +4062,7 @@ const data = {
       year: 1524,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Jupiter Mercury And Virtue , Italian, High Renaissance, 1524, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4178,7 +4085,7 @@ const data = {
       year: 1524,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Jupiter Mercury And Virtue , Italian, High Renaissance, 1524, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4201,7 +4108,7 @@ const data = {
       year: 1517,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Lamentation Over The Body Of Christ  , Italian, High Renaissance, 1517, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4224,7 +4131,7 @@ const data = {
       year: 1525,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Madonna And Child  , Italian, High Renaissance, 1525, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4247,7 +4154,7 @@ const data = {
       year: 1507,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Melissa (Circe)  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4268,7 +4175,7 @@ const data = {
       year: 1524,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Mythological Scene  , Italian, High Renaissance, 1524, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4291,7 +4198,7 @@ const data = {
       year: 1530,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: "Dosso Dossi, Alfonso I D'este  , Italian, High Renaissance, 1530, art, fine art, painting, paintings, paint, canvas",
       price: 19.99,
@@ -4314,7 +4221,7 @@ const data = {
       year: 1520,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Cesare Borgia  , Italian, High Renaissance, 1520, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4337,7 +4244,7 @@ const data = {
       year: 1534,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Saint Cosmas And Saint Damian  , Italian, High Renaissance, 1534, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4360,7 +4267,7 @@ const data = {
       year: 1516,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Saint Sebastian  , Italian, High Renaissance, 1526, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4381,7 +4288,7 @@ const data = {
       year: 1527,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, Sts John And Bartholomew With Donors  , Italian, High Renaissance, 1527, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -4404,7 +4311,7 @@ const data = {
       year: 1520,
       description:
         'Dosso Dossi (c. 1489-1542), real name Giovanni di Niccolo de Luteri, was an Italian Renaissance painter who belonged to the School of Ferrara, painting in a style mainly influenced by Venetian painting, in particular Giorgione and early Titian.  From 1514 to his death he was court artist to the Este Dukes of Ferrara and of Modena, whose small court valued its reputation as an artistic centre.  He often worked with his younger brother Battista Dossi, who had worked under Raphael.  He painted many mythological subjects and allegories with a rather dream-like atmosphere, and often striking disharmonies in colour.  His figures cannot be said to be very well drawn.  His portraits also often show rather unusual poses or expressions for works originating in a court.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Dosso Dossi, The Virgin Appearing  , Italian, High Renaissance, 1520, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -8579,7 +8486,7 @@ const data = {
       year: 1504,
       description:
         'Giorgione born Giorgio Barbarelli da Castelfranco (c. 1477 - 1510) was an Italian painter of the Venetian school in the High Renaissance from Venice, whose career was ended by his death at a little over 30.  Giorgione is known for the elusive poetic quality of his work, though only about six surviving paintings are affirmatively acknowledged to be his.  The uncertainty surrounding the identity and meaning of his work has made Giorgione one of the most mysterious figures in European art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Giorgione, Judith  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11063,7 +10970,7 @@ const data = {
       year: 1500,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, Allegory Of Gluttony And Lust  , Dutch, Northern Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11086,7 +10993,7 @@ const data = {
       year: 1490,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, Ascent Of The Blessed  , Dutch, Northern Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11109,7 +11016,7 @@ const data = {
       year: 1490,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, Christ Carrying The Cross  , Dutch, Northern Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11132,7 +11039,7 @@ const data = {
       year: 1516,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, Christ Carrying The Cross  , Dutch, Northern Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11155,7 +11062,7 @@ const data = {
       year: 1500,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, Death And The Miser  , Dutch, Northern Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11178,7 +11085,7 @@ const data = {
       year: 1475,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Adoration Of The Magi  , Dutch, Northern Renaissance, 1475, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11201,7 +11108,7 @@ const data = {
       year: 1499,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Adoration Of The Magi  , Dutch, Northern Renaissance, 1499, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11224,7 +11131,7 @@ const data = {
       year: 1480,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Carrying Of The Cross  , Dutch, Northern Renaissance, 1480, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11247,7 +11154,7 @@ const data = {
       year: 1515,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Garden Of Earthly Delights  , Dutch, Northern Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11270,7 +11177,7 @@ const data = {
       year: 1515,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Garden Of Earthly Delights  , Dutch, Northern Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11293,7 +11200,7 @@ const data = {
       year: 1515,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Garden Of Earthly Delights  , Dutch, Northern Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11316,7 +11223,7 @@ const data = {
       year: 1516,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Hell And The Flood  , Dutch, Northern Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11339,7 +11246,7 @@ const data = {
       year: 1482,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Last Judgment  , Dutch, Northern Renaissance, 1482, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11362,7 +11269,7 @@ const data = {
       year: 1500,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Temptation Of Saint Anthony  , Dutch, Northern Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -11385,7 +11292,7 @@ const data = {
       year: 1515,
       description:
         'Hieronymus Bosch born Jheronimus van Aken (c.1450 - August 9, 1516) was a Dutch/Netherlandish draughtsman and painter from Brabant.  He is widely considered one of the most notable representatives of Early Netherlandish painting school.  His work is known for its fantastic imagery, detailed landscapes, and illustrations of religious concepts and narratives. Within his lifetime his work was collected in the Netherlands, Austria, and Spain, and widely copied, especially his macabre and nightmarish depictions of hell.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Hieronymus Bosch, The Temptation Of Saint Anthony  , Dutch, Northern Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13081,7 +12988,7 @@ const data = {
       year: 1433,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, A Man In A Turban  , Flemish, Northern Renaissance, 1433, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13104,7 +13011,7 @@ const data = {
       year: 1433,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, Man In A Blue Turban  , Flemish, Northern Renaissance, 1433, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13127,7 +13034,7 @@ const data = {
       year: 1432,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, Saint Jerome In His Study  , Flemish, Northern Renaissance, 1432, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13150,7 +13057,7 @@ const data = {
       year: 1436,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Annunciation  , Flemish, Northern Renaissance, 1436, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13173,7 +13080,7 @@ const data = {
       year: 1434,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Arnolfini Portrait  , Flemish, Northern Renaissance, 1434, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13196,7 +13103,7 @@ const data = {
       year: 1425,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Crucifixion (The Last Judgment)  , Flemish, Northern Renaissance, 1425, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13219,7 +13126,7 @@ const data = {
       year: 1432,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Ghent Altar  , Flemish, Northern Renaissance, 1432, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13242,7 +13149,7 @@ const data = {
       year: 1432,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Ghent Altar  , Flemish, Northern Renaissance, 1432, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13265,7 +13172,7 @@ const data = {
       year: 1429,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Ghent Altarpiece (Virgin Mary)  , Flemish, Northern Renaissance, 1429, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -13288,7 +13195,7 @@ const data = {
       year: 1438,
       description:
         "Jan van Eyck (c. 1390 - July 9, 1441) was a Flemish painter active in Bruges.  He is often considered one of the founders of Early Netherlandish painting school and one of the most significant representatives of Northern Renaissance art.  The few surviving records of his early life indicate that he was born c. 1380 - 1390, most likely in Maaseik.  He took employment in the Hague as painter and Valet de chambre with John III the Pitiless, ruler of Holland and Hainaut in the Hague around 1422, when he was already a master painter with workshop assistants.  After John's death in 1425 he was employed in Lille as court painter to Philip the Good, Duke of Burgundy, until 1429 before moving to Bruges, where he lived until his death.",
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Flemish',
       tags: 'Jan Van Eyck, The Madonna In The Church  , Flemish, Northern Renaissance, 1438, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16471,7 +16378,7 @@ const data = {
       year: 1472,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Annunciation  , Italian, High Renaissance, 1472, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16494,7 +16401,7 @@ const data = {
       year: 1495,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Head Of Christ  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16517,7 +16424,7 @@ const data = {
       year: 1499,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Head Of Saint James The Less  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16540,7 +16447,7 @@ const data = {
       year: 1499,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Head Of Saint Peter  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16563,7 +16470,7 @@ const data = {
       year: 1499,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Heads Of Judas And Peter  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16586,7 +16493,7 @@ const data = {
       year: 1499,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Heads Of Saints Thomas And James The Greater  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16609,7 +16516,7 @@ const data = {
       year: 1510,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Leda And The Swan  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16632,7 +16539,7 @@ const data = {
       year: 1511,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Leda And The Swan  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16655,7 +16562,7 @@ const data = {
       year: 1490,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Madonna Litta  , Italian, High Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16678,7 +16585,7 @@ const data = {
       year: 1478,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Madonna Benois  , Italian, High Renaissance, 1478, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16701,7 +16608,7 @@ const data = {
       year: 1510,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Madonna With The Yarnwinder  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16724,7 +16631,7 @@ const data = {
       year: 1504,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Mona Lisa  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16745,7 +16652,7 @@ const data = {
       year: 1485,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, A Musician  , Italian, High Renaissance, 1485, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16768,7 +16675,7 @@ const data = {
       year: 1490,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, La Belle Ferroniere  , Italian, High Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16791,7 +16698,7 @@ const data = {
       year: 1474,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Ginevra Benci  , Italian, High Renaissance, 1474, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16814,7 +16721,7 @@ const data = {
       year: 1500,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Salvator Mundi  , Italian, High Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16837,7 +16744,7 @@ const data = {
       year: 1515,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Saint John The Baptist  , Italian, High Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16860,7 +16767,7 @@ const data = {
       year: 1515,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, Saint John The Baptist  , Italian, High Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16883,7 +16790,7 @@ const data = {
       year: 1496,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, The Lady With The Ermine  , Italian, High Renaissance, 1496, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16906,7 +16813,7 @@ const data = {
       year: 1499,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, The Last Supper  , Italian, High Renaissance, 1499, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16929,7 +16836,7 @@ const data = {
       year: 1480,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, The Madonna Of The Carnation  , Italian, High Renaissance, 1480, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16952,7 +16859,7 @@ const data = {
       year: 1492,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, The Vitruvian Man  , Italian, High Renaissance, 1492, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16975,7 +16882,7 @@ const data = {
       year: 1510,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, The Virgin And Child With Saint Anne  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -16998,7 +16905,7 @@ const data = {
       year: 1485,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Leonardo Da Vinci, The Virgin Of The Rocks  , Italian, High Renaissance, 1485, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17021,7 +16928,7 @@ const data = {
       year: 1473,
       description:
         'Leonardo di ser Piero da Vinci (April 15, 1452 - May 2, 1519), more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath whose areas of interest included invention, painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography.  He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time.  Sometimes credited with the inventions of the parachute, helicopter and tank,he epitomised the Renaissance humanist ideal.  Many historians and scholars regard Leonardo as the prime exemplar of the "Universal Genius" or "Renaissance Man", an individual of "unquenchable curiosity" and "feverishly inventive imagination", and he is widely considered one of the most diversely talented individuals ever to have lived.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: "Leonardo Da Vinci, Woman's Head  , Italian, High Renaissance, 1473, art, fine art, painting, paintings, paint, canvas",
       price: 19.99,
@@ -17615,7 +17522,7 @@ const data = {
       year: 1512,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, Creation Of Adam (Sistine Chapel)  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17638,7 +17545,7 @@ const data = {
       year: 1512,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, Creation Of Adam (Sistine Chapel)  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17661,7 +17568,7 @@ const data = {
       year: 1512,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, Creation Of Adam (Sistine Chapel)  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17684,7 +17591,7 @@ const data = {
       year: 1512,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, Creation Of The Sun And Moon (Sistine Chapel)  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17707,7 +17614,7 @@ const data = {
       year: 1512,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, The Prophet Joel (Sistine Chapel)  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17730,7 +17637,7 @@ const data = {
       year: 1501,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, The Entombment  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17751,7 +17658,7 @@ const data = {
       year: 1510,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, The Prophet Ezekiel  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -17774,7 +17681,7 @@ const data = {
       year: 1497,
       description:
         'Michelangelo di Lodovico Buonarroti Simoni (March 6, 1475 - February 18, 1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance born in the Republic of Florence, who exerted an unparalleled influence on the development of Western art.  Considered to be the greatest living artist during his lifetime, he has since been described as one of the greatest artists of all time.  Despite making few forays beyond the arts, his versatility in the disciplines he took up was of such a high order that he is often considered a contender for the title of the archetypal Renaissance man, along with his rival and fellow Florentine Medici client, Leonardo da Vinci.  A number of Michelangelo\'s works of painting, sculpture, and architecture rank among the most famous in existence.  In his lifetime, he was often called Il Divino ("the divine one").',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Michelangelo, Manchester Madonna  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21690,7 +21597,7 @@ const data = {
       year: 1559,
       description:
         'Pieter Aertsen (c. 1508 - June 3, 1575), called Lange Pier ("Tall Pete") because of his height, was a Dutch painter in the style of Northern Mannerism.  He is credited with the invention of the monumental genre scene, which combines still life and genre painting and often also includes a biblical scene in the background.  He was active in his native city Amsterdam but also worked for a long period in Antwerp, then the centre of artistic life in the Netherlands.  His genre scenes were influential on later Flemish Baroque painting, Dutch still life painting and also in Italy.  His peasant scenes preceded by a few years the much better-known paintings produced in Antwerp by Pieter Bruegel the Elder.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Pieter Aertsen, The Cook  , Dutch, Northern Renaissance, 1559, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21711,7 +21618,7 @@ const data = {
       year: 1560,
       description:
         'Pieter Aertsen (c. 1508 - June 3, 1575), called Lange Pier ("Tall Pete") because of his height, was a Dutch painter in the style of Northern Mannerism.  He is credited with the invention of the monumental genre scene, which combines still life and genre painting and often also includes a biblical scene in the background.  He was active in his native city Amsterdam but also worked for a long period in Antwerp, then the centre of artistic life in the Netherlands.  His genre scenes were influential on later Flemish Baroque painting, Dutch still life painting and also in Italy.  His peasant scenes preceded by a few years the much better-known paintings produced in Antwerp by Pieter Bruegel the Elder.',
-      category: 'Northern Renaissance',
+      category: 'Renaissance',
       nationality: 'Dutch',
       tags: 'Pieter Aertsen, Vendor Of Fowl  , Dutch, Northern Renaissance, 1560, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21778,7 +21685,7 @@ const data = {
       year: 1491,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Albani Torlonia Altarpiece  , Italian, High Renaissance, 1491, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21801,7 +21708,7 @@ const data = {
       year: 1505,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Ascension Of Christ  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21824,7 +21731,7 @@ const data = {
       year: 1482,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Christ Handing The Keys To Saint Peter  , Italian, High Renaissance, 1482, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21847,7 +21754,7 @@ const data = {
       year: 1503,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Combat Of Love And Chastity  , Italian, High Renaissance, 1503, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21870,7 +21777,7 @@ const data = {
       year: 1507,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Deposition From The Cross  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21893,7 +21800,7 @@ const data = {
       year: 1507,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Lady Of Loreta  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21916,7 +21823,7 @@ const data = {
       year: 1500,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Madonna And Child Enthroned  , Italian, High Renaissance, 1494, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21939,7 +21846,7 @@ const data = {
       year: 1495,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Madonna And Child Enthroned  , Italian, High Renaissance, 1497, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21962,7 +21869,7 @@ const data = {
       year: 1494,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Madonna And Child With Saints  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -21985,7 +21892,7 @@ const data = {
       year: 1497,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Madonna And Child  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22008,7 +21915,7 @@ const data = {
       year: 1495,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Madonna In Glory With Saints  , Italian, High Renaissance, 1501, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22031,7 +21938,7 @@ const data = {
       year: 1501,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Madonna  , Italian, High Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22052,7 +21959,7 @@ const data = {
       year: 1504,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Marriage Of The Virgin  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22075,7 +21982,7 @@ const data = {
       year: 1490,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Pieta  , Italian, High Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22096,7 +22003,7 @@ const data = {
       year: 1490,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Pieta  , Italian, High Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22117,7 +22024,7 @@ const data = {
       year: 1480,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, A Young Man  , Italian, High Renaissance, 1480, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22140,7 +22047,7 @@ const data = {
       year: 1494,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Francesco Delle Opere  , Italian, High Renaissance, 1494, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22163,7 +22070,7 @@ const data = {
       year: 1488,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Lorenzo Di Credi  , Italian, High Renaissance, 1488, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22186,7 +22093,7 @@ const data = {
       year: 1500,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Self-Portrait  , Italian, High Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22209,7 +22116,7 @@ const data = {
       year: 1490,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Saint Sebastian Tied To A Column  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22232,7 +22139,7 @@ const data = {
       year: 1510,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Saint Sebastian  , Italian, High Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22255,7 +22162,7 @@ const data = {
       year: 1506,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, The Assumption Of The Virgin  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22278,7 +22185,7 @@ const data = {
       year: 1493,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, The Virgin Appearing To Saint Bernard  , Italian, High Renaissance, 1493, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22301,7 +22208,7 @@ const data = {
       year: 1495,
       description:
         'Pietro Perugino (c. 1446 - 1523), born Pietro Vannucci, was an Italian Renaissance painter of the Umbrian school, who developed some of the qualities that found classic expression in the High Renaissance. Raphael was his most famous pupil.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Pietro Perugino, Virgin And Child  , Italian, High Renaissance, 1495, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22324,7 +22231,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Adam And Eve  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22345,7 +22252,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, An Allegory (Vision Of A Knight)  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22368,7 +22275,7 @@ const data = {
       year: 1501,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Angel  , Italian, High Renaissance, 1501, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22391,7 +22298,7 @@ const data = {
       year: 1501,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Angel  , Italian, High Renaissance, 1501, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22411,7 +22318,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Baptism Of Constantine  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22434,7 +22341,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Baptism Of Constantine  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22457,7 +22364,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Baptism Of Constantine  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22480,7 +22387,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Baptism Of Constantine  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22503,7 +22410,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Battle At Pont Milvius  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22526,7 +22433,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Battle At Pont Milvius  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22549,7 +22456,7 @@ const data = {
       year: 1514,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Battle Of Ostia  , Italian, High Renaissance, 1514, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22570,7 +22477,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Bridgewater Madonna  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22591,7 +22498,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Christ Blessing  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22612,7 +22519,7 @@ const data = {
       year: 1517,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Christ Falling On The Way To Calvary  , Italian, High Renaissance, 1517, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22635,7 +22542,7 @@ const data = {
       year: 1490,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Christ Supported By Two Angels  , Italian, High Renaissance, 1490, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22658,7 +22565,7 @@ const data = {
       year: 1514,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: "Raphael, Christ's Charge To Saint Peter  , Italian, High Renaissance, 1514, art, fine art, painting, paintings, paint, canvas",
       price: 19.99,
@@ -22681,7 +22588,7 @@ const data = {
       year: 1508,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Colonna Madonna  , Italian, High Renaissance, 1508, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22702,7 +22609,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Coronation Of The Virgin  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22725,7 +22632,7 @@ const data = {
       year: 1503,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Diotalevi Madonna  , Italian, High Renaissance, 1503, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22746,7 +22653,7 @@ const data = {
       year: 1510,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Disputation Of The Holy Sacrament  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22769,7 +22676,7 @@ const data = {
       year: 1518,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: "Raphael, Ezekiel's Vision  , Italian, High Renaissance, 1518, art, fine art, painting, paintings, paint, canvas",
       price: 19.99,
@@ -22790,7 +22697,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Guidobaldo Da Montefeltro  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22813,7 +22720,7 @@ const data = {
       year: 1518,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Grande Famille Of Francois I  , Italian, High Renaissance, 1518, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22836,7 +22743,7 @@ const data = {
       year: 1508,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Niccolini-Cowper Madonna  , Italian, High Renaissance, 1508, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22859,7 +22766,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Pieta  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22879,7 +22786,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, A Lady With A Unicorn  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22902,7 +22809,7 @@ const data = {
       year: 1500,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, A Man Holding An Apple  , Italian, High Renaissance, 1500, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22925,7 +22832,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, A Woman  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22946,7 +22853,7 @@ const data = {
       year: 1515,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, A Young Man  , Italian, High Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22969,7 +22876,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Agnolo Doni  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -22992,7 +22899,7 @@ const data = {
       year: 1515,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Baldassare Castiglione  , Italian, High Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23015,7 +22922,7 @@ const data = {
       year: 1515,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Bindo Altoviti  , Italian, High Renaissance, 1515, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23038,7 +22945,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Elisabetta Gonzaga  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23061,7 +22968,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Maddalena Doni  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23084,7 +22991,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Pope Julius Ii  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23107,7 +23014,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Self-Portrait With A Friend  , Italian, High Renaissance, 1519, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23130,7 +23037,7 @@ const data = {
       year: 1519,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Self-Portrait  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23151,7 +23058,7 @@ const data = {
       year: 1514,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Sistine Madonna (Angels)  , Italian, High Renaissance, 1514, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23174,7 +23081,7 @@ const data = {
       year: 1514,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Sistine Madonna  , Italian, High Renaissance, 1514, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23195,7 +23102,7 @@ const data = {
       year: 1502,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Anthony Of Padua  , Italian, High Renaissance, 1502, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23216,7 +23123,7 @@ const data = {
       year: 1508,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Catherine Of Alexandria  , Italian, High Renaissance, 1508, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23239,7 +23146,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Cecilia  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23262,7 +23169,7 @@ const data = {
       year: 1502,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Francis Of Assisi  , Italian, High Renaissance, 1502, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23285,7 +23192,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint George And The Dragon  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23308,7 +23215,7 @@ const data = {
       year: 1520,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint John The Baptist In The Desert  , Italian, High Renaissance, 1520, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23331,7 +23238,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint John The Baptist Preaching  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23354,7 +23261,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Michael Overwhelming The Demon  , Italian, High Renaissance, 1518, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23377,7 +23284,7 @@ const data = {
       year: 1518,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Michael  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23397,7 +23304,7 @@ const data = {
       year: 1502,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Saint Sebastian  , Italian, High Renaissance, 1502, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23418,7 +23325,7 @@ const data = {
       year: 1508,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Tempi Madonna  , Italian, High Renaissance, 1508, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23439,7 +23346,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Agony In The Garden  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23462,7 +23369,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Agony In The Garden  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23485,7 +23392,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Agony In The Garden  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23508,7 +23415,7 @@ const data = {
       year: 1510,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Aldobrandini Madonna  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23531,7 +23438,7 @@ const data = {
       year: 1503,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Annunciation  , Italian, High Renaissance, 1503, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23552,7 +23459,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Canigiani Madonna  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23575,7 +23482,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Deposition  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23596,7 +23503,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Deposition  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23617,7 +23524,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Donation Of Rome  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23640,7 +23547,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Donation Of Rome  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23663,7 +23570,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Donation Of Rome  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23686,7 +23593,7 @@ const data = {
       year: 1504,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Engagement Of Virgin Mary  , Italian, High Renaissance, 1504, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23709,7 +23616,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: "Raphael, The Grand Duke's Madonna  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas",
       price: 19.99,
@@ -23732,7 +23639,7 @@ const data = {
       year: 1518,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Holy Family Of The Oak Tree  , Italian, High Renaissance, 1518, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23755,7 +23662,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Holy Family With A Lamb  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23778,7 +23685,7 @@ const data = {
       year: 1514,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Holy Family With A Fish  , Italian, High Renaissance, 1514, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23801,7 +23708,7 @@ const data = {
       year: 1519,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Judgment Of Solomon  , Italian, High Renaissance, 1519, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23824,7 +23731,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Madonna Del Passeggio  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23847,7 +23754,7 @@ const data = {
       year: 1509,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Madonna Of Loreto  , Italian, High Renaissance, 1509, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23870,7 +23777,7 @@ const data = {
       year: 1507,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Madonna Of The Pinks  , Italian, High Renaissance, 1507, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23893,7 +23800,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Parnassus  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23914,7 +23821,7 @@ const data = {
       year: 1503,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Presentation In The Temple  , Italian, High Renaissance, 1503, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23937,7 +23844,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Procession To Calvary  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23960,7 +23867,7 @@ const data = {
       year: 1512,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Prophet Isaiah  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -23981,7 +23888,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The School Of Athens  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24004,7 +23911,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The School Of Athens  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24027,7 +23934,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The School Of Athens  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24050,7 +23957,7 @@ const data = {
       year: 1511,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The School Of Athens  , Italian, High Renaissance, 1511, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24073,7 +23980,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Small Cowper Madonna  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24096,7 +24003,7 @@ const data = {
       year: 1505,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Three Graces  , Italian, High Renaissance, 1505, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24117,7 +24024,7 @@ const data = {
       year: 1512,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Triumph Of Galatea  , Italian, High Renaissance, 1512, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24140,7 +24047,7 @@ const data = {
       year: 1517,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, The Visitation  , Italian, High Renaissance, 1517, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24161,7 +24068,7 @@ const data = {
       year: 1506,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Tommaso Fedra Inghrami  , Italian, High Renaissance, 1506, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24184,7 +24091,7 @@ const data = {
       year: 1520,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Transfiguration  , Italian, High Renaissance, 1520, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24205,7 +24112,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Vision Of The Cross  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -24226,7 +24133,7 @@ const data = {
       year: 1516,
       description:
         'Raffaello Sanzio da Urbino (March 28, 1483 - April 6, 1520), known as Raphael, was an Italian painter and architect of the High Renaissance.  His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur.  Together with Michelangelo and Leonardo da Vinci, he forms the traditional trinity of great masters of that period.  Raphael was enormously productive, running an unusually large workshop and, despite his death at 37, leaving a large body of work.  Many of his works are found in the Vatican Palace, where the frescoed Raphael Rooms were the central, and the largest, work of his career.  The best known work is The School of Athens in the Vatican Stanza della Segnatura.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Raphael, Vision Of The Cross  , Italian, High Renaissance, 1516, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26137,7 +26044,7 @@ const data = {
       year: 1565,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Allegory Of Time Governed By Prudence  , Italian, High Renaissance, 1565, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26160,7 +26067,7 @@ const data = {
       year: 1518,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Assumption Of The Virgin  , Italian, High Renaissance, 1518, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26183,7 +26090,7 @@ const data = {
       year: 1522,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Christ  , Italian, High Renaissance, 1522, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26203,7 +26110,7 @@ const data = {
       year: 1555,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Crucifixion  , Italian, High Renaissance, 1555, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26223,7 +26130,7 @@ const data = {
       year: 1544,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, David And Goliath  , Italian, High Renaissance, 1544, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26244,7 +26151,7 @@ const data = {
       year: 1510,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Ariosto  , Italian, High Renaissance, 1510, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26265,7 +26172,7 @@ const data = {
       year: 1544,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Sacrifice Of Isaac  , Italian, High Renaissance, 1544, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26286,7 +26193,7 @@ const data = {
       year: 1562,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Self-Portrait  , Italian, High Renaissance, 1562, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26307,7 +26214,7 @@ const data = {
       year: 1576,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, The Flaying Of Marsyas  , Italian, High Renaissance, 1576, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26330,7 +26237,7 @@ const data = {
       year: 1544,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, The Resurrection  , Italian, High Renaissance, 1544, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26351,7 +26258,7 @@ const data = {
       year: 1554,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, The Trinity In Glory  , Italian, High Renaissance, 1554, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,
@@ -26372,7 +26279,7 @@ const data = {
       year: 1520,
       description:
         'Tiziano Vecelli or Tiziano Vecellio (c. 1490 - August 27, 1576), known in English as Titian, was an Italian painter, the most important member of the 16th-century Venetian school.  He was born in Pieve di Cadore, near Belluno (in Veneto, Republic of Venice).  During his lifetime he was often called da Cadore, taken from the place of his birth.  Recognized by his contemporaries as "The Sun Amidst Small Stars" (recalling the famous final line of Dante\'s Paradiso), Titian was one of the most versatile of Italian painters, equally adept with portraits, landscape backgrounds, and mythological and religious subjects.  His painting methods, particularly in the application and use of colour, would exercise a profound influence not only on painters of the Italian Renaissance, but on future generations of Western art.',
-      category: 'High Renaissance',
+      category: 'Renaissance',
       nationality: 'Italian',
       tags: 'Titian, Venus Anadyomene  , Italian, High Renaissance, 1520, art, fine art, painting, paintings, paint, canvas',
       price: 19.99,

@@ -1,6 +1,5 @@
 .productsScreenOuterContainer {
   width: 100%;
-  padding: 2vh 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,7 +24,7 @@
 }
 
 .productsScreenResultsContainer {
-  padding: 4vh 2%;
+  padding: 6vh 2%;
 }
 
 .productsScreenResultsTextWrapper {
@@ -33,6 +32,46 @@
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   color: #242424;
+}
+
+.productsScreenResultsTextTitleSortWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sortContainer {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sortSelect {
+  width: 100%;
+  min-width: 200px;
+  height: 30px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: -0.3px;
+  word-spacing: 1px;
+  background: hsl(0, 0%, 95%);
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2),
+    1px 1px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  appearance: none;
+}
+
+.sortOption {
+  text-align: center;
+  text-transform: capitalize;
+  justify-self: center;
+  cursor: pointer;
 }
 
 .productsScreenResultsTitle {

@@ -15,7 +15,6 @@ function QueryMenu(props) {
     century: centuryQuery,
   } = props.queryParams;
 
-  console.log(props.queryParams);
   return (
     <div className={queryMenuStyle.queryMenuContainer}>
       <div
@@ -64,7 +63,7 @@ function QueryMenu(props) {
           setCategoryExpand(!categoryExpand);
         }}
       >
-        <h4 className={queryMenuStyle.queryMenuQueryTitle}>Categories</h4>
+        <h4 className={queryMenuStyle.queryMenuQueryTitle}>Genres</h4>
         <p className={queryMenuStyle.queryMenuQueryExpand}>
           {!categoryExpand ? '+' : '-'}
         </p>
