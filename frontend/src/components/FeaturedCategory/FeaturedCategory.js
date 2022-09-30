@@ -39,8 +39,6 @@ function FeaturedCategory(props) {
             size: 7,
           },
         });
-        console.log(result);
-
         dispatch({
           type: 'FETCH_SUCCESS',
           payload: result.data.results,
@@ -67,66 +65,58 @@ function FeaturedCategory(props) {
         className={featuredCategoryStyle.featuredCategoryImageOuterContainer}
       >
         {results.map((item, index) => (
-          <div
-            className={
-              featuredCategoryStyle.featuredCategoryImageInnerContainer
-            }
-            key={index}
-          >
+          <Link to={`/products/?genre=${item[0].category}`}>
             <div
-              className={featuredCategoryStyle.featuredCategoryImageContainer}
+              className={
+                featuredCategoryStyle.featuredCategoryImageInnerContainer
+              }
+              key={index}
             >
               <div
-                className={featuredCategoryStyle.featuredCategoryImageWrapper}
+                className={featuredCategoryStyle.featuredCategoryImageContainer}
               >
-                <Link to={`/products/${item[0].slug}`}>
+                <div
+                  className={featuredCategoryStyle.featuredCategoryImageWrapper}
+                >
                   <img
                     className={featuredCategoryStyle.featuredCategoryImage}
                     src={item[0].image}
                     alt={item[0].name}
                   />
-                </Link>
-              </div>
-              <div
-                className={featuredCategoryStyle.featuredCategoryImageWrapper}
-              >
-                <Link to={`/products/${item[1].slug}`}>
+                </div>
+                <div
+                  className={featuredCategoryStyle.featuredCategoryImageWrapper}
+                >
                   <img
                     className={featuredCategoryStyle.featuredCategoryImage}
                     src={item[1].image}
                     alt={item[1].name}
                   />
-                </Link>
-              </div>
-              <div
-                className={featuredCategoryStyle.featuredCategoryImageWrapper}
-              >
-                <Link to={`/products/${item[2].slug}`}>
+                </div>
+                <div
+                  className={featuredCategoryStyle.featuredCategoryImageWrapper}
+                >
                   <img
                     className={featuredCategoryStyle.featuredCategoryImage}
                     src={item[2].image}
                     alt={item[2].name}
                   />
-                </Link>
-              </div>
-              <div
-                className={featuredCategoryStyle.featuredCategoryImageWrapper}
-              >
-                <Link to={`/products/${item[3].slug}`}>
+                </div>
+                <div
+                  className={featuredCategoryStyle.featuredCategoryImageWrapper}
+                >
                   <img
                     className={featuredCategoryStyle.featuredCategoryImage}
                     src={item[3].image}
                     alt={item[3].name}
                   />
-                </Link>
+                </div>
               </div>
-            </div>
-            <Link to={`/products/${item[3].slug}`}>
               <h3 className={featuredCategoryStyle.featuredCategoryImageTitle}>
                 {item[0].category}
               </h3>
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
     </section>

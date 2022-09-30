@@ -27,7 +27,8 @@
 }
 
 .featuredCategoryImageOuterContainer {
-  width: 80%;
+  width: 100%;
+  padding: 0 10%;
   margin: 0 auto;
   display: flex;
   justify-content: center;

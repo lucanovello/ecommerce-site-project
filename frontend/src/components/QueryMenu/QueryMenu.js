@@ -6,20 +6,16 @@ function QueryMenu(props) {
   const [categoryExpand, setCategoryExpand] = useState(true);
   const [nationalityExpand, setNationalityExpand] = useState(true);
 
-  const { products, artists, categories, nationalities } = props.content;
-  const { setCurrentTitle, setCurrentQuery } = props.states;
+  const { artists, categories, nationalities } = props.content;
+  const { setSearchParams } = props.useSearchParams;
+  const {
+    artist: artistQuery,
+    genre: genreQuery,
+    nationality: nationalityQuery,
+    century: centuryQuery,
+  } = props.queryParams;
 
-  const getResults = (key, value) => {
-    const getResultsArr = [];
-    for (let i = 0; i < products.length; i++) {
-      const product = products[i];
-      if (product[key] === value) getResultsArr.push(product);
-    }
-    setCurrentTitle(value);
-    setCurrentQuery(getResultsArr);
-    return getResultsArr;
-  };
-
+  console.log(props.queryParams);
   return (
     <div className={queryMenuStyle.queryMenuContainer}>
       <div
@@ -38,6 +34,7 @@ function QueryMenu(props) {
           !artistExpand && queryMenuStyle.collapse
         }`}
       >
+        {}
         {artists.map((artist, index) => (
           <div className={queryMenuStyle.queryMenuQueryItem} key={index}>
             <input
@@ -46,10 +43,12 @@ function QueryMenu(props) {
               id={artist}
               name="filter"
               data-category="artist"
-              onClick={(e) =>
-                getResults(e.target.dataset.category, e.target.id)
-              }
+              onClick={(e) => {
+                setSearchParams({ artist: e.target.id.toLowerCase() });
+              }}
+              defaultChecked={artist && artist === artistQuery ? true : false}
             />
+
             <label
               htmlFor={artist}
               className={queryMenuStyle.queryMenuQueryCheckboxLabel}
@@ -77,14 +76,18 @@ function QueryMenu(props) {
       >
         {categories.map((category, index) => (
           <div className={queryMenuStyle.queryMenuQueryItem} key={index}>
+            {artists ? true : false}
             <input
               type="radio"
               className={queryMenuStyle.queryMenuQueryCheckbox}
               id={category}
               name="filter"
               data-category="category"
-              onClick={(e) =>
-                getResults(e.target.dataset.category, e.target.id)
+              onClick={(e) => {
+                setSearchParams({ genre: e.target.id.toLowerCase() });
+              }}
+              defaultChecked={
+                category && category === genreQuery ? true : false
               }
             />
             <label
@@ -120,8 +123,11 @@ function QueryMenu(props) {
               id={nationality}
               name="filter"
               data-category="nationality"
-              onClick={(e) =>
-                getResults(e.target.dataset.category, e.target.id)
+              onClick={(e) => {
+                setSearchParams({ nationality: e.target.id.toLowerCase() });
+              }}
+              defaultChecked={
+                nationality && nationality === nationalityQuery ? true : false
               }
             />
             <label

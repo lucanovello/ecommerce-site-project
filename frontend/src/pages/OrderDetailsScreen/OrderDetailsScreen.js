@@ -193,28 +193,37 @@ const OrderDetailsScreen = () => {
                   Items
                 </h2>
                 {order.orderItems.map((item, index) => (
-                  <li
-                    className={orderDetailsScreenStyle.orderDetailsScreenItem}
-                    key={index}
+                  <Link
+                    to={`/products/${item.slug}`}
+                    className={orderDetailsScreenStyle.Link}
                   >
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className={
-                        orderDetailsScreenStyle.orderDetailsScreenItemImage
-                      }
-                    />
-                    <div
-                      className={
-                        orderDetailsScreenStyle.orderDetailsScreenItemDetails
-                      }
+                    <li
+                      className={orderDetailsScreenStyle.orderDetailsScreenItem}
+                      key={index}
                     >
                       <div
-                        me={
-                          orderDetailsScreenStyle.orderDetailsScreenItemDetail
+                        className={
+                          orderDetailsScreenStyle.orderDetailsScreenItemImageWrapper
                         }
                       >
-                        <Link to={`/products/${item.slug}`}>
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className={
+                            orderDetailsScreenStyle.orderDetailsScreenItemImage
+                          }
+                        />
+                      </div>
+                      <div
+                        className={
+                          orderDetailsScreenStyle.orderDetailsScreenItemDetails
+                        }
+                      >
+                        <div
+                          me={
+                            orderDetailsScreenStyle.orderDetailsScreenItemDetail
+                          }
+                        >
                           <h4
                             className={
                               orderDetailsScreenStyle.orderDetailsScreenItemDetailsName
@@ -222,45 +231,45 @@ const OrderDetailsScreen = () => {
                           >
                             {item.name}
                           </h4>
-                        </Link>
-                        <p
-                          className={
-                            orderDetailsScreenStyle.orderDetailsScreenItemDetailsArtist
-                          }
-                        >
-                          {item.artist}
-                        </p>
+                          <p
+                            className={
+                              orderDetailsScreenStyle.orderDetailsScreenItemDetailsArtist
+                            }
+                          >
+                            {item.artist}
+                          </p>
 
-                        <p
+                          <p
+                            className={
+                              orderDetailsScreenStyle.orderDetailsScreenItemDetailsDevice
+                            }
+                          >
+                            {item.device}
+                          </p>
+                          <p
+                            className={
+                              orderDetailsScreenStyle.orderDetailsScreenItemDetailsQty
+                            }
+                          >
+                            Qty: {item.quantity}
+                          </p>
+                        </div>
+                        <div
                           className={
-                            orderDetailsScreenStyle.orderDetailsScreenItemDetailsDevice
+                            orderDetailsScreenStyle.orderDetailsScreenItemDetail
                           }
                         >
-                          {item.device}
-                        </p>
-                        <p
-                          className={
-                            orderDetailsScreenStyle.orderDetailsScreenItemDetailsArtist
-                          }
-                        >
-                          Qty: {item.quantity}
-                        </p>
+                          <p
+                            className={
+                              orderDetailsScreenStyle.orderDetailsScreenItemDetailsPrice
+                            }
+                          >
+                            ${item.price.toFixed(2)}
+                          </p>
+                        </div>
                       </div>
-                      <div
-                        className={
-                          orderDetailsScreenStyle.orderDetailsScreenItemDetail
-                        }
-                      >
-                        <p
-                          className={
-                            orderDetailsScreenStyle.orderDetailsScreenItemDetailsPrice
-                          }
-                        >
-                          ${item.price.toFixed(2)}
-                        </p>
-                      </div>
-                    </div>
-                  </li>
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </div>

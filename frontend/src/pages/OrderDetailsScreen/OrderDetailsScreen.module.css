@@ -110,30 +110,36 @@
   color: hsl(0, 0%, 70%);
 }
 
-.orderDetailsScreenItem {
+.Link {
   width: 100%;
   height: 100%;
   padding-right: 2%;
   padding-bottom: 0.5vh;
+  border-bottom: 1px dashed #dddddd;
+}
+.Link:last-child {
+  border-bottom: none;
+}
+.orderDetailsScreenItem {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px dashed #dddddd;
 }
 
-.orderDetailsScreenItem:last-child {
-  border-bottom: none;
-}
-
-.orderDetailsScreenItemImage {
-  width: 12%;
+.orderDetailsScreenItemImageWrapper {
   min-width: 100px;
+  width: 12%;
   margin-right: 5%;
+  overflow: hidden;
+}
+.orderDetailsScreenItemImage {
+  width: 100%;
+  min-width: 100px;
   cursor: pointer;
   transition: 0.1s ease-out;
 }
 .orderDetailsScreenItemImage:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .orderDetailsScreenItemDetails {
@@ -156,11 +162,22 @@
   line-height: 1.1;
   align-self: flex-end;
   cursor: pointer;
+  transition: 0.1s ease;
 }
-.orderDetailsScreenItemDetailsArtist {
+
+.orderDetailsScreenItemDetailsArtist,
+.orderDetailsScreenItemDetailsQty {
   font-size: 1em;
   align-self: flex-start;
+}
+.orderDetailsScreenItemDetailsArtist {
   cursor: pointer;
+  z-index: 99;
+  transition: 0.1s ease;
+}
+.orderDetailsScreenItemDetailsArtist:hover,
+.orderDetailsScreenItemDetailsName:hover {
+  color: hsl(220, 50%, 35%);
 }
 
 .orderDetailsScreenItemDetailsDevice {

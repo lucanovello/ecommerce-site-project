@@ -20,7 +20,7 @@ function Product(props) {
             {`${props.product.name}, ${props.product.year}`}
           </h4>
         </Link>
-        <Link to={`/${props.product.artist.replace(' ', '_')}`}>
+        <Link to={`/products/?artist=${props.product.artist.toLowerCase()}`}>
           <h5 className={productStyle.featuredItemArtist}>
             {props.product.artist}
           </h5>

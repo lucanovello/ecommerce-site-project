@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Fragment, useEffect, useReducer, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useSearchParams } from 'react-router-dom';
 import ErrorBox from '../../components/ErrorBox/ErrorBox';
 import FeaturedItems from '../../components/FeaturedItems/FeaturedItems';
 import LoadingBox from '../../components/LoadingBox/LoadingBox';
@@ -42,9 +43,24 @@ function ProductsScreen(props) {
     loading: true,
     error: '',
   });
-
-  const [currentQuery, setCurrentQuery] = useState(products);
+  const [currentQuery, setCurrentQuery] = useState();
   const [currentTitle, setCurrentTitle] = useState('All');
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const queryParams = {
+    artist: searchParams.get('artist')
+      ? searchParams.get('artist').toLowerCase()
+      : '',
+    genre: searchParams.get('genre')
+      ? searchParams.get('genre').toLowerCase()
+      : '',
+    nationality: searchParams.get('nationality')
+      ? searchParams.get('nationality').toLowerCase()
+      : '',
+    century: searchParams.get('century')
+      ? searchParams.get('century').toLowerCase()
+      : '',
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,6 +79,35 @@ function ProductsScreen(props) {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const getResults = (key, value) => {
+      const getResultsArr = [];
+      for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+        if (product[key].toLowerCase() === value.toLowerCase())
+          getResultsArr.push(product);
+      }
+      setCurrentTitle(value.toLowerCase());
+      setCurrentQuery(getResultsArr);
+    };
+
+    queryParams.artist
+      ? getResults('artist', queryParams.artist)
+      : queryParams.genre
+      ? getResults('category', queryParams.genre)
+      : queryParams.nationality
+      ? getResults('nationality', queryParams.nationality)
+      : queryParams.century
+      ? getResults('century', queryParams.century)
+      : setCurrentQuery(products.slice(0, 35));
+  }, [
+    queryParams.artist,
+    queryParams.genre,
+    queryParams.nationality,
+    queryParams.century,
+    products,
+  ]);
+
   return loading ? (
     <LoadingBox />
   ) : error ? (
@@ -78,13 +123,23 @@ function ProductsScreen(props) {
 
       <div className={productsScreenStyle.productsScreenInnerContainer}>
         <QueryMenu
-          content={{ products, artists, categories, nationalities }}
-          states={{ setCurrentQuery, setCurrentTitle }}
+          content={{ artists, categories, nationalities }}
+          useSearchParams={{ setSearchParams }}
+          queryParams={queryParams}
         />
         {/* RESULTS INNER SECTION */}
         <div className={productsScreenStyle.productsScreenResultsContainer}>
-          <div className={productsScreenStyle.productsScreenResultsTitle}>
-            {`${currentTitle}`}
+          <div className={productsScreenStyle.productsScreenResultsTextWrapper}>
+            <h2
+              className={productsScreenStyle.productsScreenResultsTitle}
+            >{`${currentTitle}`}</h2>
+            {currentTitle === queryParams.artist ? (
+              <p
+                className={productsScreenStyle.productsScreenResultsDescription}
+              >
+                {currentQuery[0].description}
+              </p>
+            ) : null}
           </div>
           <div className={productsScreenStyle.productWrapper}>
             {currentQuery.slice(0, 35).map((product) => (
