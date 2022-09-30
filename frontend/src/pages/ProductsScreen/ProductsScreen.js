@@ -32,7 +32,7 @@ const reducer = (state, action) => {
 };
 
 function ProductsScreen(props) {
-  const [searchParams, setSearchParams] = useSearchParams({ sort: 'featured' });
+  const [searchParams, setSearchParams] = useSearchParams();
   const [
     { loading, error, products, artists, categories, nationalities },
     dispatch,
@@ -47,7 +47,15 @@ function ProductsScreen(props) {
   const [currentQuery, setCurrentQuery] = useState([]);
   const [currentTitle, setCurrentTitle] = useState('All');
   const [currentSort, setCurrentSort] = useState(
-    searchParams.get('sort') ? searchParams.get('sort') : 'featured'
+    searchParams.get('sort') === 'isFeatured' ||
+      searchParams.get('sort') === 'name' ||
+      searchParams.get('sort') === 'artist' ||
+      searchParams.get('sort') === 'category' ||
+      searchParams.get('sort') === 'year' ||
+      searchParams.get('sort') === 'rating' ||
+      searchParams.get('sort') === 'price'
+      ? searchParams.get('sort')
+      : 'isFeatured'
   );
 
   const queryParams = {
@@ -130,7 +138,7 @@ function ProductsScreen(props) {
       (finalQuery.nationality = queryParams.nationality);
     sortParams
       ? (finalQuery.sort = currentSort)
-      : (finalQuery.sort = 'featured');
+      : (finalQuery.sort = 'isFeatured');
 
     console.log(finalQuery);
     setSearchParams(finalQuery);
@@ -180,20 +188,36 @@ function ProductsScreen(props) {
                   name="sort"
                   id="sort"
                   onChange={(e) => setCurrentSort(e.target.value.toLowerCase())}
-                  value={sortParams ? `Sort by: ${sortParams}` : 'Sort by: '}
+                  value={
+                    currentSort
+                      ? `Sort by: ${
+                          currentSort === 'isfeatured'
+                            ? 'featured'
+                            : currentSort === 'category'
+                            ? 'Genre'
+                            : currentSort
+                        }`
+                      : 'Sort by: '
+                  }
                 >
                   <option
                     className={productsScreenStyle.sortOption}
-                    value={sortParams ? `Sort by: ${sortParams}` : 'Sort by: '}
-                    selected
                     disabled
                     hidden
                   >
-                    {sortParams ? `Sort by: ${sortParams}` : 'Sort by: '}
+                    {currentSort
+                      ? `Sort by: ${
+                          currentSort === 'isfeatured'
+                            ? 'featured'
+                            : currentSort === 'category'
+                            ? 'Genre'
+                            : currentSort
+                        }`
+                      : 'Sort by: '}
                   </option>
                   <option
                     className={productsScreenStyle.sortOption}
-                    value="featured"
+                    value="isFeatured"
                   >
                     Featured
                   </option>

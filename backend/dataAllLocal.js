@@ -26320,7 +26320,7 @@ const data = {
       sku: 'Vasily-Perov-A-Scene-At-The-Railroad-1968_',
       name: 'A Scene At The Railroad',
       artist: 'Vasily Perov',
-      year: 1968,
+      year: 1868,
       description:
         'Vasily Grigorevich Perov (January 2, 1834 - June 10, 1882) was a Russian painter and one of the founding members of Peredvizhniki, a group of Russian realist painters.',
       category: 'Realism',
