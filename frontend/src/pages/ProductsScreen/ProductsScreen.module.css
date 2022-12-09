@@ -1,103 +1,128 @@
 .productsScreenOuterContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-  color: #242424;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    color: #242424;
 }
 
 .productsScreenMainTitle {
-  padding: 0 15% 1vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #242424;
+    padding: 0 15% 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #242424;
 }
 .productsScreenInnerContainer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: calc(150px + 5%) auto;
+    width: 100%;
+    display: flex;
 }
 
 .productsScreenResultsContainer {
-  padding: 6vh 2%;
+    width: 100%;
+    padding: 3vh 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .productsScreenResultsTextWrapper {
-  width: 95%;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  color: #242424;
+    width: 95%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    color: #242424;
 }
 
 .productsScreenResultsTextTitleSortWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .sortContainer {
-  width: 20%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    width: 21%;
+    min-width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
 }
 .sortSelect {
-  width: 100%;
-  min-width: 200px;
-  height: 30px;
-  padding: 5px 8px;
-  border: none;
-  border-radius: 3px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: capitalize;
-  text-align: center;
-  letter-spacing: -0.3px;
-  word-spacing: 1px;
-  background: hsl(0, 0%, 95%);
-  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2),
-    1px 1px 2px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  appearance: none;
+    width: 100%;
+    height: 30px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: -0.3px;
+    word-spacing: 1px;
+    background: hsl(0, 0%, 95%);
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    appearance: none;
 }
 
 .sortOption {
-  text-align: center;
-  text-transform: capitalize;
-  justify-self: center;
-  cursor: pointer;
+    text-align: center;
+    text-transform: capitalize;
+    justify-self: center;
+    cursor: pointer;
 }
 
 .productsScreenResultsTitle {
-  font-size: 2rem;
-  font-weight: 900;
-  text-transform: capitalize;
-  letter-spacing: -0.5px;
-  word-spacing: 1px;
+    margin-bottom: 1vh;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+    word-spacing: 1px;
 }
 
 .productsScreenResultsDescription {
-  font-size: 0.8rem;
-  text-align: justify;
-  line-height: 1.3;
-  font-weight: 400;
-  letter-spacing: 0;
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .productWrapper {
-  width: 90%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center; */
-  flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    flex-wrap: wrap;
+}
+
+.queryMenuQueryItem {
+    width: 100%;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    column-gap: calc(10px + 1vmax);
+    row-gap: 2vh;
+}
+
+@media (max-width: 625px) {
+    .productsScreenResultsContainer {
+        padding: 4vh 5%;
+    }
+
+    .productsScreenInnerContainer {
+        flex-direction: column;
+    }
 }

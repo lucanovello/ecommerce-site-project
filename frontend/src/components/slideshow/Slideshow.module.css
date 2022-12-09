@@ -1,66 +1,68 @@
 .slideshowContainer {
-  width: 100%;
-  min-height: calc(
-    (100vh - var(--navbar-height)) - var(--navbar-header-height) - 8px
-  );
-  padding: calc(50px + 6%) calc(10px + 6%);
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border-bottom: var(--dashed-border);
-  color: white;
+    width: 100%;
+    min-height: calc((100vh - var(--navbar-height)) - var(--navbar-header-height) - 8px);
+    padding: calc(50px + 6%) 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: var(--dashed-border);
+    color: white;
 }
 
 .slideshowText {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  /* text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .slideshowText h1 {
-  font-size: calc(3.5rem + 1vmax);
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
+    font-size: calc(2rem + 5vmin);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0 2px 3px black;
 }
 
 .slideshowText span {
-  margin: 10% 0;
-  width: 40%;
-  height: 3px;
-  background: linear-gradient(to right, transparent, white, transparent);
+    margin: 3vh 0;
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    line-height: 1;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .slideshowText p {
-  font-size: calc(1rem + 0.5vmax);
-  font-weight: 400;
-  text-align: center;
+    font-size: calc(1rem + 2vmin);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
 }
 
 .slideshowBtn {
-  margin-top: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2vh calc(20px + 1vmax);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  background: var(--main-color);
-  border: var(--dashed-border);
-  border-radius: 20px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.2s ease-out;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh calc(20px + 1vmax);
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(0.9rem + 0.5vmin);
+    font-weight: 600;
+    color: white;
+    background: var(--main-color);
+    border: var(--dashed-border);
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease-out;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
 }
 .slideshowBtn:hover {
-  background: white;
-  color: var(--main-color);
-  border: 1px dashed var(--main-color);
+    background: white;
+    color: var(--main-color);
+    border: 1px dashed var(--main-color);
+    text-shadow: none;
 }

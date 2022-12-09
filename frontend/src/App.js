@@ -18,111 +18,93 @@ import PlaceOrderScreen from './pages/PlaceOrderScreen/PlaceOrderScreen';
 import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen';
 import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen';
 import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
-import ArtistScreen from './pages/ArtistScreen/ArtistScreen';
 
 function App() {
-  const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { cart, userInfo } = state;
-  const location = useLocation();
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const { cart, userInfo } = state;
+    const location = useLocation();
 
-  return (
-    <main className={appStyle.App}>
-      <ToastContainer
-        position="bottom-center"
-        transition={Flip}
-        limit={1}
-        toastClassName={appStyle.toast}
-        bodyClassName={appStyle.toastBody}
-        progressClassName={appStyle.toastProgress}
-        pauseOnHover={false}
-        autoClose={700}
-        newestOnTop={true}
-        closeButton={false}
-        draggable={true}
-      />
-      <Navbar userInfo={userInfo} />
+    return (
+        <main className={appStyle.App}>
+            <ToastContainer
+                position="bottom-center"
+                transition={Flip}
+                limit={1}
+                className={appStyle.toastContainer}
+                toastClassName={appStyle.toast}
+                bodyClassName={appStyle.toastBody}
+                progressClassName={appStyle.toastProgress}
+                pauseOnHover={false}
+                autoClose={700}
+                newestOnTop={true}
+                closeButton={false}
+                draggable={true}
+            />
+            <Navbar userInfo={userInfo} />
 
-      <main className={appStyle.AppBodyContainer}>
-        <Routes>
-          <Route
-            path="/"
-            element={<Home headerTitle={`Luca Novello | Home`} />}
-            exact
-          />
+            <main className={appStyle.AppBodyContainer}>
+                <Routes>
+                    <Route path="/" element={<Home headerTitle={`Luca Novello | Home`} />} exact />
 
-          <Route path="/products" element={<ProductsScreen />} exact />
-          <Route
-            path="/products/:slug"
-            element={<ProductScreen ctxDispatch={ctxDispatch} />}
-            exact
-          />
-          <Route path="/cart" element={<CartScreen />} exact />
-          <Route path="/signup" element={<SignUpScreen />} exact />
-          <Route path="/signin" element={<SignInScreen />} exact />
-          <Route
-            path="/shipping"
-            element={
-              <ShippingScreen
-                cart={cart}
-                ctxDispatch={ctxDispatch}
-                headerTitle={`Shipping Address`}
-                location={location}
-              />
-            }
-            exact
-          />
-          <Route
-            path="/payment"
-            element={
-              <PaymentScreen
-                headerTitle={`Payment Method`}
-                location={location}
-              />
-            }
-            exact
-          />
-          <Route
-            path="/placeorder"
-            element={
-              <PlaceOrderScreen
-                headerTitle={`Preview Order`}
-                location={location}
-              />
-            }
-            exact
-          />
-          <Route
-            path="/order/:id"
-            element={
-              <OrderDetailsScreen
-                headerTitle={`Order Details`}
-                location={location}
-              />
-            }
-            exact
-          />
-          <Route
-            path="/orderhistory"
-            element={
-              <OrderHistoryScreen
-                headerTitle={`Order History`}
-                location={location}
-              />
-            }
-            exact
-          />
-          <Route
-            path="/profile"
-            element={
-              <ProfileScreen headerTitle={`Profile`} location={location} />
-            }
-            exact
-          />
-        </Routes>
-      </main>
-      <Footer location={location} />
-    </main>
-  );
+                    <Route path="/products" element={<ProductsScreen />} exact />
+                    <Route
+                        path="/products/:slug"
+                        element={<ProductScreen ctxDispatch={ctxDispatch} />}
+                        exact
+                    />
+                    <Route path="/cart" element={<CartScreen />} exact />
+                    <Route path="/signup" element={<SignUpScreen />} exact />
+                    <Route path="/signin" element={<SignInScreen />} exact />
+                    <Route
+                        path="/shipping"
+                        element={
+                            <ShippingScreen
+                                cart={cart}
+                                ctxDispatch={ctxDispatch}
+                                headerTitle={`Shipping Address`}
+                                location={location}
+                            />
+                        }
+                        exact
+                    />
+                    <Route
+                        path="/payment"
+                        element={
+                            <PaymentScreen headerTitle={`Payment Method`} location={location} />
+                        }
+                        exact
+                    />
+                    <Route
+                        path="/placeorder"
+                        element={
+                            <PlaceOrderScreen headerTitle={`Preview Order`} location={location} />
+                        }
+                        exact
+                    />
+                    <Route
+                        path="/order/:id"
+                        element={
+                            <OrderDetailsScreen headerTitle={`Order Details`} location={location} />
+                        }
+                        exact
+                    />
+                    <Route
+                        path="/orderhistory"
+                        element={
+                            <OrderHistoryScreen headerTitle={`Order History`} location={location} />
+                        }
+                        exact
+                    />
+                    <Route
+                        path="/profile"
+                        element={<ProfileScreen headerTitle={`Profile`} location={location} />}
+                        exact
+                    />
+                </Routes>
+            </main>
+            <Footer location={location} />
+        </main>
+    );
 }
 
 export default App;

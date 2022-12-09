@@ -1,17 +1,17 @@
 /* VARIABLES */
 :root {
-  --navbar-header-height: 35px;
-  --navbar-height: 80px;
-  --navbar-menu-height: 40px;
-  --main-color: #242424;
-  --highlight-color: #bacedb;
-  --link-color: hsl(210, 100%, 40%);
-  --button-color: hsl(210, 100%, 15%);
-  --button-click-color: hsl(210, 91%, 25%);
-  --button-disabled-color: rgb(211, 223, 224);
-  --button-highlight-color: hsla(210, 40%, 75%, 0.6);
-  --dashed-border: 1px dashed white;
-  --cart-border-color: #d1d1d1;
+    --navbar-header-height: 35px;
+    --navbar-height: 80px;
+    --navbar-menu-height: 40px;
+    --main-color: #242424;
+    --highlight-color: #bacedb;
+    --link-color: hsl(210, 100%, 40%);
+    --button-color: hsl(210, 100%, 15%);
+    --button-click-color: hsl(210, 91%, 25%);
+    --button-disabled-color: rgb(211, 223, 224);
+    --button-highlight-color: hsla(210, 40%, 75%, 0.6);
+    --dashed-border: 1px dashed white;
+    --cart-border-color: #d1d1d1;
 }
 
 /* FONTS */
@@ -27,30 +27,35 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 *:focus-visible {
-  outline-width: 1px;
-  outline-style: dashed;
-  outline-color: currentcolor;
-  border-radius: 1px;
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: currentcolor;
+    border-radius: 1px;
 }
 
 button:focus-visible {
-  outline-width: 1px;
-  outline-style: dashed;
-  outline-color: var(--main-color);
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: var(--main-color);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
-  overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
