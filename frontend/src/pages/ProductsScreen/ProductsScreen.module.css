@@ -24,7 +24,7 @@
 
 .productsScreenResultsContainer {
     width: 100%;
-    padding: 3vh 2%;
+    padding: 3vh 5%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -81,7 +81,9 @@
 }
 
 .productsScreenResultsTitle {
+    width: 100%;
     margin-bottom: 1vh;
+    padding: 0 5%;
     font-size: 2rem;
     font-weight: 900;
     text-transform: capitalize;
@@ -90,6 +92,8 @@
 }
 
 .productsScreenResultsDescription {
+    width: 100%;
+    padding: 0 5%;
     font-size: 0.8rem;
     text-align: justify;
     line-height: 1.4;
@@ -98,8 +102,9 @@
 }
 
 .productWrapper {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 5%;
     font-size: 1.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

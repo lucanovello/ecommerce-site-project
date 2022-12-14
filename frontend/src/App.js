@@ -25,7 +25,7 @@ function App() {
     const location = useLocation();
 
     return (
-        <main className={appStyle.App}>
+        <div className={appStyle.App}>
             <ToastContainer
                 position="bottom-center"
                 transition={Flip}
@@ -103,7 +103,7 @@ function App() {
                 </Routes>
             </main>
             <Footer location={location} />
-        </main>
+        </div>
     );
 }
 
