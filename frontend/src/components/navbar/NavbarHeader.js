@@ -47,14 +47,14 @@ function NavbarMenu(props) {
                         <div className={navbarStyle.profileLinkContainer}>
                             <p className={navbarStyle.profileLinkTitle}> {props.userInfo.name}</p>
                             <div className={navbarStyle.profileLinkDropdownContainer}>
-                                <Link to={'/profile'} className={navbarStyle.profileLink}>
+                                <Link to={'./profile'} className={navbarStyle.profileLink}>
                                     Profile
                                 </Link>
-                                <Link to={'/orderhistory'} className={navbarStyle.profileLink}>
+                                <Link to={'./orderhistory'} className={navbarStyle.profileLink}>
                                     Order History
                                 </Link>
                                 <Link
-                                    to={'/'}
+                                    to={'./'}
                                     onClick={signoutHandler}
                                     className={navbarStyle.profileLink}
                                 >
@@ -189,10 +189,10 @@ function NavbarMenu(props) {
                 >
                     {props.userInfo ? (
                         <Fragment>
-                            <Link to={'/profile'} onClick={closeMobileNavHandler}>
+                            <Link to={'./profile'} onClick={closeMobileNavHandler}>
                                 <h2 className={navbarStyle.mobileNavMenuLink}>Profile</h2>
                             </Link>
-                            <Link to={'/orderhistory'} onClick={closeMobileNavHandler}>
+                            <Link to={'./orderhistory'} onClick={closeMobileNavHandler}>
                                 <h2 className={navbarStyle.mobileNavMenuLink}>Order History</h2>
                             </Link>
                             <Link to="/products/?sort=featured" onClick={closeMobileNavHandler}>
@@ -214,7 +214,7 @@ function NavbarMenu(props) {
                                 <h2 className={navbarStyle.mobileNavMenuLink}>Genres</h2>
                             </Link>
                             <Link
-                                to={'/'}
+                                to={'./'}
                                 onClick={() => {
                                     signoutHandler();
                                     closeMobileNavHandler();

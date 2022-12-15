@@ -1,23 +1,23 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Flip, ToastContainer } from 'react-toastify';
+import appStyle from './App.module.css';
+import { useContext } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from './components/Navbar/Navbar';
+import { Store } from './Store';
+import Navbar from './components/Navbar/Navbar.js';
+import Footer from './components/Footer/Footer.js';
 import Home from './pages/Home/Home.js';
 import ProductScreen from './pages/ProductScreen/ProductScreen.js';
 import ProductsScreen from './pages/ProductsScreen/ProductsScreen.js';
-import appStyle from './App.module.css';
-import { useContext } from 'react';
-import CartScreen from './pages/CartScreen/CartScreen';
-import Footer from './components/Footer/Footer';
-import SignInScreen from './pages/SignInScreen/SignInScreen';
-import { Store } from './Store';
-import ShippingScreen from './pages/ShippingScreen/ShippingScreen';
-import SignUpScreen from './pages/SignInScreen/SignUpScreen';
-import PaymentScreen from './pages/PaymentScreen/PaymentScreen';
-import PlaceOrderScreen from './pages/PlaceOrderScreen/PlaceOrderScreen';
-import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen';
-import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen';
-import ProfileScreen from './pages/ProfileScreen/ProfileScreen';
+import CartScreen from './pages/CartScreen/CartScreen.js';
+import SignInScreen from './pages/SignInScreen/SignInScreen.js';
+import ShippingScreen from './pages/ShippingScreen/ShippingScreen.js';
+import SignUpScreen from './pages/SignInScreen/SignUpScreen.js';
+import PaymentScreen from './pages/PaymentScreen/PaymentScreen.js';
+import PlaceOrderScreen from './pages/PlaceOrderScreen/PlaceOrderScreen.js';
+import OrderDetailsScreen from './pages/OrderDetailsScreen/OrderDetailsScreen.js';
+import OrderHistoryScreen from './pages/OrderHistoryScreen/OrderHistoryScreen.js';
+import ProfileScreen from './pages/ProfileScreen/ProfileScreen.js';
 
 function App() {
     const { state, dispatch: ctxDispatch } = useContext(Store);

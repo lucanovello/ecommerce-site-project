@@ -28,16 +28,16 @@ const PlaceOrderScreen = () => {
 
     useEffect(() => {
         if (!userInfo) {
-            return navigate('/signin');
+            return navigate('./signin');
         }
         if (cart.cartItems.length < 1) {
-            return navigate('/');
+            return navigate('./');
         }
         if (cart.shippingAddress.length < 1) {
-            return navigate('/shipping');
+            return navigate('./shipping');
         }
         if (cart.paymentMethod.length < 1) {
-            return navigate('/payment');
+            return navigate('./payment');
         }
     }, [cart, navigate, userInfo]);
 

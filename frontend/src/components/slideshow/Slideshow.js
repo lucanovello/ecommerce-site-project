@@ -11,7 +11,7 @@ function Slideshow(props) {
             style={{
                 background: `radial-gradient(rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7)), center / cover no-repeat url(${props.slide.image})`,
                 // background: `radial-gradient(rgba(0,0,0,0.1) ,rgba(0,0,0,0.8)) , 70% / cover no-repeat url(${props.slide.image})`,
-                // background: `50% 50% / cover no-repeat url('/images/wassily-kandinsky-title.jpg')`,
+                // background: `50% 50% / cover no-repeat url('./images/wassily-kandinsky-title.jpg')`,
             }}
         >
             <div className={slideshowStyles.slideshowText}>

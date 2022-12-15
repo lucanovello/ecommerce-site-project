@@ -31,8 +31,7 @@ function Home(props) {
         const fetchData = async () => {
             dispatch({ type: 'FETCH_REQUEST' });
             try {
-                const result = await axios.get('/api/seed/slideshow');
-                console.log(result);
+                const result = await axios.get('./api/seed/slideshow');
                 dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
             } catch (err) {
                 dispatch({ type: 'FETCH_FAIL', payload: getError(err.message) });
